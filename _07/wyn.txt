@@ -1,0 +1,820 @@
+data: '\n'
+start tag: <html lang="en" >
+start tag: <head>
+data: '\n\n\n   \n      '
+start tag: <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" >
+start tag: <title>
+data: 'Dive Into Python'
+end tag: </title>
+data: '\n   \n      \n      '
+start tag: <link rel="stylesheet" href="Dive%20Into%20Python/diveintopython.css" type="text/css" >
+data: '\n      '
+start tag: <link rev="made" href="mailto:f8dy@diveintopython.org" >
+data: '\n      '
+start tag: <meta name="generator" content="DocBook XSL Stylesheets V1.52.2" >
+data: '\n      '
+start tag: <meta name="description" content=" This book lives at .  If you're reading it somewhere else, you may not have the latest version." >
+data: '\n      '
+start tag: <meta name="keywords" content="Python, Dive Into Python, tutorial, object-oriented, programming, documentation, book, free" >
+data: '\n      '
+start tag: <link rel="alternate" type="application/rss+xml" title="RSS" href="http://diveintopython.org/history.xml" >
+end tag: </head>
+start tag: <body>
+data: '\n      '
+start tag: <table id="Header" summary="" border="0" cellpadding="0" cellspacing="0" width="100%" >
+data: '\n         '
+start tag: <tbody>
+start tag: <tr>
+data: '\n            '
+start tag: <td id="breadcrumb" colspan="6" >
+*** unknown entity ref: &nbsp;
+end tag: </td>
+data: '\n         '
+end tag: </tr>
+data: '\n         '
+start tag: <tr>
+data: '\n            '
+start tag: <td colspan="3" id="logocontainer" >
+data: '\n               '
+start tag: <h1 id="logo" >
+data: 'Dive Into Python'
+end tag: </h1>
+data: '\n               '
+start tag: <p id="tagline" >
+data: 'Python from novice to pro'
+end tag: </p>
+data: '\n            '
+end tag: </td>
+data: '\n            '
+start tag: <td colspan="3" align="right" >
+data: '\n               '
+start tag: <form id="search" method="get" action="http://www.google.com/custom" >
+data: '\n                  '
+start tag: <p>
+start tag: <label for="q" accesskey="4" >
+data: 'Find:'
+*** unknown entity ref: &nbsp;
+end tag: </label>
+start tag: <input id="q" name="q" size="20" maxlength="255" value=" " type="text" >
+data: ' '
+start tag: <input value="Search" type="submit" >
+start tag: <input name="cof" value="LW:106;L:http://diveintopython.org/images/cover-small.jpg;LH:140;AH:left;GL:0;AWFID:3ced2bb1f7f1b212;" type="hidden" >
+start tag: <input name="domains" value="diveintopython.org" type="hidden" >
+start tag: <input name="sitesearch" value="diveintopython.org" type="hidden" >
+end tag: </p>
+data: '\n               '
+end tag: </form>
+data: '\n            '
+end tag: </td>
+data: '\n         '
+end tag: </tr>
+data: '\n      '
+end tag: </tbody>
+end tag: </table>
+data: '\n      '
+start tag: <div id="wrapper" >
+data: '\n         '
+start tag: <div id="main" >
+data: '\n            '
+start tag: <div class="section" lang="en" >
+data: '\n               '
+start tag: <div class="titlepage" >
+data: '\n                  '
+start tag: <div>
+data: '\n                     '
+start tag: <div>
+data: '\n                        '
+start tag: <h2 class="title" >
+start tag: <a name="intro" >
+end tag: </a>
+end tag: </h2>
+data: '\n                     '
+end tag: </div>
+data: '\n                  '
+end tag: </div>
+data: '\n                  '
+start tag: <div>
+end tag: </div>
+data: '\n               '
+end tag: </div>
+data: '\n\t'
+start tag: <p style="margin: 0pt 10px 1em 0pt; float: left;" >
+start tag: <a class="plain" href="http://www.amazon.com/exec/obidos/ASIN/1590593561/ref%3Dnosim/diveintomark20" >
+start tag: <img style="border: 0pt none ;" src="Dive%20Into%20Python/cover-small.jpg" alt="[Dive Into Python]" title="Dive Into Python: Buy it at Amazon.com" height="140" width="106" >
+end tag: </a>
+end tag: </p>
+data: '\n               '
+start tag: <p>
+start tag: <i class="citetitle" >
+data: 'Dive Into '
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+end tag: </i>
+data: ' is a '
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+data: ' book for experienced programmers. You can '
+start tag: <a href="http://www.amazon.com/exec/obidos/ASIN/1590593561/ref%3Dnosim/diveintomark20" >
+data: 'buy a printed copy'
+end tag: </a>
+data: ', '
+start tag: <a href="http://diveintopython.org/toc/index.html" >
+data: 'read it online'
+end tag: </a>
+data: ', or '
+start tag: <a href="#download" title="Download Dive Into Python" >
+data: 'download it'
+end tag: </a>
+data: ' in a variety of formats.  It is also available in '
+start tag: <a href="#languages" title="Dive Into Python in your language" >
+data: 'multiple languages'
+end tag: </a>
+data: '.\n               '
+end tag: </p>
+data: '\n            '
+end tag: </div>
+data: '\n            '
+start tag: <div class="section" lang="en" >
+data: '\n               '
+start tag: <div class="titlepage" >
+data: '\n                  '
+start tag: <div>
+data: '\n                     '
+start tag: <div>
+data: '\n                        '
+start tag: <h2 style="clear: left;" class="title" >
+start tag: <a name="read" >
+end tag: </a>
+data: 'Read '
+start tag: <a href="http://diveintopython.org/toc/index.html" >
+start tag: <i class="citetitle" >
+data: 'Dive Into '
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+end tag: </i>
+end tag: </a>
+end tag: </h2>
+data: '\n                     '
+end tag: </div>
+data: '\n                  '
+end tag: </div>
+data: '\n                  '
+start tag: <div>
+end tag: </div>
+data: '\n               '
+end tag: </div>
+data: '\n               '
+start tag: <p>
+data: 'The complete text is '
+start tag: <a href="http://diveintopython.org/toc/index.html" >
+data: 'available online'
+end tag: </a>
+data: '.  You can '
+start tag: <a href="http://diveintopython.org/appendix/history.html" >
+data: 'read the revision history'
+end tag: </a>
+data: " to see what's new. "
+start tag: <strong>
+data: 'Updated 20 May 2004'
+end tag: </strong>
+end tag: </p>
+data: '\n            '
+end tag: </div>
+data: '\n            '
+start tag: <div class="section" lang="en" >
+data: '\n               '
+start tag: <div class="titlepage" >
+data: '\n                  '
+start tag: <div>
+data: '\n                     '
+start tag: <div>
+data: '\n                        '
+start tag: <h2 class="title" >
+start tag: <a name="download" >
+end tag: </a>
+data: 'Download '
+start tag: <i class="citetitle" >
+data: 'Dive Into '
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+end tag: </i>
+end tag: </h2>
+data: '\n                     '
+end tag: </div>
+data: '\n                  '
+end tag: </div>
+data: '\n                  '
+start tag: <div>
+end tag: </div>
+data: '\n               '
+end tag: </div>
+data: '\n               '
+start tag: <div class="itemizedlist" >
+data: '\n                  '
+start tag: <ul>
+data: '\n                     '
+start tag: <li>
+start tag: <a href="http://diveintopython.org/download/diveintopython-html-5.4.zip" title="Download as HTML (846 KB)" >
+start tag: <span class="acronym" >
+data: 'HTML'
+end tag: </span>
+end tag: </a>
+end tag: </li>
+data: '\n                     '
+start tag: <li>
+start tag: <a href="http://diveintopython.org/download/diveintopython-pdf-5.4.zip" title="Download as PDF (764 KB)" >
+start tag: <span class="acronym" >
+data: 'PDF'
+end tag: </span>
+end tag: </a>
+end tag: </li>
+data: '\n                     '
+start tag: <li>
+start tag: <a href="http://diveintopython.org/download/diveintopython-word-5.4.zip" title="Download in Microsoft Word format (686 KB)" >
+start tag: <span class="application" >
+data: 'Microsoft Word 97'
+end tag: </span>
+end tag: </a>
+end tag: </li>
+data: '\n                     '
+start tag: <li>
+start tag: <a href="http://diveintopython.org/download/diveintopython-text-5.4.zip" title="Download as plain text (368 KB)" >
+data: 'plain text'
+end tag: </a>
+end tag: </li>
+data: '\n                     '
+start tag: <li>
+start tag: <a href="http://diveintopython.org/download/diveintopython-html-flat-5.4.zip" title="Download as single HTML file (459 KB)" >
+start tag: <span class="acronym" >
+data: 'HTML'
+end tag: </span>
+data: ' (single file)'
+end tag: </a>
+end tag: </li>
+data: '\n                     '
+start tag: <li>
+start tag: <a href="http://diveintopython.org/download/diveintopython-xml-5.4.zip" title="Download XML source (286 KB)" >
+data: 'XML (DocBook)'
+end tag: </a>
+end tag: </li>
+data: '\n                     '
+start tag: <li>
+start tag: <a href="http://diveintopython.org/download/diveintopython-common-5.4.zip" title="Download build tools and auxiliary files (2917 KB)" >
+data: 'Build scripts'
+end tag: </a>
+data: ' (for translators)\n                     '
+end tag: </li>
+data: '\n                  '
+end tag: </ul>
+data: '\n               '
+end tag: </div>
+data: '\n            '
+end tag: </div>
+data: '\n            '
+start tag: <div class="section" lang="en" >
+data: '\n               '
+start tag: <div class="titlepage" >
+data: '\n                  '
+start tag: <div>
+data: '\n                     '
+start tag: <div>
+data: '\n                        '
+start tag: <h2 class="title" >
+start tag: <a name="languages" >
+end tag: </a>
+start tag: <i class="citetitle" >
+data: 'Dive Into '
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+end tag: </i>
+data: ' in your language\n                        '
+end tag: </h2>
+data: '\n                     '
+end tag: </div>
+data: '\n                  '
+end tag: </div>
+data: '\n                  '
+start tag: <div>
+end tag: </div>
+data: '\n               '
+end tag: </div>
+data: '\n               '
+start tag: <p>
+start tag: <a href="http://diveintopython.org/appendix/fdl_translation.html" >
+data: 'Translations are freely permitted'
+end tag: </a>
+data: ' as long as they are released under the '
+start tag: <span class="acronym" >
+data: 'GNU'
+end tag: </span>
+data: ' Free Documentation License.  '
+start tag: <i class="citetitle" >
+data: 'Dive Into '
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+end tag: </i>
+data: ' has already been fully or partially translated into several languag'
+data: 'es.  If you translate it into another language and would\n          '
+data: '        like to be listed here, just '
+start tag: <a href="mailto:mark@diveintopython.org" >
+data: 'let me know'
+end tag: </a>
+data: '.\n               '
+end tag: </p>
+data: '\n               '
+start tag: <div class="itemizedlist" >
+data: '\n                  '
+start tag: <ul>
+data: '\n                     '
+start tag: <li>
+start tag: <a href="http://it.diveintopython.org/" >
+data: 'Italian'
+end tag: </a>
+end tag: </li>
+data: '\n                     '
+start tag: <li>
+start tag: <a href="http://diveintopython.adrahon.org/" >
+data: 'French'
+end tag: </a>
+end tag: </li>
+data: '\n                     '
+start tag: <li>
+start tag: <a href="http://es.diveintopython.org/" >
+data: 'Spanish'
+end tag: </a>
+end tag: </li>
+data: '\n                     '
+start tag: <li>
+start tag: <a href="http://www.woodpecker.org.cn/diveintopython/" >
+data: 'Chinese'
+end tag: </a>
+end tag: </li>
+data: '\n                     '
+start tag: <li>
+start tag: <a href="http://kr.diveintopython.org/" >
+data: 'Korean'
+end tag: </a>
+end tag: </li>
+data: '\n                     '
+start tag: <li>
+start tag: <a href="http://ru.diveintopython.org/" >
+data: 'Russian'
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+end tag: </ul>
+data: '\n               '
+end tag: </div>
+data: '\n            '
+end tag: </div>
+data: '\n            '
+start tag: <div class="section" lang="en" >
+data: '\n               '
+start tag: <div class="titlepage" >
+data: '\n                  '
+start tag: <div>
+data: '\n                     '
+start tag: <div>
+data: '\n                        '
+start tag: <h2 class="title" >
+start tag: <a name="republish" >
+end tag: </a>
+data: 'Republish '
+start tag: <i class="citetitle" >
+data: 'Dive Into '
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+end tag: </i>
+end tag: </h2>
+data: '\n                     '
+end tag: </div>
+data: '\n                  '
+end tag: </div>
+data: '\n                  '
+start tag: <div>
+end tag: </div>
+data: '\n               '
+end tag: </div>
+data: '\n               '
+start tag: <p>
+data: 'Want to mirror this web site? Publish this book on your corporate in'
+data: 'tranet? Distribute it on '
+start tag: <span class="acronym" >
+data: 'CD-ROM'
+end tag: </span>
+data: '? Feel free. This book is published under the '
+start tag: <span class="acronym" >
+data: 'GNU'
+end tag: </span>
+data: '\nFree Documentation License, which gives you enormous freedoms to m'
+data: "odify\nand redistribute it in all its forms. If you're familiar with"
+data: ' the '
+start tag: <span class="acronym" >
+data: 'GNU'
+end tag: </span>
+data: ' General Public License for software, you already understand these f'
+data: 'reedoms; the '
+start tag: <span class="acronym" >
+data: 'FDL'
+end tag: </span>
+data: ' is the '
+start tag: <span class="acronym" >
+data: 'GPL'
+end tag: </span>
+data: ' for books. You can '
+start tag: <a href="http://diveintopython.org/appendix/fdl.html" >
+data: 'read the license'
+end tag: </a>
+data: ' for all the details.\n               '
+end tag: </p>
+data: '\n            '
+end tag: </div>
+start tag: <br>
+start tag: <div class="Footer" >
+data: '\n               '
+start tag: <p class="copyright" >
+data: 'Copyright \xa9 2000, 2001, 2002, 2003, 2004 '
+start tag: <a href="mailto:mark@diveintopython.org" >
+data: 'Mark Pilgrim'
+end tag: </a>
+end tag: </p>
+data: '\n            '
+end tag: </div>
+data: '\n         '
+end tag: </div>
+data: '\n      '
+end tag: </div>
+data: '\n      '
+start tag: <div id="menu" >
+data: '\n         '
+start tag: <div class="appendix" >
+data: '\n            '
+start tag: <h2>
+data: 'Download '
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+end tag: </h2>
+data: '\n            '
+start tag: <div class="itemizedlist" >
+data: '\n               '
+start tag: <ul>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.activestate.com/Products/ActivePython/" >
+data: 'ActivePython'
+end tag: </a>
+data: ' (freeware, Windows)\n                  '
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.python.org/ftp/python/" >
+data: 'IDLE'
+end tag: </a>
+data: ' (open source, Windows)\n                  '
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.activestate.com/Products/Komodo/" >
+data: 'Komodo'
+end tag: </a>
+data: ' (commercial, Windows)\n                  '
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.python.org/ftp/python/2.3.3/rpms/" >
+data: 'RPMs'
+end tag: </a>
+data: ' (open source, Linux)\n                  '
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.python.org/ftp/python/" >
+data: 'Source code'
+end tag: </a>
+data: ' (all platforms)\n                  '
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.python.org/emacs/python-mode/" >
+start tag: <span class="application" >
+data: 'python-mode'
+end tag: </span>
+end tag: </a>
+data: ' for '
+start tag: <a href="http://www.gnu.org/software/emacs/" >
+start tag: <span class="application" >
+data: 'Emacs'
+end tag: </span>
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://homepages.cwi.nl/%7Ejack/macpython/download.html" >
+data: "Jack Jansen's binaries"
+end tag: </a>
+data: ' (open source, '
+start tag: <span class="abbrev" >
+data: 'Mac'
+end tag: </span>
+data: ' '
+start tag: <span class="acronym" >
+data: 'OS'
+end tag: </span>
+data: ', '
+start tag: <span class="abbrev" >
+data: 'Mac'
+end tag: </span>
+data: ' '
+start tag: <span class="acronym" >
+data: 'OS'
+end tag: </span>
+data: ' X)\n                  '
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://people.ucsc.edu/%7Ejacobkm/tkinter_osx_howto.html" >
+data: 'Fink'
+end tag: </a>
+data: ' (open source, '
+start tag: <span class="abbrev" >
+data: 'Mac'
+end tag: </span>
+data: ' '
+start tag: <span class="acronym" >
+data: 'OS'
+end tag: </span>
+data: ' X)\n                  '
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.jython.org/download.html" >
+data: 'Jython'
+end tag: </a>
+data: ' (open source, '
+start tag: <span class="application" >
+data: 'Java'
+end tag: </span>
+data: ')\n                  '
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.python.org/download/" >
+data: 'more platforms'
+end tag: </a>
+end tag: </li>
+data: '\n               '
+end tag: </ul>
+data: '\n            '
+end tag: </div>
+data: '\n         '
+end tag: </div>
+data: '\n         '
+start tag: <div class="appendix" >
+data: '\n            '
+start tag: <h2>
+data: 'Learn '
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+end tag: </h2>
+data: '\n            '
+start tag: <div class="itemizedlist" >
+data: '\n               '
+start tag: <ul>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.freenetpages.co.uk/hp/alan.gauld/" title="Python book for first-time programmers" >
+start tag: <i class="citetitle" >
+data: 'Learning to Program'
+end tag: </i>
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.ibiblio.org/obp/thinkCSpy/" title="Python book for computer science majors" >
+start tag: <i class="citetitle" >
+data: 'How to Think Like a Computer Scientist'
+end tag: </i>
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.mindview.net/Books/TIPython" title="advanced book on design patterns in Python" >
+start tag: <i class="citetitle" >
+data: 'Thinking in Python'
+end tag: </i>
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.python.org/doc/Intros.html" title="Python articles for beginners and experts" >
+data: 'Introductions'
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://python.oreilly.com/" title="books for sale, plus online articles" >
+data: "O'Reilly "
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+data: ' Center'
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.python.org/doc/NonEnglish.html" title="tutorials in over a dozen languages" >
+data: 'Non-English resources'
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://directory.google.com/Top/Computers/Programming/Languages/Python/FAQs,_Help,_and_Tutorials/" >
+data: 'more tutorials'
+end tag: </a>
+end tag: </li>
+data: '\n               '
+end tag: </ul>
+data: '\n            '
+end tag: </div>
+data: '\n         '
+end tag: </div>
+data: '\n         '
+start tag: <div class="appendix" >
+data: '\n            '
+start tag: <h2>
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+data: ' reference\n            '
+end tag: </h2>
+data: '\n            '
+start tag: <div class="itemizedlist" >
+data: '\n               '
+start tag: <ul>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.python.org/doc/current/" title="official Python documentation" >
+data: 'Official documentation'
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.brunningonline.net/simon/python/PQR.html" title="all essential Python syntax, on one page" >
+data: 'Quick Reference'
+end tag: </a>
+end tag: </li>
+data: '\n               '
+end tag: </ul>
+data: '\n            '
+end tag: </div>
+data: '\n         '
+end tag: </div>
+data: '\n         '
+start tag: <div class="appendix" >
+data: '\n            '
+start tag: <h2>
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+data: ' community\n            '
+end tag: </h2>
+data: '\n            '
+start tag: <div class="itemizedlist" >
+data: '\n               '
+start tag: <ul>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.python.org/" title="Python language home page" >
+data: 'Python.org'
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://groups.google.com/groups?group=comp.lang.python" title="lively discussion of all things Python" >
+data: 'comp.lang.python'
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://groups.google.com/groups?group=comp.lang.python.announce" title="announcements of new and updated software, books, and other resources" >
+data: 'c.l.p.announce'
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://mail.python.org/mailman/listinfo/tutor" title="mailing list for beginners" >
+data: 'Tutor'
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://mail.python.org/mailman/listinfo" title="email discussions of specific Python topics" >
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+data: ' mailing lists'
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://directory.google.com/Top/Computers/Programming/Languages/Python/" >
+data: 'more links'
+end tag: </a>
+end tag: </li>
+data: '\n               '
+end tag: </ul>
+data: '\n            '
+end tag: </div>
+data: '\n         '
+end tag: </div>
+data: '\n         '
+start tag: <div class="appendix" >
+data: '\n            '
+start tag: <h2>
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+data: ' code\n            '
+end tag: </h2>
+data: '\n            '
+start tag: <div class="itemizedlist" >
+data: '\n               '
+start tag: <ul>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.activestate.com/ASPN/Python/Cookbook/" title="growing archive of annotated code samples" >
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+data: ' Cookbook'
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.vex.net/parnassus/" title="central repository for 3rd party Python software" >
+data: 'Vaults of Parnassus'
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://www.faqts.com/knowledge-base/index.phtml/fid/199/" title="community-maintained knowledge base" >
+start tag: <span class="application" >
+data: 'Python'
+end tag: </span>
+data: '.faqts'
+end tag: </a>
+end tag: </li>
+data: '\n               '
+end tag: </ul>
+data: '\n            '
+end tag: </div>
+data: '\n         '
+end tag: </div>
+data: '\n         '
+start tag: <div class="appendix" >
+data: '\n            '
+start tag: <h2>
+data: 'Also by the author'
+end tag: </h2>
+data: '\n            '
+start tag: <div class="itemizedlist" >
+data: '\n               '
+start tag: <ul>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://diveintoaccessibility.org/" title="Free book for web designers" >
+data: 'Dive Into Accessibility'
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://diveintoosx.org/" title="Free repository for Macintosh system administrators" >
+data: 'Dive Into OS X'
+end tag: </a>
+end tag: </li>
+data: '\n                  '
+start tag: <li>
+start tag: <a href="http://diveintomark.org/" title="author's own Python projects, web services and other fun stuff" >
+data: 'dive into mark'
+end tag: </a>
+end tag: </li>
+data: '\n               '
+end tag: </ul>
+data: '\n            '
+end tag: </div>
+data: '\n         '
+end tag: </div>
+data: '\n      '
+end tag: </div>
+data: '\n   '
+end tag: </body>
+end tag: </html>
