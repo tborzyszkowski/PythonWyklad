@@ -1,10 +1,14 @@
 # slowniki
 
 print '----------'
-d = {'ab': 12, 33:{1:'q', 2:'w'}, 'bb':'cc'}
+d = {'ab': 12, 33: {1: 'q', 2: 'w'}, 'bb': 'cc'}
+
+print d.values()
+print d.keys()
 
 # typ slownika
 print type(d)
+print len(d[33])
 
 # operacje
 print d

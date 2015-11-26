@@ -9,7 +9,7 @@ vec = [2, 4, 6]
 print [3*x for x in vec]
 print [3*x for x in vec if x > 3]
 print [3*x for x in vec if x < 2]
-print [[x,x**2] for x in vec]
+print [[x, x**2] for x in vec]
 
 # blad ale jaki ?
 #print [x, x**2 for x in vec]
@@ -23,4 +23,3 @@ print [x+y for x in vec1 for y in vec2]
 print [vec1[i]*vec2[i] for i in range(len(vec1))]
 
 print [str(round(355/113.0, i)) for i in range(1,6)]
-

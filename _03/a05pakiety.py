@@ -1,5 +1,5 @@
 import sys
-sys.path.append('D:\users\Tomek\UG\Zajecia\Python\Wyk\_03')
+sys.path.append('D:\users\Tomek\UG\Zajecia\Python\Wyklad\src\_03')
 
 import pakiet
 dir(pakiet)
@@ -26,5 +26,5 @@ dir(pakiet.trzeci)
 
 
 # Jakie sa roznice w uzyciu komend:
-# import oraz from ... import do pakiet�w
+# import oraz from ... import do pakietow
 # na ich poszczegolych poziomach?

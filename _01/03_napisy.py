@@ -1,7 +1,7 @@
 # Napisy
 print '----------'
 # podobnie jak w C uzywamy \n \t \" ....
-print 'Ala\t i \n Ola'
+print r'Ala\t i \n Ola'
 print '\'Ala\' - powiedziala Ola'
 
 # laczenie napisow
@@ -20,7 +20,7 @@ print dir(string)
 
 # opis funkcji count
 print string.count.func_doc
-          
+
 # napisy formatowane
 
 a = 'Ala'
@@ -32,4 +32,3 @@ print "Cena = %.2f"  % 50.456789
 print "Cena = %+.3f" % 50.456789
 print '%(language)s has %(#)03d quote types.' % \
           {'language': "Python", "#": 2}
-

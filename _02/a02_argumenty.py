@@ -19,7 +19,7 @@ def f(a=i):
     print 'a = ', a
 
 i = 2
-f()
+print "f():", f()
 # Jaki bedzie wynik powyzszego wywolania
 
 ##########################################

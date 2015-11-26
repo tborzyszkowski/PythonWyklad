@@ -6,7 +6,7 @@ class A:
     def test(self):
         return self.m()
     def testSelf(self):
-        return self.test()    
+        return self.test()
 
 class B(A):
     def m(self):

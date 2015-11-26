@@ -23,4 +23,3 @@ print [x+y for x in vec1 for y in vec2]
 print [vec1[i]*vec2[i] for i in range(len(vec1))]
 
 print [str(round(355/113.0, i)) for i in range(1,6)]
-

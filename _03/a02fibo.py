@@ -1,6 +1,7 @@
 # liczby Fibonacciego
 
-def fib(n): 
+
+def fib(n):
     """Wypisuje liczby Fibonacciego mniejsze niz n
     """
     a, b = 0, 1
@@ -19,9 +20,18 @@ def fib2(n):
         a, b = b, a+b
     return result
 
+
+def silnia(n):
+    if n == 0:
+        return 1
+    elif n > 0:
+        return n * silnia(n-1)
+    else:
+        return (-1)*silnia((-1)*n)
+
+
 def a(n):
     return n
 
 def b(n):
     return a(n)
-        

@@ -2,7 +2,7 @@
 
 print '----------'
 
-l = ['a','b','c','d','e','f','g']
+l = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 print l
 print l[0]
 print l[-1]

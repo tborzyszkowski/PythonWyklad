@@ -1,11 +1,12 @@
 print __name__
-#print type(__name__)
+# print type(__name__)
 
-a=13
+a = 13
+
 
 def nazwa():
     print __name__
-    #a = 1
+    a = 1
     print "a = ", a
 
 
@@ -15,4 +16,4 @@ def nazwa():
 if __name__ == "__main__":
     print 'aqq'
     nazwa()
-
+    print 'a = ', a

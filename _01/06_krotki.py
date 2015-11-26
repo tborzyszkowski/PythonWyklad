@@ -14,7 +14,7 @@ print '------operacje ----------'
 print k.index(1)
 print k.count('b')
 print len(k)
-k[-1][1]='zzz'
+k[-1][1] ='zzz'
 print k
 print 'a' in k, 'z' in k
 
