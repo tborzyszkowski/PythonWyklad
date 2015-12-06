@@ -24,7 +24,7 @@ class BaseHTMLProcessor(SGMLParser):
 		# extend (called by SGMLParser.__init__)
 		self.pieces = []
 		SGMLParser.reset(self)
-		
+
 	def unknown_starttag(self, tag, attrs):
 		# called for each start tag
 		# attrs is a list of (attr, value) tuples
@@ -39,7 +39,7 @@ class BaseHTMLProcessor(SGMLParser):
 		# to ensure that it will pass through this parser unaltered (in handle_comment).
 		strattrs = "".join([' %s="%s"' % (key, value) for key, value in attrs])
 		self.pieces.append("<%(tag)s%(strattrs)s>" % locals())
-		
+
 	def unknown_endtag(self, tag):
 		# called for each end tag, e.g. for </pre>, tag will be "pre"
 		# Reconstruct the original end tag.
@@ -49,7 +49,7 @@ class BaseHTMLProcessor(SGMLParser):
 		# called for each character reference, e.g. for "&#160;", ref will be "160"
 		# Reconstruct the original character reference.
 		self.pieces.append("&#%(ref)s;" % locals())
-		
+
 	def handle_entityref(self, ref):
 		# called for each entity reference, e.g. for "&copy;", ref will be "copy"
 		# Reconstruct the original entity reference.
@@ -63,7 +63,7 @@ class BaseHTMLProcessor(SGMLParser):
 		# not containing any character or entity references
 		# Store the original text verbatim.
 		self.pieces.append(text)
-		
+
 	def handle_comment(self, text):
 		# called for each HTML comment, e.g. <!-- insert Javascript code here -->
 		# Reconstruct the original comment.
@@ -71,7 +71,7 @@ class BaseHTMLProcessor(SGMLParser):
 		# code (like Javascript) within comments so it can pass through this
 		# processor undisturbed; see comments in unknown_starttag for details.
 		self.pieces.append("<!--%(text)s-->" % locals())
-		
+
 	def handle_pi(self, text):
 		# called for each processing instruction, e.g. <?instruction>
 		# Reconstruct original processing instruction.
@@ -83,7 +83,7 @@ class BaseHTMLProcessor(SGMLParser):
 		#	 "http://www.w3.org/TR/html4/loose.dtd">
 		# Reconstruct original DOCTYPE
 		self.pieces.append("<!%(text)s>" % locals())
-		
+
 	def output(self):
 		"""Return processed HTML as a single string"""
 		return "".join(self.pieces)

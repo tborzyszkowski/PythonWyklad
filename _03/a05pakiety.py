@@ -1,5 +1,5 @@
 import sys
-sys.path.append('D:\users\Tomek\UG\Zajecia\Python\Wyklad\src\_03')
+sys.path.append('D:\users\Tomek\UG\Zajecia\Python\Wyklad\PythonWyklad\_03')
 
 import pakiet
 dir(pakiet)

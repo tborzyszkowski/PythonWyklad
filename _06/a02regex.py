@@ -3,14 +3,14 @@ import re
 print re.compile("a").match("ba", 1).group()
 print re.compile("a").match("ba", 1).span()
 
-#re.compile("^a").search("ba", 1).group()         
-#re.compile("^a").search("ba", 1).span()         
+#re.compile("^a").search("ba", 1).group()
+#re.compile("^a").search("ba", 1).span()
 
-#re.compile("^a").search("\na", 1).group()        
-#re.compile("^a").search("\na", 1).span()        
+#re.compile("^a").search("\na", 1).group()
+#re.compile("^a").search("\na", 1).span()
 
-print re.compile("^a", re.M).search("\na", 1).group()  
-print re.compile("^a", re.M).search("\na", 1).span()  
+print re.compile("^a", re.M).search("\na", 1).group()
+print re.compile("^a", re.M).search("\na", 1).span()
 
 #re.compile("^a", re.M).search("ba", 1).group()
 #re.compile("^a", re.M).search("ba", 1).span()
@@ -39,5 +39,3 @@ print re.match('super', 'insuperable')
 
 print re.search('super', 'superstition').span()
 print re.search('super', 'insuperable').span()
-
-    

@@ -1,5 +1,6 @@
 # wywolania metod wirtualnych
 
+
 class A:
     def m(self):
         return 1
