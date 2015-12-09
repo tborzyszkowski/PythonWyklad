@@ -7,8 +7,8 @@ from scipy.stats.mstats import mquantiles
 ###################################################
 # Percent Point Function (PPF) for distribution
 # (Inverse of CDF: Cumulative Distribution Function
-
-print stats.norm.ppf( [.01, .05,.5, .95, .99], 0, 1)
+mu, sigma = 0, 1 # mean and standard deviation
+print stats.norm.ppf( [.01, .05,.5, .95, .99], mu, sigma)
 
 ######################################
 # Zadania
@@ -21,7 +21,7 @@ print stats.norm.ppf( [.01, .05,.5, .95, .99], 0, 1)
 ###################################################
 # Empirical Percent Point Function (PPF) for distribution
 
-mu, sigma = 0, 1 # mean and standard deviation
+
 # s = np.array([6., 47., 49., 15., 42., 41., 7., 39., 43., 40., 36.])
 s = np.random.normal(mu, sigma, 1000)
 print mquantiles(s ,[.01, .05,.5, .95, .99])
