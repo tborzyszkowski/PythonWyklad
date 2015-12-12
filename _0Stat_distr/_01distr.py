@@ -40,3 +40,9 @@ plt.show()
 #
 # 2. Jak w zadaniu 1. z tym, że dla skośniego rozkładu t_Studenta
 #    Wygeneruj probki w oparciu o: metodę rsv klasy SkewStudent (plik SkewStudent.py)
+
+from SkewStudent import SkewStudent
+
+st = SkewStudent(eta=13., lam=-.5)
+sample = st.rvs(size=10)
+print sample
