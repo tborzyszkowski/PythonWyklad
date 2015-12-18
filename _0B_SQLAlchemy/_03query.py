@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from _01mapping import *
+from user_alch import *
 from sqlalchemy.orm import sessionmaker
 
 Session = sessionmaker(bind = engine)
@@ -26,3 +26,7 @@ for row in session.query(User, User.name).all():
 # Zobacz opratory filtrowania:
 # http://docs.sqlalchemy.org/en/rel_1_0/orm/tutorial.html#common-filter-operators
 #
+
+#################################
+# Zadanie
+# Dla bazy wycen społki Lotos wykonaj zapytanie wypisujące wybrane kolumny

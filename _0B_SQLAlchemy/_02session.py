@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from _01mapping import *
+from user_alch import *
 from sqlalchemy.orm import sessionmaker
 
 
@@ -9,7 +9,7 @@ session = Session()
 print "\nSession class:\n", Session
 #print "\nsession object:\n",dir(session)
 
-# ed_user = User(name='ed', fullname='Ed Jones', password='edspassword')
+ed_user = User(name='ed', fullname='Ed Jones', password='edspassword')
 session.add(ed_user)
 print "ed_user.id:", ed_user.id
 
@@ -54,3 +54,9 @@ print "Query result:", qr
 # Zobacz stany obiektwow w sesji (Transient, Pending, Persistent, Detached):
 #    http://docs.sqlalchemy.org/en/rel_1_0/orm/session_state_management.html#session-object-states
 #
+
+#################################
+# Zadanie
+# Na podstawie danych zgromadzinych w pliku PLLOTOS00025.csv
+# zbubuj tabelę zawierającą dane dotyczące wycen społek giełdowych.
+# Do tabeli tej dodaj wiersze zawierające wyceny z pliku PLLOTOS00025.csv
