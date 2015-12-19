@@ -52,6 +52,11 @@ if __name__ == "__main__":
     parse_file(path)
     print "#"*20
     dane = xls_to_list(path, [1]+range(5,13))
+
+    print "##########################"
+    for row in dane:
+        print row
+
     print "Kursy otwarcia:"
     kurs_otwarcia_lst =[]
     for row in dane[1:]:
