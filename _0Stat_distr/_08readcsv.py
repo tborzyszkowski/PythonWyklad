@@ -16,6 +16,11 @@ def csv_to_list(path, col_list):
 if __name__ == "__main__":
     path = '_0Stat_distr\PLLOTOS00025.csv'
     dane = csv_to_list(path, [1]+range(5,13))
+
+    print "##########################"
+    for row in dane:
+        print row
+
     kurs_otwarcia_lst =[]
     for row in dane[1:]:
         kurs_otwarcia_lst.append( float(row[1].replace(',','.')) )
