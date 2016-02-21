@@ -5,8 +5,8 @@ Created on 2010-02-28
 '''
 from math import sqrt
 a = 1
-b = -5
-c = 6
+b = 0
+c = 1
 d = b * b -4 * a * c
 
 # wynik = ((a == 0) and [
