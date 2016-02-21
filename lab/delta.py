@@ -1,13 +1,11 @@
 '''
-Created on 2010-02-28
-
-@author: tomek
+a * x**2 + b * x + c = 0
 '''
 from math import sqrt
 a = 1
 b = 0
 c = 1
-d = b * b -4 * a * c
+d = b * b - 4 * a * c
 
 # wynik = ((a == 0) and [
 #                         ((b == 0) and [ ((c == 0) and ['Dozo'] or ['Brak'])[0]
