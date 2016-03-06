@@ -29,18 +29,18 @@ def euklides(a, b):
             b -= a
     return a
 
-#print euklides(160, 120)
+# print euklides(160, 120)
 
 
 def euklides2(*args):
     return reduce(euklides, args)
 
-lista =[16, 4, 8]
-print euklides2(9,6,12,99,30)
+lista = [16, 4, 8]
+print euklides2(9, 6, 12, 99, 30)
 
-#print reduce(lambda x,y: x+y,[1,2,3])
+# print reduce(lambda x,y: x+y,[1,2,3])
 
-#print map(lambda x: x+1, [1])
+# print map(lambda x: x+1, [1])
 
 big1 = random.getrandbits(256)
 big2 = random.getrandbits(256)
@@ -49,7 +49,7 @@ snd = 1000010000L
 big3 = filter(is_prime, range(fst, snd))
 print len(big3)
 
-prime =0
+prime = 0
 if big3:
     prime = big3[0]
 else:
@@ -57,6 +57,6 @@ else:
 print big1, big2, prime
 
 start = time.time()
-print euklides(prime * prime, prime * prime* prime)
+print euklides(prime * prime, prime * prime * prime)
 stop = time.time()
 print 'Time:', stop - start
