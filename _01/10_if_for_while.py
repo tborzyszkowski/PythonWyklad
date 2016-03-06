@@ -4,7 +4,7 @@
 x = int(raw_input('Podaj liczbe od 1 do 10: '))
 if x < 0:
     print 'Tylko tyle?'
-elif 0 <= x <=10:
+elif 0 <= x <= 10:
     print 'OK'
 else:
     print 'Za duzo'

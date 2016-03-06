@@ -1,6 +1,6 @@
 # krotki
 
-k = ('a', 1, 'qqq', {1:'x', 2:'y'})
+k = ('a', 1, 'qqq', {1: 'x', 2: 'y'})
 print k
 
 print k[0]
@@ -9,12 +9,12 @@ print k[1:-1]
 
 
 print '------operacje ----------'
-#k.append('www')
-#k.remove('qq')
+# k.append('www')
+# k.remove('qq')
 print k.index(1)
 print k.count('b')
 print len(k)
-k[-1][1] ='zzz'
+k[-1][1] = 'zzz'
 print k
 print 'a' in k, 'z' in k
 

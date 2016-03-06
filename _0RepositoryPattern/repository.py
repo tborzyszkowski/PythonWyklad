@@ -213,9 +213,9 @@ if __name__ == '__main__':
 
     print InvoiceRepository().getById(1)
 
-    try:
-        with InvoiceRepository() as invoice_repository:
-            invoice_repository.delete( Invoice(id = 1) )
-            invoice_repository.complete()
-    except RepositoryException as e:
-        print(e)
+    # try:
+    #     with InvoiceRepository() as invoice_repository:
+    #         invoice_repository.delete( Invoice(id = 1) )
+    #         invoice_repository.complete()
+    # except RepositoryException as e:
+    #     print(e)

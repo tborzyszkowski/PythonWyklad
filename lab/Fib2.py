@@ -46,7 +46,7 @@ def multPow2(a, n):
 
 
 a = [[1, 1], [1, 0]]
-n = 100000
+n = 10
 
 lista_macierzy = []
 

@@ -14,5 +14,5 @@ print (1, 2, 3)	< [1, 2, 3]
 print (1, 2, 3)	> [1, 2, 3]
 print 0 == 0L == 0.0 == 0j
 print 'Ala' > ['A', 'l', 'a']
-print 0 > [0] # wynik tego typu porownan moze sie zmieniac z wersji na wersje
+print 0 > [0]  # wynik tego typu porownan moze sie zmieniac z wersji na wersje
 #               parz Reference manual

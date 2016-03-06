@@ -2,7 +2,7 @@
 
 print '----------'
 # przyklad z wykladu
-print [ z ** 2 for z in range(10) if z % 2 == 0 ]
+print [z ** 2 for z in range(10) if z % 2 == 0]
 
 # prostszy przyklad
 vec = [2, 4, 6]
@@ -18,7 +18,7 @@ print [(x, x**2) for x in vec]
 # bardziej zlozona skaldnia
 vec1 = [2, 4, 6]
 vec2 = [4, 3, -9]
-print [x*y for x in vec1 for y in vec2]
+print [x*y for x in vec1 for y in vec2] 
 print [x+y for x in vec1 for y in vec2]
 print [vec1[i]*vec2[i] for i in range(len(vec1))]
 
