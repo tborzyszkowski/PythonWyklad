@@ -2,15 +2,16 @@ import random
 import time
 import math
 
+
 def is_prime(num):
-    for j in range(2,int(math.sqrt(num))+1):
+    for j in range(2, int(math.sqrt(num)) + 1):
         if (num % j) == 0:
             return False
     return True
 
 # a = int(raw_input('a = '))
 # b = int(raw_input('b = '))
-# 
+#
 # while a != b:
 #     if a > b:
 #         a -= b
@@ -18,7 +19,7 @@ def is_prime(num):
 #         b -= a
 # else:
 #     print 'gcd = ', a
-    
+
 
 def euklides(a, b):
     while a != b:
