@@ -22,6 +22,7 @@ def najwiekszaPotega2(n):
             i += 1
     return i-1
 
+
 def listaPoteg2(n):
     if n == 1:
         return [0]
