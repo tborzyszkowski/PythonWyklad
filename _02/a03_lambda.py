@@ -5,8 +5,9 @@
 ############################
 # proste przyklady
 f = (lambda x: x + 1)
-print f(1)
+print f(1), (lambda x: x + 1)(3)
 # dziala jak
+
 
 def f(x):
     return x + 1
@@ -17,9 +18,11 @@ def f(x):
 # niestety lambda wyrazenia w Pythonie nie sa w palni zgodne z
 # teoria lambda-rachunku
 # Sprobuj
-#(lambda x, y: y)(lambda y: y)
+# (lambda x, y: y)(lambda y: y)
 # oraz
-(lambda x, y: y)((lambda y: y), 1)
+# print (lambda x, y: y)((lambda y: y), 1)
+print (lambda x, y: x)((lambda y: y), 1)(5)
+
 
 # Jak widac lista parametrow odpowiada raczej krotce parametrow,
 # niz wielokrotnemu zastosowaniu
@@ -31,11 +34,11 @@ def f(x):
 
 tt = (lambda x: (lambda y: x))
 ff = (lambda x: (lambda y: y))
-jesli = (lambda b: (lambda x: (lambda y: (b (x) )(y))))
+jesli = (lambda b: (lambda x: (lambda y: (b(x))(y))))
 
 # jaka jest wartosc wyrazen
-((jesli (tt))(1))(2)
-((jesli (ff))(1))(2)
+print ((jesli(tt))(1))(2)
+print ((jesli(ff))(1))(2)
 
 # Zadanie z wykladu
 #   Sprobowac wyrazic w Pythonowym lambda-rachunku:
@@ -46,37 +49,47 @@ jesli = (lambda b: (lambda x: (lambda y: (b (x) )(y))))
 # narzedzia programowania funkcyjnego
 #
 # filter(f, lita) = lista elementow e takich, ze f(e)=true
+
+
 def fff(x):
     return x % 2 != 0 and x % 3 != 0
 
-filter(fff, range(2, 25))
+print filter(fff, range(2, 25))
 
 # map(f, lista) = f(lista)
+
+
 def cube(x):
     return x*x*x
 
-map(cube, range(1, 11))
+print map(cube, range(1, 11))
 
 # funkcja moze miec wiecej niz jeden argument
 seq = range(8)
+
+
 def add(x, y):
     return x+y
 
-map(add, seq, seq)
+print map(add, seq, seq)
+print map((lambda x, y: x+y), seq, seq)
 
 # reduce(f, lista) = wylicza f(x,y) na kolejnych elementach listy 'sumujac ja'
-def add(x,y):
+
+
+def add(x, y):
     return x+y
 
-reduce(add, range(1, 11))
+print reduce(add, range(1, 11))
 
 # przyklad sumowania list
+
+
 def sum(seq):
-    def add(x,y):
+    def add(x, y):
         return x+y
     return reduce(add, seq, 0)
- 
+
 sum(range(1, 11))
 
 sum([])
-
