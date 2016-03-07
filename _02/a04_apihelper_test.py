@@ -43,7 +43,7 @@ str(None)
 ##############################
 # Funkcja: dir
 
-li=[]
+li = []
 dir(li)
 
 d = {}
@@ -92,4 +92,3 @@ print "\n".join(s.split())
 from __builtin__ import *
 
 #info(__builtin__, 20)
-
