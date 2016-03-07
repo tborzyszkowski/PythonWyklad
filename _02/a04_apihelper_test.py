@@ -52,6 +52,7 @@ dir(d)
 dir(apihelper)
 
 # zawartosc obiektu
+
 ##############################
 # Funkcja: callable
 
