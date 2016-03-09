@@ -78,7 +78,7 @@ pp('xxx', 'yyy', z='zzz', v='vvv')
 def printf(format, *args):
     print format % args
 
-# Sprobuj
+# Sprobuj 
 printf('%s - %.3f', 'As', 123.45)
 
 # operator * moze byc takze uzywany do rozpakowywania argumentow
