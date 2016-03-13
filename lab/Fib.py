@@ -1,18 +1,37 @@
-Liczba = 9
+import time
+from Fib2 import fib3
 
-if Liczba == 0:
-    print 0
-elif Liczba == 1:
-    print 1
-else:
-    f1 = 0L
-    f2 = 1L
-    n = Liczba - 2
-    while n >= 0:
-        f2, f1, n = f1 + f2, f2, n-1
+
+def fib2(n):
+    f1 = 0
+    f2 = 1
+    k = n - 2
+    if n < 2:
+        f2 = n
     else:
-        print f2
-        print len(str(f2))
+        while k >= 0:
+            f2, f1, k = f1 + f2, f2, k-1
+    return f2
 
-for (x, y) in [(1, 2), (3, 4)]:
-    print y
+
+def fib(n):
+    if n < 2:
+        return n
+    else:
+        return fib(n-1) + fib(n-2)
+
+n = 10
+
+start_time = time.clock()
+print fib(n)
+print "Time fib: ", time.clock() - start_time, "sec"
+
+start_time = time.clock()
+print fib2(n)
+print "Time fib2:", time.clock() - start_time, "sec"
+
+start_time = time.clock()
+print fib3(n)
+print "Time fib2:", time.clock() - start_time, "sec"
+# for (x, y) in [(1, 2), (3, 4)]:
+#     print y

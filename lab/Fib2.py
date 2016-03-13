@@ -45,12 +45,11 @@ def multPow2(a, n):
     return a
 
 
-a = [[1, 1], [1, 0]]
-n = 10
+def fib3(n):
+    a = [[1, 1], [1, 0]]
+    lista_macierzy = []
 
-lista_macierzy = []
+    for p in listaPoteg2(n):
+        lista_macierzy.append(multPow2(a, p))
 
-for p in listaPoteg2(n):
-    lista_macierzy.append(multPow2(a, p))
-
-print reduce(mult, lista_macierzy)
+    return reduce(mult, lista_macierzy)[0][1]
