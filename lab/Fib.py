@@ -18,13 +18,13 @@ def fib1(n):
     if n < 2:
         return n
     else:
-        return fib(n-1) + fib(n-2)
+        return fib1(n-1) + fib1(n-2)
 
-n = 1000000
+n = 25
 
-# start_time = time.clock()
-# fib1(n)
-# print "Time fib1:", time.clock() - start_time, "sec"
+start_time = time.clock()
+fib1(n)
+print "Time fib1:", time.clock() - start_time, "sec"
 
 start_time = time.clock()
 fib2(n)
