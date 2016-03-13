@@ -1,4 +1,4 @@
-lista = [1.1, 2, 3, 4, 5]
+lista = [1.01, 2, 3, 4, 5]
 
 print map((lambda x: x*x), lista)
 
