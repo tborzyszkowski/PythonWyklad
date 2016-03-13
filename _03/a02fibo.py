@@ -33,5 +33,6 @@ def silnia(n):
 def a(n):
     return n
 
+
 def b(n):
     return a(n)

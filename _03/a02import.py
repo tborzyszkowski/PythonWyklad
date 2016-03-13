@@ -1,6 +1,6 @@
 import a02fibo
 
-a02fibo.fib(100000)
+print a02fibo.fib(100000)
 print
 print a02fibo.fib2(100000)
 
@@ -8,12 +8,11 @@ print "-"*20
 
 from a02fibo import fib, fib2, silnia
 
-fib(2000)
+print fib(2000)
 print
 print fib2(2000)
 print silnia(4)
 print silnia(-4)
-
 
 print "="*20
 
@@ -28,5 +27,7 @@ from a01nazwa import a
 
 print a
 a = 3
+# from a02fibo import a
+
 print a
 print a01nazwa.a

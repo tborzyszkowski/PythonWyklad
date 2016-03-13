@@ -1,5 +1,5 @@
 print __name__
-# print type(__name__)
+print type(__name__)
 
 a = 13
 

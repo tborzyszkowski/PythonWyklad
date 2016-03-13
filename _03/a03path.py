@@ -12,6 +12,9 @@ print sys.path
 import pierwszy
 import drugi
 
+dir(pierwszy)
+dir(drugi)
+
 
 # Zadanie:
 #  Zbuduj program skladajacy sie z dwoch katalogow,
