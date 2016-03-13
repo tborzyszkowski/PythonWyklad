@@ -14,24 +14,24 @@ def fib2(n):
     return f2
 
 
-def fib(n):
+def fib1(n):
     if n < 2:
         return n
     else:
         return fib(n-1) + fib(n-2)
 
-n = 10
+n = 1000000
+
+# start_time = time.clock()
+# fib1(n)
+# print "Time fib1:", time.clock() - start_time, "sec"
 
 start_time = time.clock()
-print fib(n)
-print "Time fib: ", time.clock() - start_time, "sec"
-
-start_time = time.clock()
-print fib2(n)
+fib2(n)
 print "Time fib2:", time.clock() - start_time, "sec"
 
 start_time = time.clock()
-print fib3(n)
-print "Time fib2:", time.clock() - start_time, "sec"
+fib3(n)
+print "Time fib3:", time.clock() - start_time, "sec"
 # for (x, y) in [(1, 2), (3, 4)]:
 #     print y
