@@ -1,6 +1,7 @@
 import time
 from Fib2 import fib3
-
+import numpy as np
+import matplotlib.pylab as plt
 
 def fib2(n):
     f1 = 0
@@ -20,18 +21,23 @@ def fib1(n):
     else:
         return fib1(n-1) + fib1(n-2)
 
-n = 25
 
-start_time = time.clock()
-fib1(n)
-print "Time fib1:", time.clock() - start_time, "sec"
+fibs = [fib1, fib2, fib3]
+results = {f.__name__: [] for f in fibs}
+print results
 
-start_time = time.clock()
-fib2(n)
-print "Time fib2:", time.clock() - start_time, "sec"
+for n in range(10, 30, 1):
+    for f in fibs:
+        start_time = time.clock()
+        f(n)
+        results[f.__name__].append(time.clock() - start_time)
+    print "n =", n
 
-start_time = time.clock()
-fib3(n)
-print "Time fib3:", time.clock() - start_time, "sec"
+print results
+
+# plt.plot( range(10, 30, 1), results["fib1"], linestyle='--', color='r')
+plt.plot( range(10, 30, 1), results["fib2"], linestyle='-', color='g')
+plt.plot( range(10, 30, 1), results["fib3"], linestyle=':', color='b')
+plt.show()
 # for (x, y) in [(1, 2), (3, 4)]:
 #     print y
