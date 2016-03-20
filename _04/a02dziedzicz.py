@@ -22,6 +22,7 @@ class B(A):
 
 
 # teraz wywolamy
-B().test()
+ 
 a = A()
-print a.m()  # A.m(a)
+print a.m()
+a.test()
