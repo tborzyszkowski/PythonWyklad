@@ -29,19 +29,24 @@ class Point:
         d1 = self.dlug()
         d2 = other.dlug()
         if d1 > d2:
-            return -1
+            return 1
         elif d1 == d2:
             return 0
         else:
-            return 1
+            return -1
 
 
-# p1 = Point(12,13)
-# p2 = Point(21,31)
-# l = [ p1, p2 ]
-# l.sort()
-# l.sort(reverse=True)
-# print l
+p1 = Point(12, 13)
+p2 = Point(21, 31)
+print p1["x"], p1["y"], p1["z"]
+p3 = Point(1, 2)
+p4 = Point(2, 1)
+l = [p1, p2, p4, p3]
+# print dir(l)
+l.sort()
+print l
+l.sort(reverse=True)
+print l
 
 
 class Odcinek:

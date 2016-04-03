@@ -29,11 +29,11 @@ class B2:
         return self.__class__.i
 
 
-class C(B1, B2):
+class C(B2, B1):
 
     def __init__(self):
-        B2.__init__(self)
         B1.__init__(self)
+        B2.__init__(self)
 
     def g(self):
         return self.f()

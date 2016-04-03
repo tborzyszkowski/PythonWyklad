@@ -2,7 +2,7 @@
 
 class A:
     i = 1
-    def __init__(self, a = 10):
+    def __init__(self, a=10):
         self.a = a
     def f(self):
         return self.a
@@ -10,7 +10,7 @@ class A:
         return self.__class__.i
     def h(self):
         return self.f() + self.getI()
-        
+
 class B1(A):
     j = -1
     def __init__(self):
@@ -41,4 +41,3 @@ class C(B1, B2):
 c = C()
 print 'a = ', c.a, ' b = ', c.b, ' i = ', c.__class__.i, ' j = ', c.__class__.j
 print 'c.f() = ', c.f(), ' c.getI() = ', c.getI(), 'c.h() = ', c.h()
-

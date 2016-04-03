@@ -1,7 +1,7 @@
 class A:
     def m(self):
         return 1
-
+    
     def test(self):
         return self.m()
 
