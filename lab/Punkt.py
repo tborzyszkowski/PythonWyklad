@@ -24,7 +24,10 @@ class Punkt:
 p = Punkt()
 # print p
 # print p.przesun(Wektor(1,1))
-print p.odleglosc(p.przesun(Wektor(1, 1)))
+# print p.odleglosc(p.przesun(Wektor(1, 1)))
+p1 = Punkt(1, 1)
+print p.odleglosc(p1)
+print p1.przesun(Wektor(2, 2))
 
 
 class Prostokat:
