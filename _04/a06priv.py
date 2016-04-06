@@ -20,7 +20,7 @@ class Prywatna:
         self.a = 10
         self.__b = 17
 
-    def f(self):
+    def __f(self):
         print self.a, '  ', self.__b
         return 0
 
@@ -28,4 +28,5 @@ p = Prywatna()
 print p.a
 # print p.__b
 print p._Prywatna__b
-print p.f()
+# print p.f()
+print "--", dir(p)
