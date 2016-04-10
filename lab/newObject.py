@@ -54,4 +54,5 @@ class FooNew21(FooNew2, FooNew1):
 
 print FooNew12().i, FooNew21().i
 
-#
+# Poczytaj rowniez:
+# http://makina-corpus.com/blog/metier/2014/python-tutorial-understanding-python-mro-class-search-path
