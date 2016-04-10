@@ -25,10 +25,9 @@ print s
 print 'Read 1 : ', f.tell()
 print f.read()
 print 'Read 2 : ', f.tell()
-f.seek(-15,2)
+f.seek(-15, 2)
 print f.read(3)
 print 'Seek 2 : ', f.tell()
 print f.read()
 
 f.close()
-
