@@ -8,12 +8,14 @@ class Literkowanie:
     def getLiterka(self):
         pass
 
+    # def printWzor(self, n=5):
+    #     lit = self.getLiterka()
+    #     if lit:
+    #         return (""+lit) * n
+    #     else:
+    #         return None
     def printWzor(self, n=5):
-        lit = self.getLiterka()
-        if lit:
-            return (""+lit) * n
-        else:
-            return None
+        return (""+self.getLiterka()) * n
 
 
 class LiterkowanieA(Literkowanie):
