@@ -1,4 +1,4 @@
-from abc import *
+from abc import ABCMeta, abstractmethod
 
 
 class Literkowanie:
@@ -32,5 +32,13 @@ lA = LiterkowanieA()
 print lA.printWzor(n=10)
 lB = LiterkowanieB()
 print lB.printWzor()
-l = Literkowanie()
-print l.printWzor()
+# l = Literkowanie()
+# print l.printWzor()
+
+
+class LiterkowanieWrong(Literkowanie):
+    def getString(self):
+        return "Ala ma kota"
+
+l = LiterkowanieWrong()
+print l.getString()
