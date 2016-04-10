@@ -15,7 +15,7 @@ class Literkowanie:
     #     else:
     #         return None
     def printWzor(self, n=5):
-        return self.getLiterka() * n
+        return ("" + str(self.getLiterka())) * n
 
 
 class LiterkowanieA(Literkowanie):
