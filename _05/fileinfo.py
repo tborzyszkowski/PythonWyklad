@@ -38,7 +38,8 @@ class FileInfo(UserDict):
     def __init__(self, filename=None):
         UserDict.__init__(self)
         self["name"] = filename
-    
+
+
 class MP3FileInfo(FileInfo):
     "store ID3v1.0 MP3 tags"
     tagDataMap = {"title"   : (  3,  33, stripnulls),
@@ -47,7 +48,7 @@ class MP3FileInfo(FileInfo):
                   "year"    : ( 93,  97, stripnulls),
                   "comment" : ( 97, 126, stripnulls),
                   "genre"   : (127, 128, ord)}
-    
+
     def __parse(self, filename):
         "parse ID3v1.0 tags from MP3 file"
         self.clear()
@@ -81,6 +82,6 @@ def listDirectory(directory, fileExtList):
     return [getFileInfoClass(f)(f) for f in fileList]
 
 if __name__ == "__main__":
-    for info in listDirectory("/music/_singles/", [".mp3"]):
+    for info in listDirectory(r"D:\W8\ffff\muzyka\empire of the sun-1987-williams", [".mp3"]):
         print "\n".join(["%s=%s" % (k, v) for k, v in info.items()])
         print

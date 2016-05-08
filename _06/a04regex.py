@@ -1,34 +1,36 @@
 import re
 
-p = re.compile(r'\W+')
-print p.split('This is a test, short and sweet, of split().')
+# p = re.compile(r'\W+')
+# print p.split('This is a test, short and sweet, of split().')
 
-print p.split('This is a test, short and sweet, of split().', 3)
+# print p.split('This is a test, short and sweet, of split().', 3)
+#
+# print p.split('This... is a test.')
+# p2 = re.compile(r'(\W+)')
+# print p2.split('This... is a test.')
+#
+# print re.split('[\W]+', 'Words, words, words.')
+# print re.split('([\W]+)', 'Words, words, words.')
+# print re.split('[\W]+', 'Words, words, words.', 1)
+#
+# # ########
+#
+# p = re.compile('(blue|white|red)')
+# print p.sub('colour', 'blue socks and red shoes')
+# print p.sub('colour', 'blue socks and red shoes', count=1)
+# print p.subn('colour', 'blue socks and red shoes')
+# print p.subn('colour', 'no colours at all')[1]
+#
+# p = re.compile('x*')
+# print p.sub('-', 'abxd')
+#
+# # Argumentem sub() moze byc funkcja,
+# # ktora bedzie wywolana na kazdym dopasowaniu wzorca
 
-print p.split('This... is a test.')
-p2 = re.compile(r'(\W+)')
-print p2.split('This... is a test.')
 
-print re.split('[\W]+', 'Words, words, words.')
-print re.split('([\W]+)', 'Words, words, words.')
-print re.split('[\W]+', 'Words, words, words.', 1)
-
-# ########
-
-p = re.compile( '(blue|white|red)')
-print p.sub( 'colour', 'blue socks and red shoes')
-print p.sub( 'colour', 'blue socks and red shoes', count=1)
-print p.subn( 'colour', 'blue socks and red shoes')
-print p.subn( 'colour', 'no colours at all')
-
-p = re.compile('x*')
-print p.sub('-', 'abxd')
-
-# Argumentem sub() moze byc funkcja,
-# ktora bedzie wywolana na kazdym dopasowaniu wzorca
-def hexrepl( match ):
+def hexrepl(match):
     "Return the hex string for a decimal number"
-    value = int( match.group() )
+    value = int(match.group())
     return hex(value)
 
 p = re.compile(r'\d+')
