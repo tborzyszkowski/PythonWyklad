@@ -19,7 +19,7 @@ s = np.random.normal(mu, sigma, 1000)
 print "Mean: ", abs(mu - np.mean(s)) < 0.01, np.mean(s)
 print "Var:  ", abs(sigma - np.std(s, ddof=1)) < 0.01, np.std(s, ddof=1)
 
-count, bins, ignored = plt.hist(s, 50, normed=True)
+count, bins, ignored = plt.hist(s, 100, normed=True)
 # print "Count:", count
 # print "Bins: ", bins
 plt.plot(bins, 1/(sigma * np.sqrt(2 * np.pi)) *

@@ -19,6 +19,7 @@ __license__ = "Python"
 from sgmllib import SGMLParser
 import htmlentitydefs
 
+
 class BaseHTMLProcessor(SGMLParser):
 	def reset(self):
 		# extend (called by SGMLParser.__init__)

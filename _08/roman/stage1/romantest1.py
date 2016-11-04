@@ -14,8 +14,9 @@ __license__ = "Python"
 import roman1
 import unittest
 
+
 class KnownValues(unittest.TestCase):
-    knownValues = ( (1, 'I'),
+    knownValues = ((1, 'I'),
                     (2, 'II'),
                     (3, 'III'),
                     (4, 'IV'),
@@ -84,6 +85,7 @@ class KnownValues(unittest.TestCase):
             result = roman1.fromRoman(numeral)
             self.assertEqual(integer, result)
 
+
 class ToRomanBadInput(unittest.TestCase):
     def testTooLarge(self):
         """toRoman should fail with large input"""
@@ -117,6 +119,7 @@ class FromRomanBadInput(unittest.TestCase):
         for s in ('IIMXCC', 'VX', 'DCM', 'CMM', 'IXIV',
                   'MCMC', 'XCX', 'IVI', 'LM', 'LD', 'LC'):
             self.assertRaises(roman1.InvalidRomanNumeralError, roman1.fromRoman, s)
+
 
 class SanityCheck(unittest.TestCase):
     def testSanity(self):

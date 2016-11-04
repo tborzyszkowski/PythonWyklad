@@ -25,9 +25,8 @@ class URLLister(SGMLParser):
 
 if __name__ == "__main__":
 	import urllib
-	# usock = urllib.urlopen("http://www.wp.pl/")
-	usock = urllib.urlopen("http://cnn.com/")
-#    usock = urllib.urlopen("http://manta.univ.gda.pl/cgi-bin/www-public/html_test.cgi")
+	#usock = urllib.urlopen("http://www.wp.pl/")
+	usock = urllib.urlopen("https://inf.ug.edu.pl/")
 	parser = URLLister()
 	parser.feed(usock.read())
 	parser.close()

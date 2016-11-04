@@ -11,11 +11,23 @@ __date__ = "$Date: 2004/05/05 21:57:20 $"
 __copyright__ = "Copyright (c) 2001 Mark Pilgrim"
 __license__ = "Python"
 
-#Define exceptions
-class RomanError(Exception): pass
-class OutOfRangeError(RomanError): pass
-class NotIntegerError(RomanError): pass
-class InvalidRomanNumeralError(RomanError): pass
+
+# Define exceptions
+class RomanError(Exception):
+    pass
+
+
+class OutOfRangeError(RomanError):
+    pass
+
+
+class NotIntegerError(RomanError):
+    pass
+
+
+class InvalidRomanNumeralError(RomanError):
+    pass
+
 
 def toRoman(n):
     """convert integer to Roman numeral"""
