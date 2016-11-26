@@ -5,11 +5,15 @@ print len(a), a[:10]
 b = random.sample(a, 10)
 print b
 
-najmn = b[0]
+najmn = 0
+najwi = 0
 i = 0
 while i < len(b):
-    if najmn > b[i]:
-        najmn = b[i]
+    if b[najmn] > b[i]:
+        najmn = i
+    if b[najwi] < b[i]:
+        najwi = i
     i += 1
 
-print "minimum:", najmn
+print "minimum:", b[najmn]
+print "maximum:", b[najwi]
