@@ -18,5 +18,5 @@ b = random.sample(a, N)
 t1 = datetime.now()
 sorted(b)
 t2 = datetime.now()
-#print b[:N / 10]
+# print b[:N / 10]
 print "time:   ", (t2 - t1).total_seconds() * 1000
