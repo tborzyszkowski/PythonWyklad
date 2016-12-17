@@ -16,13 +16,14 @@ class RepositoryException(Exception):
         Exception.__init__(self, message)
         self.errors = errors
 
+
 #
 # Model danych
 #
 class Invoice():
     """Model pojedynczej faktury
     """
-    def __init__(self, id, date= datetime.now(), invitems=[]):
+    def __init__(self, id, date=datetime.now(), invitems=[]):
         self.id = id
         self.date = date
         self.invitems = invitems

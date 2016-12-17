@@ -49,10 +49,14 @@ class MojaKlasa:
 
 
 y = MojaKlasa(30, 40)
-# y.wypisz()
+y.wypisz()
 z = MojaKlasa()
-# z.wypisz()
-# MojaKlasa(13).wypisz()
+z.wypisz()
+y.wypisz()
+MojaKlasa(13).wypisz()
+z.wypisz()
+y.wypisz()
+
 # y.wypisz()
 
 # # czym jest
