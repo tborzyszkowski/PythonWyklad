@@ -11,7 +11,7 @@ import time
 test_start_time=time.time()
 
 mu, sigma = 0, 1 # mean and standard deviation
-s = np.random.normal(mu, sigma, 1000 * 1000 * 100)
+s = np.random.normal(mu, sigma, 1000 * 1000 * 10)
 
 n, (smin, smax), sm, sv, ss, sk = stats.describe(s)
 #n, (smin, smax), sm, sv, ss, sk = stats.describe([1,2,3])

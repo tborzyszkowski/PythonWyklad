@@ -1,0 +1,1 @@
+print "Ala ma kota"

@@ -1,9 +1,9 @@
 '''
 ax + by + c =0
 '''
-a = 0
+a = 1
 b = 1
-c = 1
+c = 0
 
 res = ('duzo' if c == 0 else 'nie ma') if a == 0 else -c/float(a)
 

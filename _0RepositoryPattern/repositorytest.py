@@ -37,7 +37,7 @@ class RepositoryTest(unittest.TestCase):
 
     def testGetByIdInvitemsLen(self):
         self.assertEqual(len(repository.InvoiceRepository().getById(1).invitems),
-                2, "Powinno wyjść 2")
+                3, "Powinno wyjść 2")
 
     def testDeleteNotFound(self):
         self.assertRaises(repository.RepositoryException,

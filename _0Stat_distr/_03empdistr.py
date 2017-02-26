@@ -37,7 +37,7 @@ def ecdf(x, sample):
 # 2. Jak w zadaniu 1. z tym, że dla skośniego rozkładu t_Studenta
 
 s = SkewStudent(eta=10., lam=-.1)
-sample = s.rvs(size=1000)
+sample = s.rvs(size=100)
 x = np.linspace(min(sample), max(sample))
 y_ecdf = np.vectorize(lambda x: ecdf(x, sample))
 y_cdf  = s.cdf(x)

@@ -11,6 +11,8 @@ db_path = 'invoice.db'
 #
 # Wyjątek używany w repozytorium
 #
+
+
 class RepositoryException(Exception):
     def __init__(self, message, *errors):
         Exception.__init__(self, message)
