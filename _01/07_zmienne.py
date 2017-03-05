@@ -2,7 +2,7 @@
 
 print '----------'
 
-#print zmienna
+# print zmienna
 zmienna = 1
 print zmienna, type(zmienna)
 
