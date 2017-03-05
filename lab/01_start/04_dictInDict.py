@@ -7,3 +7,12 @@ print d2
 print d3
 
 print d3['c3']['b2']['a1']
+
+d1['qq'] = d1
+
+print d1
+print d1['qq']
+print d1['qq']['qq']
+
+print d1 == d1['qq']
+print d1 is d1['qq']

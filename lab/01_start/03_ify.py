@@ -17,3 +17,7 @@ for a in aa:
                                 , (a > b and [a] or [b])[0]
                                 , (a > b and {0: a} or {0: b})[0]
                                 , a > b and a or b)
+
+print [] == [None]
+print [] is [None]
+print [1] == [1]
