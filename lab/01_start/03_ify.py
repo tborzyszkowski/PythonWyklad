@@ -1,17 +1,14 @@
-# (b ? c : d)
+aa = [None, {}, {'q': 12}]
+bb = [None, "", "Ala"]
 
-
-a = 2
-b = 3
-print (a>b and [a] or [b])[0]
-
-print a if a>b else b
-
-# print (1==1 and [None] or [2])[0]
-# print (1==1 and None or 2)
-# if 1 == 2:
-#     print 10
-# elif "":
-#     print 20
-# else: 
-#     print 30
+str_format2 = '{:^15} {:^15} {:^20} {:^25} {:^30}'
+print str_format2.format("a", "b",
+            "a if a>b else b",
+            "(a > b and [a] or [b])[0]",
+            "(a > b and {0: a} or {0: b})[0]")
+for a in aa:
+    for b in bb:
+        print str_format2.format(a, b
+                                , a if a > b else b
+                                , (a > b and [a] or [b])[0]
+                                , (a > b and {0: a} or {0: b})[0])
