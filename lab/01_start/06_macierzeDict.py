@@ -1,9 +1,9 @@
 from random import randint
 
-n = 1000
-m1 = {w: {k: randint(0,5) for k in range(n)} for w in range(n)}
-# m2 = {w: {k: (1 if w ==k else 0) for k in range(n)} for w in range(n)}
-m2 = {w: {k: randint(0,5) for k in range(n)} for w in range(n)}
+n = 100
+m1 = {w: {k: randint(0, 5) for k in range(n)} for w in range(n)}
+# m2 = {w: {k: (1 if w == k else 0) for k in range(n)} for w in range(n)}
+m2 = {w: {k: randint(0, 5) for k in range(n)} for w in range(n)}
 wyn = {w: {k: 0 for k in range(n)} for w in range(n)}
 
 for w in range(n):
