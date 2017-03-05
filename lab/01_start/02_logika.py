@@ -1,7 +1,12 @@
-a = {'q': 12}
-b = ""
-c = 10
+a = [{}, {'q': 12}]
+b = ["", "Ala"]
+c = [0, 10]
 
-w = a and b or c
+# w = a and b or c
 
-print w
+str_format = '%10s %10s %10s %10s'
+print str_format % ("a", "b", "c", "a and b or c")
+for aa in a:
+    for bb in b:
+        for cc in c:
+            print str_format % (aa, bb, cc, aa and bb or cc)
