@@ -23,15 +23,16 @@ def fib1(n):
         return fib1(n-1) + fib1(n-2)
 
 
-# fibs = [fib1, fib2, fib3]
+# fibs = [fib2, fib3]
+# fibs = [fib1, fib2]
 fibs = [fib3, fibonacciFast]
 
 results = {f.__name__: [] for f in fibs}
 print results
 
-r_begin = 90000
-r_end = 100000
-r_range = range(r_begin, r_end, 50)
+r_begin = 150000
+r_end = 160000
+r_range = range(r_begin, r_end, 100)
 
 for n in r_range:
     print "n =", n,
@@ -50,5 +51,3 @@ print results
 plt.plot(r_range, results["fib3"], linestyle='-', color='b')
 plt.plot(r_range, results["fibonacciFast"], linestyle='-', color='r')
 plt.show()
-# for (x, y) in [(1, 2), (3, 4)]:
-#     print y
