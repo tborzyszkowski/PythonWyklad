@@ -1,5 +1,6 @@
 import time
 from Fib2 import fib3
+from Fib_rek3 import fibonacciFast
 import matplotlib.pylab as plt
 
 
@@ -23,28 +24,30 @@ def fib1(n):
 
 
 # fibs = [fib1, fib2, fib3]
-fibs = [fib2, fib3]
+fibs = [fib3, fibonacciFast]
 
 results = {f.__name__: [] for f in fibs}
 print results
 
-r_begin = 1000
-r_end = 10000
-r_range = range(r_begin, r_end, 2)
+r_begin = 30000
+r_end = 40000
+r_range = range(r_begin, r_end, 100)
 
 for n in r_range:
+    print "n =", n,
     for f in fibs:
         start_time = time.clock()
         f(n)
-        results[f.__name__].append(time.clock() - start_time)
-    print "n =", n
-
+        czas = time.clock() - start_time
+        results[f.__name__].append(czas)
+        print czas, "\t",
 print results
 
 
 # plt.plot(r_range, results["fib1"], linestyle='--', color='r')
 plt.plot(r_range, results["fib2"], linestyle='-', color='g')
 plt.plot(r_range, results["fib3"], linestyle='-', color='b')
+plt.plot(r_range, results["fibonacciFast"], linestyle='-', color='r')
 plt.show()
 # for (x, y) in [(1, 2), (3, 4)]:
 #     print y
