@@ -29,8 +29,8 @@ d = b * b - 4 * a * c
 # print wynik
 
 if a == 0:
-    if b ==0:
-        if c==0:
+    if b == 0:
+        if c == 0:
             print 'Duzo'
         else:
             print "Brak"
