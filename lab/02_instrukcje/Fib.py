@@ -29,9 +29,9 @@ fibs = [fib3, fibonacciFast]
 results = {f.__name__: [] for f in fibs}
 print results
 
-r_begin = 30000
-r_end = 40000
-r_range = range(r_begin, r_end, 100)
+r_begin = 90000
+r_end = 100000
+r_range = range(r_begin, r_end, 50)
 
 for n in r_range:
     print "n =", n,
@@ -41,6 +41,7 @@ for n in r_range:
         czas = time.clock() - start_time
         results[f.__name__].append(czas)
         print czas, "\t",
+    print "\n"
 print results
 
 
