@@ -45,7 +45,7 @@ print results
 
 
 # plt.plot(r_range, results["fib1"], linestyle='--', color='r')
-plt.plot(r_range, results["fib2"], linestyle='-', color='g')
+# plt.plot(r_range, results["fib2"], linestyle='-', color='g')
 plt.plot(r_range, results["fib3"], linestyle='-', color='b')
 plt.plot(r_range, results["fibonacciFast"], linestyle='-', color='r')
 plt.show()
