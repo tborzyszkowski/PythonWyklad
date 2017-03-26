@@ -18,7 +18,7 @@ def slownie2(liczba):
 
 print slownie2(01234)
 
-print kwotaslownie(1234)
+print kwotaslownie(0)
 # print lslownie(123)
 
 def slownie3(liczba):

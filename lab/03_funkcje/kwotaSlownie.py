@@ -65,7 +65,7 @@ def lslownie(liczba):
     """Liczba calkowita słownie"""
     trojki = []
     if liczba == 0:
-        return u'zero'.encode('utf-8')
+        return u'zero'
     while liczba > 0:
         trojki.append(liczba % 1000)
         liczba = liczba // 1000
@@ -87,20 +87,19 @@ def cosslownie(liczba, cos):
 
     liczba - int
     cos - tablica przypadków [coś, cosie, cosiów]"""
+    return (lslownie(liczba) + u" " + cos[_przypadek(liczba)]).encode('utf-8')
 
-    return lslownie(liczba)+u" " + cos[_przypadek(liczba)].encode('utf-8')
 
-
-def kwotaslownie(liczba, format = 0):
+def kwotaslownie(liczba, format=0):
     """Słownie złotych, groszy.
 
     liczba - float, liczba złotych z groszami po przecinku
     format - jesli 0, to grosze w postaci xx/100, słownie w p. przypadku
     """
-    lzlotych=int(liczba)
-    lgroszy=int(liczba * 100 + 0.5) % 100
+    lzlotych = int(liczba)
+    lgroszy = int(liczba * 100 + 0.5) % 100
     if format != 0:
-        groszslownie=cosslownie(lgroszy, grosze)
+        groszslownie = cosslownie(lgroszy, grosze)
     else:
         groszslownie = '%d/100' % lgroszy
-    return cosslownie(lzlotych, zlotowki)  + u" " + groszslownie
+    return cosslownie(lzlotych, zlotowki) +(u" ").encode('utf-8') + groszslownie.encode('utf-8')
