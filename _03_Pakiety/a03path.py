@@ -5,7 +5,7 @@ print sys.path
 # import pierwszy
 # import drugi
 
-sys.path.append('D:\users\Tomek\UG\Zajecia\Python\Wyklad\PythonWyklad\_03\moduly')
+sys.path.append('D:\users\Tomek\UG\Zajecia\Python\Wyklad\PythonWyklad\_03_Pakiety\moduly')
 
 print sys.path
 

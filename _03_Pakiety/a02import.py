@@ -19,7 +19,8 @@ print "="*20
 a = 5
 
 import a01nazwa
-
+print a01nazwa.a
+# del a01nazwa
 print a
 print a01nazwa.a
 
