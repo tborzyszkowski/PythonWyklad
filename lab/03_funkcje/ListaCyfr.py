@@ -1,4 +1,6 @@
-from slownie import slownie
+# -*- coding: utf-8 -*-
+
+from kwotaSlownie import *
 
 
 def slownie2(liczba):
@@ -15,9 +17,9 @@ def slownie2(liczba):
     return wyn
 
 print slownie2(01234)
-print slownie(01234)
-# , unit=UNIT_ZLOTY)
 
+print kwotaslownie(1234)
+# print lslownie(123)
 
 def slownie3(liczba):
     cyfry = ['zero', 'jeden', 'dwa', 'trzy', 'cztery',

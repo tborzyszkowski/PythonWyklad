@@ -1,4 +1,4 @@
-from slownie import slownie
+from slownie import *
 
 
 def slownie2(liczba):
