@@ -1,24 +1,27 @@
-from slownie import *
+from slownie import slownie
+
 
 def slownie2(liczba):
-    cyfry = {0:'zero', 1:'jeden', 2:'dwa', 
-         3:'trzy', 4:'cztery', 5:'piec', 
-         6:'szesc', 7:'siedem', 8:'osiem', 9:'dziewiec'}
+    cyfry = {
+        0: 'zero', 1: 'jeden', 2: 'dwa',
+        3: 'trzy', 4: 'cztery', 5: 'piec',
+        6: 'szesc', 7: 'siedem', 8: 'osiem', 9: 'dziewiec'
+    }
     a = liczba
     wyn = []
     while a != 0:
-        wyn =[(cyfry[a % 10])]+ wyn
+        wyn = [(cyfry[a % 10])] + wyn
         a = a / 10
-    return wyn 
+    return wyn
 
 print slownie2(01234)
 print slownie(01234, unit=UNIT_ZLOTY)
 
 
 def slownie3(liczba):
-    cyfry = ['zero','jeden','dwa','trzy','cztery', 
-             'piec','szesc','siedem','osiem','dziewiec']
-    return map(lambda x:cyfry[int(x)],str(liczba))
+    cyfry = ['zero', 'jeden', 'dwa', 'trzy', 'cztery',
+             'piec', 'szesc', 'siedem', 'osiem', 'dziewiec']
+    return map(lambda x: cyfry[int(x)], str(liczba))
 
 print slownie3(1234)
 
