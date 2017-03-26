@@ -19,6 +19,13 @@ def is_prime(num):
 #         b -= a
 # else:
 #     print 'gcd = ', a
+def euklidesMod(a, b):
+    if a <= b:
+        return euklidesMod(b, a)
+    elif b == 0:
+        return a
+    else:
+        return euklidesMod(b, a % b)
 
 
 def euklides(a, b):
@@ -33,7 +40,7 @@ def euklides(a, b):
 
 
 def euklides2(*args):
-    return reduce(euklides, args)
+    return reduce(euklidesMod, args)
 
 lista = [16, 4, 8]
 print euklides2(9, 6, 12, 99, 30)
@@ -57,6 +64,6 @@ else:
 print big1, big2, prime
 
 start = time.time()
-print euklides(prime * prime, prime * prime * prime)
+print euklidesMod(prime * prime, prime * prime * prime)
 stop = time.time()
 print 'Time:', stop - start
