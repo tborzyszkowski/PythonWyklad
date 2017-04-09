@@ -10,7 +10,7 @@ osoby = [{'nazwisko': 'Nowak', 'waga': 70,
          'ulubione_dania': ['frytki', 'ryba']},
          ]
 
-print osoby
+print "\n".join(["\n{nazwisko}\n{waga}\n{ulubione_dania}".format(**o) for o in osoby])
 print [o['nazwisko'] for o in osoby]
 
 osoby.sort(key=lambda o: o['nazwisko'])
