@@ -25,7 +25,7 @@ SECRET_KEY = '6p+zyd0u1606fjc9_&^(1k3q&tro&27q4(&+mvzgf0bk&-ucv+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sigma.ug.edu.pl']
 
 
 # Application definition
