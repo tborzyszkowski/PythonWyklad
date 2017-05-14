@@ -10,7 +10,7 @@
 #     except ValueError:
 #         print "+++ Chodzilo o liczbe +++"
 #     except ZeroDivisionError, e:
-#         print dir(e)
+#         print e
 
 
 # # pliki i wyjatki
@@ -23,7 +23,7 @@
 #     s = f.readline()
 #     print s.strip()
 #     i = int(s.strip())
-#     # i = 1/0
+#     i = 1/i
 # except IOError, (errno, strerror):
 #     print "I/O error(%s): %s" % (errno, strerror)
 # except ValueError:
@@ -68,7 +68,7 @@
 # print '5'*20
 #
 # def this_fails():
-#     x = 1/0
+#     return 1/0
 #
 # try:
 #     this_fails()

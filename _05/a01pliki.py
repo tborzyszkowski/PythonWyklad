@@ -26,8 +26,15 @@ print 'Read 1 : ', f.tell()
 print f.read()
 print 'Read 2 : ', f.tell()
 f.seek(-15, 2)
+print 'Read 3 : ', f.tell()
 print f.read(3)
 print 'Seek 2 : ', f.tell()
 print f.read()
+
+f.close()
+
+f = open(r'_05\a01pliki.py', 'r')
+lista = f.readlines()
+print "".join(lista)
 
 f.close()
