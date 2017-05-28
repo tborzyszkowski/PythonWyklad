@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    Delete answer
+{% endblock %}
+
+{% block CSS %}
+    <link rel="stylesheet" href="{% static 'css/question.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div id="answers">
+        <h3>Delete answer</h3>
+        <div class="Error">Are you sure?</div>
+        <table>
+            <td class="votes"> {{ answer.getRating }} </td>
+            <td class="content"> {{ answer.content }} </td>
+            <td class="details">
+                <div class="author"> Author: {{ answer.author }} </div>
+                <div class="date"> Date: {{ answer.answerDate|date:'Y-m-d H:i' }} </div>
+            </td>
+        </table>
+        {% if user == answer.author or user.is_staff and perms.question.can_change_question %}
+            <form method="post" action="">
+                {% csrf_token %}
+                <div style="padding: 10px; text-align:center;">
+                    <button type="cancel" class="btn btn-primary" value="cancel" name="cancel">Cancel</button>
+                    <button type="submit" class="btn btn-danger" value="confirm">Confirm</button>
+                </div>
+            </form> 
+        {% else %}
+            <div class="Error"> You cannot delete this answer </div>
+        {% endif %}
+    </div>  
+{% endblock %}

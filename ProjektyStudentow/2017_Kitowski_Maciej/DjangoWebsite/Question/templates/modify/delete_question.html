@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    Delete question
+{% endblock %}
+
+{% block CSS %}
+    <link rel="stylesheet" href="{% static 'css/question.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div id="question">
+        <h3>Delete question</h3>
+        <div class="Error">Are you sure?</div>
+        <div id="title"> {{ question.title }} </div>
+        <table>
+            <tr>
+                <td class="votes">{{ question.getRating }}</td>
+                <td class="content">
+                    {{ question.content }}
+                    <div id="questionCategories">
+                        {% for cat in question.categories.all %}
+                            <a href = "/category/{{ cat }}/1" class = "category">{{ cat }}</a>
+                        {% endfor %}
+                    </div>
+                </td>
+                <td class="details">
+                    <div class="author"> Author: {{ question.author }} </div>
+                    <div class="date"> Date: {{ question.askDate|date:'Y-m-d H:i' }} </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="answers">
+        {% for ans in question.answers.all %}
+            <table>
+                {% if ans.getRating <= -5 %}
+                <tr class="lowVote">
+                {% else %}
+                
+                {% endif %}
+                <tr id="{{ forloop.counter }}">
+                    {% if ans.getRating <= -5 %}
+                        <td class="votes lowVote">
+                    {% elif ans.getRating >= 5 %}
+                        <td class="votes highVote">
+                    {% else %}
+                        <td class="votes">
+                    {% endif %}
+                        {{ ans.getRating }}<br/>
+                    </td>
+                    {% if ans.getRating <= -5 %}
+                        <td class="content lowVote">
+                    {% elif ans.getRating >= 5 %}
+                        <td class="content highVote">
+                    {% else %}
+                        <td class="content">
+                    {% endif %}
+                        {{ ans.content }}
+                    </td>
+                    {% if ans.getRating <= -5 %}
+                        <td class="details lowVote">
+                    {% elif ans.getRating >= 5 %}
+                        <td class="details highVote">
+                    {% else %}
+                        <td class="details">
+                    {% endif %}
+                        <div class="author"> Author: {{ ans.author }} </div>
+                        <div class="date"> Date: {{ ans.answerDate|date:'Y-m-d H:i' }} </div>
+                    </td>
+                </tr>
+                <hr/>
+            </table>
+        {% endfor %}
+    </div>
+    <div id="editQuestion">
+        {% if form.errors %}
+            <div class="Error">
+                {{ form.errors }}
+            </div>
+        {% endif %}
+        {% if user == answer.author or user.is_staff and perms.question.can_change_question %}
+            <form method="post" action="">
+                {% csrf_token %}
+                <div style="padding: 10px; text-align:center;">
+                    <button type="cancel" class="btn btn-primary" value="cancel" name="cancel">Cancel</button>
+                    <button type="submit" class="btn btn-danger" value="confirm">Confirm</button>
+                </div>
+            </form>
+        {% else %}
+            <div class="Error"> You cannot delete this answer </div>
+        {% endif %}
+    </div>
+{% endblock %}

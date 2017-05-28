@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    Add new question
+{% endblock %}
+
+{% block CSS %}
+    <link rel="stylesheet" href="{% static 'css/newQuestion.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div id="FormContent">
+        {% if form.errors %}
+            <div class="Error">
+                {{ form.errors }}
+            </div>
+        {% endif %}
+        {% if user.is_authenticated %}
+            <h3>Add new question</h3>
+            <form method="post" action="{% url 'newQuestion' %}">
+                {% csrf_token %}
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="glyphicon glyphicon-flag"></i></div>
+                    {{ form.title }}
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></div>
+                    {{ form.content }}
+                </div>
+                <h4>Categories</h4>
+                <small>Press ctrl to select multiple categories.</small>
+                <div id="categories">
+                    <div class="checkboxField">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="glyphicon glyphicon-check"></i></div>
+                            {{ form.categories }}
+                        </div>
+                    </div>
+                </div>
+                <div class="SubmitButton">
+                    <button type="submit" class="btn btn-primary" value="login">Send</button>
+                </div>
+            </form>
+        {% else %}
+            <div class="Error"> You have to be logged.</div>
+        {% endif %}    
+    </div>
+{% endblock %}
