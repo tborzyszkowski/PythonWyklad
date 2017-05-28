@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    Question categories
+    {% if is_paginated %}
+        | Page: {{ page_obj.number }}
+    {% endif %}
+{% endblock %}
+
+{% block CSS %}
+    <link rel="stylesheet" href="{% static 'css/categories.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div id="Navbar">
+        <!--{% if user.is_authenticated %}
+            <div id="RequestCategoryButton">
+                <a href="#" class="btn btn-default" role="button">Request new category</a>
+            </div>
+        {% endif %}-->
+    </div>
+    <div id="Categories">
+        {% for cat in categories %}
+            <a href="/category/{{ cat.name }}/1">
+                <div class="Category">
+                    <div class="name">{{ cat.name }}</div>
+                    <div class="count"> {{ cat.countReferences }} </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+    {% if is_paginated %}
+        <div id="pageNumbers">
+            {% if page_obj.has_previous %}
+                <a href="{% url 'categories' page=page_obj.previous_page_number%}" class="page">Previous page</a>
+            {% endif %}
+            {% for pageNumber in page_obj.paginator.page_range %}
+                {% if pageNumber == page_obj.number %}
+                    <a href="#" class="currentPage"> {{ pageNumber }} </a>
+                {% else %}
+                    <a href="{% url 'categories' page=pageNumber %}" class="page"> {{ pageNumber }} </a>
+                {% endif %}
+            {% endfor %}
+            {% if page_obj.has_next %}
+                <a href="{% url 'categories' page=page_obj.next_page_number%}" class="page">Next page</a>
+            {% endif %}
+        </div>
+    {% endif %}
+{% endblock %}

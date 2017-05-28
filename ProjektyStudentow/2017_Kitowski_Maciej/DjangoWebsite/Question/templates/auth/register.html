@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    Register page
+{% endblock %}
+
+{% block CSS %}
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div id="Register">
+        {% if not user.is_authenticated %}
+            <h3> Register </h3>
+            {% if form.errors %}
+                <div class="Error">
+                    {{ form.errors }}
+                </div>
+            {% endif %}
+            <form method="post">
+                {% csrf_token %}
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+                    {{ form.username }}
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
+                    {{ form.email }}
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
+                    {{ form.password1 }}
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
+                    {{ form.password2 }}
+                </div>
+                <hr/>
+                <div class="SubmitButton">
+                    <button type="submit" class="btn btn-primary" value="register">Register</button>
+                </div>
+            </form>
+        {% else %}
+            <div class="Error">Already logged as {{ user.get_username }}</div>
+        {% endif %} 
+    </div>
+{% endblock %}

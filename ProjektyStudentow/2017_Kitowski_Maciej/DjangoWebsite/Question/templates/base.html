@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Projekt zaliczeniowy na przedmiot Zaawansowane języki skryptowe (Informatyka zaocznie UG - 1rok, semestr 2)">
+        <meta name="keywords" content="Django, Python, UG, Uniwersytet Gdański, MFI, Wydział Matematyki fizyki i informatyki, I have no idea what i'm doing'">
+        <meta name="author" content="Maciej Kitowski, grupa 1">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+        <script src="{% static 'jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% block CSS %}{% endblock %}
+    </head>
+    <body>
+        <div id="header">
+            <a href="/" class="Button"><img src="{% static 'graphics/logo.svg' %}" width="250px" height="40px"></img></a>
+            <a href="/categories" class="Button"> Categories </a>
+            <div id="auth">
+                {% if user.is_authenticated %}
+                    <small>Logged as <b>{{ user.get_username }}</b></small>
+                    {% if request.user.is_staff %}
+                        <a href="/admin" class="Button">Admin</a>
+                    {% endif %}
+                    <a href="/logout" class="Button">Logout</a>
+                    {% else %}
+                      <a href="/login" class="Button">Login</a>
+                      <a href="/register" class="Button">Register</a> 
+                {% endif %}
+            </div>
+        </div>
+        <div id="mainContent">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <a href="#" class="btn btn-default btn-lg" role="button" id="backToTop"><span class="glyphicon glyphicon-chevron-up"></span></a>
+        <div id="footer">
+            Created by Maciej Kitowski <br/>
+            <a href = "https://github.com/MaciejKitowski"><small><img src="{% static 'graphics/github.svg' %}" width="30px"></img></small></a>
+            <a href = "mailto:MaciejKitowski&#64;hotmail.com"><small><img src="{% static 'graphics/email.svg' %}" width="30px"></img></small></a> 
+            <a href = "https://gitlab.com/Horunkan"><small><img src="{% static 'graphics/gitlab.svg' %}" width="30px"></img></small></a> <br/>
+            <small>All rights reserved</small>
+        </div>
+    </body>
+</html>
