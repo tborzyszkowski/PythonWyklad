@@ -26,8 +26,11 @@ https://docs.djangoproject.com/en/1.11/
 Przydatne komendy(Cmd, Command Line,)
 *********************************************
 python manage.py createsuperuser
+
 python manage.py runserver
+
 python manage.py makemigrations
+
 python manage.py migrate
 
 python manage.py shell
@@ -69,7 +72,7 @@ Przykład w kodzie:
 ### https://www.w3schools.com/html/html_forms.asp
 
 ### Views.py => 
-
+<div>
 def index(request):
     if not request.user.is_authenticated():
         return render(request, 'music/login.html')
@@ -91,3 +94,20 @@ def index(request):
             })
         else:
             return render(request, 'music/index.html', {'albums': albums})
+			
+</div>			
+			
+<div align="center">
+        <img width="15%" src="Screenshots/1.png" alt="List screen"></img>
+        <img height="0" width="8px">
+        <img width="15%" src="Screenshots/2.png" alt="List screen"></img>
+        <img height="0" width="8px">
+        <img width="15%" src="Screenshots/3.png" alt="List screen"></img>
+        <img height="0" width="8px">
+        <img width="15%" src="Screenshots/4.png" alt="List screen"></img>
+        <img height="0" width="8px">
+        <img width="15%" src="Screenshots/5.png" alt="List screen"></img>
+        <img height="0" width="8px">
+        <img width="15%" src="Screenshots/6.png" alt="List screen"></img>
+        <img height="0" width="8px">
+</div>
