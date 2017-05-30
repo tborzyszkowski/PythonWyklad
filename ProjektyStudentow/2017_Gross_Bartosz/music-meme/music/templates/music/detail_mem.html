@@ -1,0 +1,41 @@
+{% extends 'music/base.html' %}
+{% block title %}{{ mem }}{% endblock %}
+{% block albums_active %}active{% endblock %}
+
+{% block body %}
+<div class="container-fluid songs-container">
+
+    <div class="row">
+
+        <!-- Left Album Info -->
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <a href="{% url 'music:detail_mem' mem.id %}">
+                        {% if mem.image %}
+                           <!-- <img src="{{ mem.image.url }}" class="img-responsive"> -->
+
+
+                        <a href="{% url 'music:server_edit' mem.id %}">
+                            <img src="{{ mem.image.url }}" class="img-responsive">
+                        </a>
+
+
+                        {% else %}
+                            <h3>No image to display</h3>
+                        {% endif %}
+                    </a>
+                    <h3>
+                        Mem Title:{{ mem.name }}</br>
+                        Mem Tags: <small>{{ mem.tag }}</small></br>
+                        (Not finished) How many Like:{{ mem.like }}
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
