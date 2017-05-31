@@ -1,0 +1,43 @@
+{% extends 'music/base.html' %}
+{% block title %}All Mems{% endblock %}
+{% block mems_active %}active{% endblock %}
+
+
+{% block body %}
+
+<div class="bodyImage">
+<h1>   <center> Mems </center> </h1>
+    {% for mem in object_list %}
+
+       <!--    <div class="col-md-3 col-sm-2"> </div>
+            <div class="col-lg-6 col-sm-8 col-md-6"> -->
+            <h3>   <center> {{ mem.name }} </center> </h3>
+            <center>
+                <a href="{% url 'music:detail_mem' mem.id %}">
+                   <img src="{{ mem.image.url }}" class="img-responsive" width="500">
+                </a>
+            <br/>
+            <h4>   <right> Tags :{{ mem.tag }}  </right> </h4>
+                  </tr>
+            </center>
+     <!--   <div/>
+                </div>
+
+    </div> -->
+
+    {% endfor %}
+</div>
+
+ {% for cyferka in lista %}
+
+<div class="col-sm-4 col-lg-2">
+<div class="thumbnail">
+<div class="caption">
+
+        <p> <a href="{% url 'music:mem_list' cyferka %}">Page with Mems {{ cyferka }}</a> </p>
+</div>
+</div>
+</div>
+{% endfor %}
+
+{% endblock %}
