@@ -1,0 +1,32 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8">
+            <div>
+                {% for article in article_list %}
+                <div>
+                    <span class="article-title-size">
+                        <b>
+                            <a href="{% url 'catalog:article_detail' article.pk %}">
+                                {{ article.title | safe | truncatewords:60}}
+                            </a>
+                        </b>
+                    </span>
+                    <p class="article">{{ article.body | safe | truncatewords:10}}</p>
+                    <p>Posted by <b>{{ article.author | safe | truncatewords:10}}</b> on
+                        <span class="glyphicon"></span> {{ article.created_on }}
+                <span class="post-views article-likes">Likes: {{ article.likes }}</span>
+                <span class="post-views article-dislikes">Dislikes: {{ article.dislikes }} </span></p>
+                <hr>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}

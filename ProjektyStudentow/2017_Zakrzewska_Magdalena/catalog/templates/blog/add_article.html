@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="col-sm-12" style ='background-color: #ccffcc;'>
+    <h4 class="'lead">New Article</h4>
+    <form method="post" action="{% url 'catalog:add_article' %}">
+        {% csrf_token %}
+        {% for field in form %}
+        {{ field }}
+        {{ field.errors }}
+        <br>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+</div>
+
+{% endblock content %}

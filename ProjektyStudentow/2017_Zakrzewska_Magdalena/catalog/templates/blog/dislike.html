@@ -1,0 +1,7 @@
+{% block content %}
+<form method="post" action="{% url 'catalog:dislike' article_id %}">
+        {% csrf_token %}
+        <button type="submit">Dislike</button>
+    </form>
+
+{% endblock content %}
