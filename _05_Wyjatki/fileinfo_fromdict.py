@@ -27,7 +27,7 @@ class FileInfo(dict):
     "store file metadata"
     def __init__(self, filename=None):
         self["name"] = filename
-    
+
 class MP3FileInfo(FileInfo):
     "store ID3v1.0 MP3 tags"
     tagDataMap = {"title"   : (  3,  33, stripnulls),
@@ -36,7 +36,7 @@ class MP3FileInfo(FileInfo):
                   "year"    : ( 93,  97, stripnulls),
                   "comment" : ( 97, 126, stripnulls),
                   "genre"   : (127, 128, ord)}
-    
+
     def __parse(self, filename):
         "parse ID3v1.0 tags from MP3 file"
         self.clear()
@@ -69,7 +69,7 @@ def listDirectory(directory, fileExtList):
         return hasattr(module, subclass) and getattr(module, subclass) or FileInfo
     return [getFileInfoClass(f)(f) for f in fileList]
 
-#if __name__ == "__main__":
-for info in listDirectory(r"D:\W7\ffff\DiscografiaMetallica", [".mp3"]):
-    print "\n".join(["%s=%s" % (k, v) for k, v in info.items()])
-    print "KONIEC"
+if __name__ == "__main__":
+    for info in listDirectory(r"D:\W8\ffff\muzyka\Dzem\Dzem\Singles", [".mp3"]):
+        print "\n".join(["%s=%s" % (k, v) for k, v in info.items()])
+        print "KONIEC"

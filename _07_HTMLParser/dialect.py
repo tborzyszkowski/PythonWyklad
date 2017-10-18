@@ -163,5 +163,5 @@ def test(url):
 		webbrowser.open_new(outfile)
 
 if __name__ == "__main__":
-	test("http://en.ug.edu.pl/")
-	# test("http://cnn.com")
+	# test("http://en.ug.edu.pl/")
+	test("http://www.wp.pl")

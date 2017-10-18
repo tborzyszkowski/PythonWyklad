@@ -21,8 +21,8 @@ import re
 # print p.subn('colour', 'blue socks and red shoes')
 # print p.subn('colour', 'no colours at all')[1]
 #
-# p = re.compile('x*')
-# print p.sub('-', 'abxd')
+p = re.compile('x+')
+print p.sub('-', 'abxxxxxxd')
 #
 # # Argumentem sub() moze byc funkcja,
 # # ktora bedzie wywolana na kazdym dopasowaniu wzorca
@@ -34,4 +34,4 @@ def hexrepl(match):
     return hex(value)
 
 p = re.compile(r'\d+')
-print p.sub(hexrepl, 'Call 65490 for printing, 49152 for user code 15 16 14 .')
+print p.sub(hexrepl, 'Call 65490 for printing, 49152 for user code 15 16 14 15.')

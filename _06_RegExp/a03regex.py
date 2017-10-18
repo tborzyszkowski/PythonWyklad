@@ -1,5 +1,8 @@
 import re
 
+# m = re.compile("(a(b)c)d").match("abcd")
+# print m.groups(), m.group(0), m.group(1), m.group(2)
+
 # phonePattern = re.compile(r'''
 #                 # don't match beginning of string, number can start anywhere
 #     (\d{3})     # area code is 3 digits (e.g. '800')
