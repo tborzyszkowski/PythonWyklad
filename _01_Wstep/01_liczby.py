@@ -1,7 +1,7 @@
 # operacje arytmetyczne na zwyklych liczbach calkowitych
 # INT
-x = 3
-y = 2
+# x = 3
+# y = 2
 
 # LONG
 # x = 1000L
@@ -12,11 +12,12 @@ y = 2
 # y = 1.234
 
 # COMPLEX
-# x = 3+2j
-# y = 2+1j
+x = 3+2j
+y = 2+1j
 
 print '----------'
-print x + y
+result = x + y
+print x , " + " ,  y , " = " , result
 print x - y
 print x * y
 print x / y   # dzielenie calkowite
