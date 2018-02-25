@@ -2,15 +2,20 @@ import time
 import math
 
 t0 = time.time()
-x = 12345 ** 678900
-y =len(str(x))
+x = 1234500 ** 67890
+t1 = time.time()
+xLen =len(str(x))
+t2 = time.time()
 
-print "Time:", time.time() - t0, "Len:", y 
+print "Time pow:", t1 - t0, "Time len:", t2 - t1, "Len:", xLen
 
 t0 = time.time()
-x = 12345 ** 67890
-z=math.ceil(math.log(x,10))
+x = 1234500 ** 67890
+t1 = time.time()
+xLen=int(math.ceil(math.log(x,10)))
 
-print "Time:", time.time() - t0, "Len:", z 
+t2 = time.time()
+
+print "Time pow:", t1 - t0, "Time len:", t2 - t1, "Len:", xLen
 
 

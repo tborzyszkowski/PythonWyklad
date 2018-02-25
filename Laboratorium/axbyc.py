@@ -4,7 +4,7 @@ ax + by + c =0
 # a = 1
 # b = 1
 # c = 0
-przypadki = [(1, 0, 0), (1, 0, 1), (0, 1, 0), (0, 1, 1), (1, 1, 0), (1, 1, 1)]
+przypadki = [(1, 0, 0), (1, 0, 1), (0, 1, 0), (0, 1, 1), (1, 1, 0), (1, 1, 1), (0, 0, 1)]
 
 for (a, b, c) in przypadki:
     res = ('duzo' if c == 0 else 'nie ma') if a == 0 else -c/float(a)
