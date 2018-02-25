@@ -1,13 +1,16 @@
 '''
 ax + by + c =0
 '''
-a = 1
-b = 1
-c = 0
+# a = 1
+# b = 1
+# c = 0
+przypadki = [(1, 0, 0), (1, 0, 1), (0, 1, 0), (0, 1, 1), (1, 1, 0), (1, 1, 1)]
 
-res = ('duzo' if c == 0 else 'nie ma') if a == 0 else -c/float(a)
+for (a, b, c) in przypadki:
+    res = ('duzo' if c == 0 else 'nie ma') if a == 0 else -c/float(a)
+    print a, "x +", b, "y + ", c, "=", 0, "res =", res
 
-print res
+# print res
 
 # x = ((a == 0) and [(c == 0 and ['duzo'] or ['nie ma'])[0]] or [-c/float(a)])[0]
 # <warunek> ? wy1 : wyr2
