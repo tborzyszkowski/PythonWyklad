@@ -1,4 +1,3 @@
-
 valLog = [None, True, False]
 valA = [None, 1]
 valB = [None, 2]
