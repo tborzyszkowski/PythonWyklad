@@ -16,6 +16,7 @@ x = 3+2j
 y = 2+1j
 
 print '----------'
+print type(x)
 result = x + y
 print x , " + " ,  y , " = " , result
 print x - y
