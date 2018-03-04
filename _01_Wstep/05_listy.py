@@ -12,6 +12,9 @@ print l[0:8]
 print l[:5]
 print l[3:]
 print l[:]
+print l[7:2:-1]
+print l[7:2]
+# print l[7]
 
 print '------ wstawianie --------'
 l.append('z')

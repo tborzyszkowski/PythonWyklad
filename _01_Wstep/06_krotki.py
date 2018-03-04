@@ -12,6 +12,7 @@ print '------operacje ----------'
 # k.append('www')
 # k.remove('qq')
 print k.index(1)
+# print k.index('b')
 print k.count('b')
 print len(k)
 k[-1][1] = 'zzz'
@@ -27,3 +28,8 @@ k = tuple(l)
 print k
 
 print dir(tuple)
+
+x = []
+x.append(x)
+l = tuple(x)
+print l
