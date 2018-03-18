@@ -23,18 +23,18 @@ def test1(arg1):
     """
     a = arg1
     print 'test1: LOCALS  :', locals()
-    print 'test1: GLOBALS :', globals()
+    print 'test1: GLOBALS :', globals()['a']
 
 
 def test2(arg2):
     """Test2_doc
     """
-    global a
+    # global a
     a = arg2
     b = arg2 + 1
     test1(b)
     print 'test2:LOCALS  :', locals()
-    print 'test2:GLOBALS :', globals()
+    print 'test2:GLOBALS :', globals()['a']
 
 print a, b
 # test1(3)
