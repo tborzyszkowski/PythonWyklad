@@ -1,0 +1,8 @@
+CFLAGS=-g -Wall -std=c11
+LDLIBS=-lm
+
+all:
+	
+
+clean:
+rm -f *.o *.out *~
