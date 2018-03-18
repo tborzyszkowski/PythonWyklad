@@ -1,13 +1,14 @@
+z = 100
+
 def abc(x):
     x+2
 
-def f1(a):
-    while a < 100:
-        a+1
-
-def f2(b):
-    while b < 100:
-        b+1
+def f3(c):
+    ls = []
+    while c < 10:
+        c += 1
+        ls.append(None)
+    return ls
 
 print (1, 2, 3) < (1, 2, 4)
 print [1, 2, 3] < [1, 2, 4]
@@ -29,3 +30,5 @@ print None < 0 < 10000 < {} < {"a":3, "c": 12345} < [] < [1, 3, 4] < "a" < "z" <
 #generalnie calosc od slownikow jest poukladana alfabetycznie
 #dict<list<string<tuple
 #jezeli typ nie rozstrzyga o wielkosci, (a raczej jego nazwa), to robia to jego wartosci
+
+print [1, 2, f3(1)] < [1, 3] #python stosuje leniwe porownania, drugie wartosci w tablicy byly rozne i calosc jest rozstrzygnieta
