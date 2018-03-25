@@ -30,3 +30,13 @@ print("--- %s seconds ---" % (t2))
 #calosc dziala rowniez dla porownania pary
 print maks_pair_reduce(None, 4, 2000, (3, 5, 6), {}, [], {1:"a"})
 print("--- %s seconds ---" % (time.time() - t2))
+
+t2 = time.time()
+lista_duza = range(0, 10000000)
+print maks_pair_reduce(*lista_duza )
+print("--- %s seconds ---" % (time.time() - t2))
+
+
+t2 = time.time()
+print maks_reduce(*lista_duza )
+print("--- %s seconds ---" % (time.time() - t2))
