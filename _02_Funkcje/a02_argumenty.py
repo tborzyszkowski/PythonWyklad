@@ -23,7 +23,7 @@ def f(a=i):
     print 'a = ', a
 
 i = 2
-# print "f():", f()
+print "f():", f()
 # Jaki bedzie wynik powyzszego wywolania
 
 ##########################################
@@ -58,7 +58,7 @@ print h(3)
 # a wartosciach bedacych wartosciami przyporzadkowanymi tym parametrom
 
 
-def pp(x, *arguments, **keywords):
+def pp(x=1, *arguments, **keywords):
     print 'x = ', x
     print '-' * 10
     print keywords
@@ -73,7 +73,8 @@ pp(1)
 pp('aaa', b='bbb', c='ccc')
 # pp(a='xxx', y='yyy', z='zzz', v='vvv')
 pp('xxx', 'yyy', z='zzz', v='vvv')
-
+# pp(1, y=2, z=3, x=5)
+# pp(1, y=3, 2, z=5, 4)
 
 def printf(format, *args):
     print format % args
@@ -87,5 +88,5 @@ printf('%s - %.3f', 'As', 123.45)
 # Sprobuj
 print range(3, 10, 2)
 # oraz
-lista = [3, 6]
-range(*lista)
+lista = [3, 10, 2]
+print range(*lista)
