@@ -1,6 +1,7 @@
 import random
 import time
 import math
+import sys
 
 
 def is_prime(num):
@@ -51,8 +52,8 @@ print euklides2(9, 6, 12, 99, 30)
 
 big1 = random.getrandbits(256)
 big2 = random.getrandbits(256)
-fst = 1000000000L
-snd = 1000010000L
+fst = 10000000000L
+snd = 10000010000L
 big3 = filter(is_prime, range(fst, snd))
 print len(big3)
 
@@ -63,7 +64,16 @@ else:
     prime = 997
 print big1, big2, prime
 
-start = time.time()
+
+if sys.platform == 'win32':
+    # On Windows, the best timer is time.clock
+    default_timer = time.clock
+else:
+    # On most other platforms the best timer is time.time
+    default_timer = time.time
+
+
+start = default_timer()
 print euklidesMod(prime * prime, prime * prime * prime)
-stop = time.time()
+stop = default_timer()
 print 'Time:', stop - start
