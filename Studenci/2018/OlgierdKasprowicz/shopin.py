@@ -1,0 +1,1 @@
+/home/okasprowicz/jezyki_skryptowe/lab4/shopin.py
