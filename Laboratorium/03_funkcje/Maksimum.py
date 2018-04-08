@@ -13,7 +13,7 @@ def max2(*args, **kwargs):
         result = reduce(max1, kwargs.values())
     return result
 
-print max2("Ala", "ma", "kota")
+print max2("Ala", "ma", "kota", "qqq")
 print max2(1, 2, 3, 4.5)
 print max2(1, 2, 3, 4.5, x=8, y=9)
 print max2(a=-1, b=-2)
