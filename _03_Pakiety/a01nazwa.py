@@ -11,8 +11,9 @@ def nazwa():
 
 
 # wyprobuj:
-#  import a01nazwa
-#  a01nazwa.nazwa
+import a01nazwa
+a01nazwa.nazwa()
+
 if __name__ == "__main__":
     print 'aqq'
     nazwa()

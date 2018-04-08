@@ -27,7 +27,7 @@ print (lambda x, y: x)((lambda y: y), 1)(5)
 # Jak widac lista parametrow odpowiada raczej krotce parametrow,
 # niz wielokrotnemu zastosowaniu
 # ale mozna pierwsza linie zapisac tak
-(lambda x: (lambda y: y))(lambda y: y)
+print ((lambda x: (lambda y: y))(lambda y: y))("Ala")
 
 ############################
 # W lambda-rzchunku  mozemy wyrazic wiekszosc dobrze znanych bytow
@@ -57,7 +57,7 @@ def fff(x):
 print filter(fff, range(2, 25))
 print filter((lambda x: x % 2 != 0 and x % 3 != 0), range(2, 25))
 
-# map(f, lista) = f(lista)
+# map(f, lista) = "f(lista)" = [f(e) for e in lista]
 
 
 def cube(x):
@@ -91,6 +91,6 @@ def sum(seq):
         return x+y
     return reduce(add, seq, 0)
 
-sum(range(1, 11))
+print sum(range(1, 11))
 
-sum([])
+print sum([])
