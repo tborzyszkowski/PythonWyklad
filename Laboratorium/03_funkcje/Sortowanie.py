@@ -15,6 +15,7 @@ print [o['nazwisko'] for o in osoby]
 
 osoby.sort(key=lambda o: o['nazwisko'])
 print [o['nazwisko'] for o in osoby]
+print osoby
 
 osoby.sort(key=lambda o: o['waga'])
 print [o['nazwisko'] for o in osoby]
