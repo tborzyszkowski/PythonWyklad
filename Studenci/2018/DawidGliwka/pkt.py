@@ -10,7 +10,7 @@ class Rectangle:
 
 
 pkt  = Point(13, 14)
-pkt
+pkt2 = Point(16, 23
 print(pkt)
-pkt
 print(pkt.x, pkt.y)
+rec = Rectangle(pkt, pkt2)
