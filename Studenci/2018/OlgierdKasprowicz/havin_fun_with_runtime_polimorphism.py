@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from point import Point
 
 class Mockingbird():
     """
@@ -29,6 +28,8 @@ def main():
     m = Mockingbird("John")
 
     # ----
+
+    from point import Point
 
     m.mock(Point, 1, 1)
     p = Point(1,1)
