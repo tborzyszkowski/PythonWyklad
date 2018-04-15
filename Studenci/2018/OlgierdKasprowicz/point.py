@@ -7,6 +7,9 @@ class Point():
         self.coordinates = coordinates
 
     def distance(self, other):
+        """
+        The dimentions are floored if not equal
+        """
         return sqrt(sum({(xi - xj) ** 2 for xi, xj in zip(self.coordinates, other.coordinates)}))
      
 
@@ -33,6 +36,8 @@ def test_alteration():
     q = Point(0)
 
     assert p.distance(q) == q.distance(p)
+
+
     
 
 if __name__ == "__main__":
