@@ -21,9 +21,9 @@ class B(A):
     def m(self):
         return self.a + self.b
 
-    # def superM(self):
-    #     return super
-
+    def superM(self):
+        # return super
+        return A.m(self)
 
 # teraz wywolamy
 
@@ -34,4 +34,4 @@ a.test(2)
 b = B()
 print b.m()
 b.test(3)
-# print b.superM()
+print b.superM()
