@@ -13,4 +13,4 @@ pkt  = Point(13, 14)
 pkt2 = Point(16, 23
 print(pkt)
 print(pkt.x, pkt.y)
-rec = Rectangle(pkt, pkt2)
+rect = Rectangle(pkt, pkt2)
