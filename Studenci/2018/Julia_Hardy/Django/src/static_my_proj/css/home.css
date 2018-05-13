@@ -1,0 +1,40 @@
+.grafik{
+    position: relative;
+}
+.grafik img {
+    width: 40%;
+    height: 30px;
+}
+
+.grafik .btn {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.grafik .btn:hover {
+    background-color: black;
+}
+.btn {
+    background: #333;
+    height: 45px;
+    width: 190px;
+    position:absolute;
+    bottom: 85px;
+}
+.btn a{
+    color: #FFF;
+    text-decoration: none;
+}
+.container{
+    position: relative;
+}
