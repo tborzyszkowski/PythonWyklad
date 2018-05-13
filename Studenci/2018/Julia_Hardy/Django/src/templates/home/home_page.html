@@ -1,0 +1,9 @@
+{% include "main.html" %}
+{% load staticfiles %}
+<link rel="stylesheet", href="{% static 'css/home.css' %}">
+
+<div class="container" class="grafik">
+    <h1>Let's dance!</h1>
+    <img class="img-responsive" src="{% static 'img/grafik.jpg'%}"/>
+    <button  class="btn" role="button"><a width="100%" color="white" href="{% url 'grafik' %}">Zobacz Grafik Zajęć</a></button>
+</div>

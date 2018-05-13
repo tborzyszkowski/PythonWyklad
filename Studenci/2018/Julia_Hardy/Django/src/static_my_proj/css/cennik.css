@@ -1,0 +1,17 @@
+h1{
+    padding-bottom: 5%;
+}
+table{
+    color: white;
+}
+
+td.nazwa{
+    background-color: #444444;
+}
+
+td.cena{
+    background-color: #8a4182;
+}
+ td:hover{
+     background-color: #111111;
+ }

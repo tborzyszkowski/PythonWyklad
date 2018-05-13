@@ -1,0 +1,15 @@
+title{
+    font-size: larger;
+    text-transform: uppercase;
+    color: #8a4191;
+}
+h1{
+    color: #8a4191;
+}
+.description{
+    font-size: 10px;
+}
+img{
+    width:400px;
+    height: 400px;
+}
