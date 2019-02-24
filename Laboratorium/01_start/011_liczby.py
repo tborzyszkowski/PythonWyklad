@@ -16,7 +16,7 @@ xLen = len(str(x))
 t2 = default_timer()
 
 print "Time pow:", t1 - t0, "Time len:", t2 - t1, "Len:", xLen
-
+print "Time pow: %d Time len: %d Len: %d" % (t1 - t0,  t2 - t1,  xLen)
 t0 = default_timer()
 x = 12345 ** 123456
 t1 = default_timer()
