@@ -12,7 +12,7 @@ for (a, b, c) in przypadki:
 
 # print res
 
-# x = ((a == 0) and [(c == 0 and ['duzo'] or ['nie ma'])[0]] or [-c/float(a)])[0]
+x = ((a == 0) and [(c == 0 and ['duzo'] or ['nie ma'])[0]] or [-c/float(a)])[0]
 # <warunek> ? wy1 : wyr2
 # wyr1 if <warunek> else wyr2
 # print x, y
