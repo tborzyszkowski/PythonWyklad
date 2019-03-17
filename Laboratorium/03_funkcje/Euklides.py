@@ -73,10 +73,14 @@ print prime
 
 
 start = default_timer()
+lista = []
 for prime in big3:
-    print prime, euklidesMod(prime * prime, prime * prime * prime)
+    lista.append(
+        (prime, euklidesMod(prime * prime, prime * prime * prime))
+    )
 stop = default_timer()
-print 'Time euklidesMod:', (stop - start) * 1000
+
+print 'Time euklidesMod:', (stop - start)
 
 # start = default_timer()
 # for prime in big3:
