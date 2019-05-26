@@ -48,7 +48,7 @@ print ((jesli(ff))(1))(2)
 ############################
 # narzedzia programowania funkcyjnego
 #
-# filter(f, lita) = lista elementow e takich, ze f(e)=true
+# filter(f, lista) = lista elementow e takich, ze f(e)=true
 
 
 def fff(x):

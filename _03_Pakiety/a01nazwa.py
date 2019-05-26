@@ -3,7 +3,6 @@ print type(__name__)
 
 a = 13
 
-
 def nazwa():
     print __name__
     a = 1
