@@ -1,0 +1,117 @@
+{% load static %}
+<html lang="pl-PL">
+<head>
+    <title>Graph Master</title>
+    <meta name="description" content="Sprawdź swoją wiedzę o grafach" />
+    <meta name="keywords" content="Grafy, Kalkulator, Macierze, Obliczenia, Nauka">
+    <meta charset="UTF-8" />
+    <meta name="author" content="Adam Mielewczyk">
+    <link rel="Shortcut icon" href="images/Stroboss.ico" />
+    <link rel="stylesheet" href="{% static 'GraphMaster/Style.css' %}">
+    <link rel="stylesheet" href="{% static 'GraphMaster/css/all.css' %}">
+</head>
+<body>
+    <div id="header">
+        <a href="{% url 'graphmaster:index' %}"><h1>Graph Master</h1></a>
+        <h2>Sprawdź swoją wiedzę o grafach</h2>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a class="active" href="{% url 'graphmaster:index' %}">Główna</a></li>
+            <li>
+                <div class="dropdown">
+                    <a href="Doswiadczenia.htm"><i class="fa fa-flask" aria-hidden="true"></i> Testy</a>
+                    <div class="dropdown-content">
+                        <a href="Wizualizacja.htm"><i class="fa fa-volume-up"></i> WIZUALIZACJA DŹWIĘKU</a>
+                        <a href="Woda.htm"><i class="fa fa-video-camera"></i> WODA NIE Z TEJ ZIEMI</a>
+                        <a href="Masa.htm"><i class="fa fa-pie-chart"></i> ŻYWA MASA</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="headerbreak">
+            <h2><i class="fa fa-file" aria-hidden="true"></i> Sprawdź</h2>
+        </div>
+        <div class="content">
+            {% if matrixIncorrect %}
+                <h6>MACIERZ NIE POPRAWNA</h6>
+            {% else %}
+            <form action="{% url 'graphmaster:answer' graph.id %}" method="post">
+                {% csrf_token %}
+                <label for="your_name">Podaj macierz: </label>
+                <textarea id="your_name" type="text" name="matrix" rows="10" cols="30">{{graph.matrix}}</textarea>
+                <input type="submit" name="action" value="Edytuj">
+                <input type="submit" name="action" value="Usun">
+            </form>
+            <canvas id="linia" width="600" height="600"></canvas>
+                                <script>
+                                var c=document.getElementById("linia");
+                                var ctx=c.getContext("2d");
+
+                                {% for edge in edgesPosition %}
+                                        ctx.beginPath();
+                                            ctx.moveTo({{edge.1}},{{edge.0}});
+                                            ctx.lineTo({{edge.3}},{{edge.2}});
+                                        ctx.lineWidth=3;
+                                        ctx.strokeStyle="#0087ff";
+                                        ctx.stroke();
+                                {% endfor %}
+
+                                {% for x, y in vertexsPosition %}
+                                    var time = new Date();
+                                    ctx.beginPath();
+                                    ctx.arc({{y}},{{x}},25,0,10*Math.PI);
+                                    ctx.lineWidth=3;
+                                    ctx.fillStyle= "#ffe100";
+                                    ctx.fill();
+                                    ctx.strokeStyle="#ff006e";
+                                    ctx.stroke();
+                                {% endfor %}
+
+                                var vertexNumber=0;
+                                {% for x, y in vertexsPosition %}
+                                    ctx.font = "30px Arial";
+                                    ctx.strokeText(vertexNumber,{{y}}-8,{{x}}+10);
+                                    vertexNumber=vertexNumber+1
+                                {% endfor %}
+                                </script>
+            <br><br><br>
+                        Ilość krawędzi: {{edgeCount}}<br><br>
+                        Ilość wierzchołków: {{vertexCount}}<br><br>
+                        Stopnie wierzchołków: {{degrees}}<br><br>
+                        Typ grafu: {{type}}<br>
+                        Opis typu grafu: {{description}}
+            {% endif %}
+        </div>
+    </div>
+    <div class="footer">
+        <div class="content">
+            <table>
+                <tr>
+                    <td>
+                        <h6>Polecana lektura</h6>
+                        <a href="https://pl.wikipedia.org/wiki/Efekt_stroboskopowy"><p class="below">T. H. Cormen, Ch. E. Leiserson, R.L. Rivest</p></a>
+                        <a href="https://majsterkowo.pl/mini-stroboskop/"><p class="below">M. Kubale (ed.), Optymalizacja dyskretna.</p></a>
+                        <a href="https://gadzetomania.pl/11960,raz-jak-woda-raz-jak-cialo-stale-ciecz-nienewtonowska"><p class="below">G. Chartman, P. Zhang, A first course in Graph Theory</p></a>
+                    </td>
+                    <td>
+                        <h6>Polecana lektura</h6>
+                        <a href="https://pl.wikipedia.org/wiki/Efekt_stroboskopowy"><p class="below">T. H. Cormen, Ch. E. Leiserson, R.L. Rivest</p></a>
+                        <a href="https://majsterkowo.pl/mini-stroboskop/"><p class="below">M. Kubale (ed.), Optymalizacja dyskretna.</p></a>
+                        <a href="https://gadzetomania.pl/11960,raz-jak-woda-raz-jak-cialo-stale-ciecz-nienewtonowska"><p class="below">G. Chartman, P. Zhang, A first course in Graph Theory</p></a>
+                    </td>
+
+                    <td>
+                        <h6>Polecana lektura</h6>
+                        <a href="https://pl.wikipedia.org/wiki/Efekt_stroboskopowy"><p class="below">T. H. Cormen, Ch. E. Leiserson, R.L. Rivest</p></a>
+                        <a href="https://majsterkowo.pl/mini-stroboskop/"><p class="below">M. Kubale (ed.), Optymalizacja dyskretna.</p></a>
+                        <a href="https://gadzetomania.pl/11960,raz-jak-woda-raz-jak-cialo-stale-ciecz-nienewtonowska"><p class="below">G. Chartman, P. Zhang, A first course in Graph Theory</p></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
