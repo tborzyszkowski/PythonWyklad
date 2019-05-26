@@ -1,0 +1,13 @@
+{% extends 'movie/base.html' %}
+
+{% block body %}
+    <div>
+        <form method="post"> <!--bez post nie doda-->
+            {% csrf_token %}
+            {% include 'movie/form-template.html' %}
+            <div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
