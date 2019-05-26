@@ -1,0 +1,17 @@
+{% extends "store/base.html" %}
+{% block content %}
+    {% for i in sl %}
+       <article class="media content-section">
+              <div class="media-body">
+                <div class="rama">
+                  <h5 class="mr-2" href="#">{{ i.transaction_date }}</h5>
+                    <a class="article-title" href="{% url 'sales-detail' i.pk %}">{{ i.stock.name }}</a>
+                </div>
+              </div>
+       </article>
+    {% endfor %}
+{% endblock content %}
+
+
+
+
