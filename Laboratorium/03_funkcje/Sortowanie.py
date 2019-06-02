@@ -26,6 +26,10 @@ print [o['nazwisko'] for o in osoby]
 print sorted(osoby, key=lambda o: o['ulubione_dania'][0], reverse=True)
 
 print sorted(osoby,
+             cmp=lambda x, y: -1 if x < y else (1 if x > y else 0),
+             key=lambda o: o['waga'])
+
+print sorted(osoby,
              cmp=lambda x, y: 1 if x < y else -1,
              key=lambda o: o['ulubione_dania'][0], reverse=True)
 

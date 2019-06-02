@@ -62,7 +62,7 @@
 #     x, y = inst          # __getitem__ allows args to be unpacked directly
 #     print 'x =', x
 #     print 'y =', y
-
+#
 # #
 #
 # print '5'*20
@@ -74,7 +74,7 @@
 #     this_fails()
 # except ZeroDivisionError, detail:
 #     print 'Handling run-time error:', detail
-#
+
 #
 # # Bind the name getpass to the appropriate function
 # # print '6'*20

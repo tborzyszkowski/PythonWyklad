@@ -8,9 +8,9 @@ print "-"*20
 
 from a02fibo import fib, fib2, silnia
 
-print fib(2000)
+print fib(200000)
 print
-print fib2(2000)
+print fib2(200000)
 print silnia(4)
 print silnia(-4)
 

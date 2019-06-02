@@ -14,4 +14,7 @@ def zakupy(oferta, portfel, **listaZakupow):
     return (kupno, portfel - suma)
 
 
-print zakupy(oferta, portfel, chleb=2, mleko=3, wiejski=1, mlotek=3)
+# print zakupy(oferta, portfel, chleb=2, mleko=3, wiejski=1, mlotek=3)
+
+dd = {"chleb": 2, "mleko": 3, "wiejski": 1, "mlotek": 3}
+print zakupy(oferta, portfel, **dd)
