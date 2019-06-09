@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Projekt</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">﻿<!-- HOME -->
+    <link rel="stylesheet" type="text/css" href="{% static 'movie/style.css' %}" /> <!-- TŁO-->
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+        <!-- Główny -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'movie:index' %}">Home</a>
+        </div>
+        <!-- Reszta -->
+    <div class="">
+        <ul class="nav navbar-nav">
+            <li class="">
+                <a href="{% url 'movie:movies' %}">
+                   <span class="glyphicon glyphicon-wrench"></span>&nbsp; Manage Movies
+                </a>
+            </li>
+            <li class="">
+                <a href="{% url 'movie:type-add' %}">
+                   <span class="glyphicon glyphicon-plus"></span>&nbsp; Types
+                </a>
+            </li>
+            <li class="">
+                <a href="{% url 'movie:movie-add' %}">
+                   <span class="glyphicon glyphicon-plus"></span>&nbsp; Movies
+                </a>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+{% block body %}
+{% endblock %}
+</body>
+</html>
