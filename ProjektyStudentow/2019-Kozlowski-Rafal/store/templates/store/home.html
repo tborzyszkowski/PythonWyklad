@@ -1,0 +1,19 @@
+{% extends "store/base.html" %}
+{% block content %}
+    <article class="media content-section">
+        <h3>Witaj w sklepie, możliwe operacje:</h3>
+    </article>
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="rama">
+                    <p><a class="article-title" href="{% url 'sales' %}"> Sprzedaż </a></p>
+                <div class="media-body">
+                    <p><a class="article-title" href="{% url 'magazine' %}"> Magazyn </a></p>
+                </div>
+                <div class="media-body">
+                    <p><a class="article-title" href="{% url 'clients' %}"> Baza klientów </a></p>
+                </div>
+            </div>
+        </div>
+    </article>
+{% endblock content %}
