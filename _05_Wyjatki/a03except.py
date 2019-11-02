@@ -6,6 +6,7 @@
 #     try:
 #         x = int(raw_input("Podaj liczbe: "))
 #         y = 1 / x
+#         print y
 #         break
 #     except ValueError:
 #         print "+++ Chodzilo o liczbe +++"
@@ -13,13 +14,13 @@
 #         print e
 
 
-# # pliki i wyjatki
+# pliki i wyjatki
 # print '2'*20
 #
 # import sys
 #
 # try:
-#     f = open('_05\myfile.txt')
+#     f = open('myfile.txt')
 #     s = f.readline()
 #     print s.strip()
 #     i = int(s.strip())
@@ -35,7 +36,7 @@
 #     # raise
 # else:
 #     print "Else part"
-#
+
 # #
 # print '3'*20
 #
@@ -49,19 +50,20 @@
 #     else:
 #         print arg, 'has', len(f.readlines()), 'lines'
 #         f.close()
-#
+
 # # Szczegoly wyjatku
 # print '4'*20
 #
 # try:
-#     raise Exception('spam', 'eggs')
+#     raise Exception('spam', 'eggs',444)
 # except Exception, inst:
 #     print type(inst)     # the exception instance
 #     print inst.args      # arguments stored in .args
 #     print inst           # __str__ allows args to printed directly
-#     x, y = inst          # __getitem__ allows args to be unpacked directly
+#     x, y, q = inst          # __getitem__ allows args to be unpacked directly
 #     print 'x =', x
 #     print 'y =', y
+#     print 'q =', q
 
 # #
 #
@@ -75,10 +77,10 @@
 # except ZeroDivisionError, detail:
 #     print 'Handling run-time error:', detail
 #
+
+# Bind the name getpass to the appropriate function
+# print '6'*20
 #
-# # Bind the name getpass to the appropriate function
-# # print '6'*20
-# #
 # try:
 #     import termios
 #     import TERMIOS

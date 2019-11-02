@@ -16,7 +16,7 @@ import re
 # # re.compile("^a", re.M).search("ba", 1).span()
 #
 #
-# p = re.compile("a[bcd]*e")
+# p = re.compile("a[bcde]*e")
 # print p.match("abcdedcba").group()
 # print p.match("abcdedcba").span()
 # #
@@ -28,7 +28,7 @@ import re
 #     print 'Match found: ', m.group()
 # else:
 #     print 'No match'
-#
+
 # it = p.finditer("aabbccddeeccaaeeddaabbccww")
 # for i in it:
 #     print i.span(), i.group()
@@ -37,5 +37,5 @@ import re
 # print re.match('super', 'superstition').span()
 # print re.match('super', 'insuperable')
 #
-print re.search('super', 'superstition').span()
-print re.search('super', 'insuperable').span()
+# print re.search('super', 'superstition').span()
+# print re.search('super', 'insuperable').span()

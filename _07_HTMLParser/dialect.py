@@ -164,4 +164,4 @@ def test(url):
 
 if __name__ == "__main__":
 	# test("http://en.ug.edu.pl/")
-	test("http://www.wp.pl")
+	test("http://www.python.org/")

@@ -3,7 +3,7 @@
 # prywatna zmienna modulu
 __b = 13
 
-# print '__b = ', __b
+print '__b = ', __b
 
 # prywatna funkcja
 

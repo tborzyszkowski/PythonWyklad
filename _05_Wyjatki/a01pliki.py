@@ -33,7 +33,7 @@ print f.read()
 
 f.close()
 
-f = open(r'_05\a01pliki.py', 'r')
+f = open(r'a01pliki.py', 'r')
 lista = f.readlines()
 print "".join(lista)
 

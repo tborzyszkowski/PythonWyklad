@@ -1,0 +1,3 @@
+1234567890abcdefghijk
+Ala ma kota
+('a', 1, 3.14)
