@@ -1,0 +1,16 @@
+{% extends "store/base.html" %}
+{% block content %}
+    <article class="media content-section">
+          <div class="media-body">
+            <div class="rama">
+              <h5 class="mr-2" href="#">{{ object.name }}</h5>
+                <a class="article-title">{{ object.description }}</a>
+            </div>
+              <small class="text-muted">Ilość: {{ object.quantity }} </small>
+              <p> {{ object.price }} PLN</p>
+              <div class="form-group">
+                <a class="btn blue-btn" href="{% url 'magazine-update' object.pk %}" type="submit"> Edytuj </a>
+              </div>
+          </div>
+    </article>
+{% endblock content %}

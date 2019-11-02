@@ -1,0 +1,22 @@
+{% extends 'movie/base.html'%}
+
+{% block body %}
+    {% for movie in all_movies %}
+        <img src="{{movie.logo}}" width="400" height="300">
+        <h1>{{movie.movie_title}}</h1>
+        <h2>{{movie.type}}</h2>
+        <a href="{% url 'movie:movie-update' movie.id %}">Update</a>
+        <form action="{% url 'movie:movie-delete' movie.id %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-success">Delete
+            </button>
+        </form>
+        <p>{{movie.movie_title}} --BY-- {{movie.director}}
+            {% if movie.is_watched %}
+        </p>
+            <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/facebook/138/heavy-check-mark_2714.png"
+            width="40" height="30"/>
+        {% endif %}
+        <p>{{movie.description}}</p>
+    {% endfor %}
+{% endblock %}

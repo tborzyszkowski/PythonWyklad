@@ -1,0 +1,16 @@
+{% extends 'movie/base.html'%}
+
+{% block body %}
+    <img src="{{type.poster}}" width="640" height="480">
+    <h1>{{type.name}}</h1>
+    {% for movie in type.movie_set.all %}
+        <img src="{{movie.logo}}" width="400" height="300">
+        <p>{{movie.movie_title}} --BY-- {{movie.director}}
+            {% if movie.is_watched %}
+        </p>
+            <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/facebook/138/heavy-check-mark_2714.png"width="40" height="30" />
+        {% endif %}
+        <p>{{movie.description}}</p>
+        <br>
+    {% endfor %}
+{% endblock %}

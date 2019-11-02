@@ -1,5 +1,11 @@
 # liczby Fibonacciego
 
+def fibRek(n):
+    if n == 0 or n == 1:
+        return n
+    else:
+        return fibRek(n-1) + fibRek(n-2)
+
 
 def fib(n):
     """Wypisuje liczby Fibonacciego mniejsze niz n

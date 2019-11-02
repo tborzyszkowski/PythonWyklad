@@ -25,8 +25,6 @@ class B(A):
         # return super
         return A.m(self)
 
-# teraz wywolamy
-
 a = A()
 print a.m()
 a.test(2)

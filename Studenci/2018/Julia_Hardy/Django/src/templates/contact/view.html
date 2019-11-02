@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet", href='{% static "css/contact.css" %}'/>
+    <h1>Dance Studio</h1>
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <div class="col-sm-6 col-12">
+                  <p>ul. Wita Stwosza 57<br/>
+                  80-308 Gdańsk<br/><br/>
+                  tel.: 58 523-2158<br/>
+                  email.:dancestudio@gmail.com</p>
+                  <form method="POST"> {% csrf_token %}
+                    {{form}}
+                      <button type="submit" class="btn btn-default">Wyślij</button>
+                  </form>
+              </div>
+              <div class="col-sm-6 col-12">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31242.588481375547!2d18.557358774715265!3d54.4078696914008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1525638224789" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+          </div>
+      </div>
+  </div>
+
+{% endblock content %}

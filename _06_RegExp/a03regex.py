@@ -19,7 +19,7 @@ import re
 # print phonePattern.search('work 1-(800) 555.1212 #1234').group()
 # print phonePattern.search('800-555-1212').groups()
 # print phonePattern.search('800-555-1212').group()
-#
+
 #
 # # ###############################
 #
@@ -28,9 +28,9 @@ import re
 # print m.group(0), m.group(1), m.group(2), m.group(3), m.group(4)
 # print m.group(2, 1, 0)
 #
-p = re.compile(r'(\b\w+)\s+\1')
-print p.search('Paris in the the spring aaa aaa bb bb').group()
-print p.findall('Paris in the the spring aaa aaa bb bb')
+# p = re.compile(r'(\b\w+)(\s+\1){2,}')
+# print p.search('Paris in the the the    the\n the spring aaa aaa bb bb').group()
+# print p.findall('Paris in the the spring aaa aaa bb bb')
 #
 # # Wyjasnienia
 # #   \b tylko pelne slowa

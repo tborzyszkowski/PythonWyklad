@@ -1,0 +1,18 @@
+{% include "main.html" %}
+{% load staticfiles %}
+<link rel="stylesheet", href='{% static "css/zajecia_list.css" %}'/>
+
+{% for obj in object_list %}
+<div class="container">
+    <div class="col">
+        <div class="row">
+            <div class="col-sm-6 col-lg-6">
+             {{obj.title}}{{obj.description}}
+            </div>
+            <div class="col-sm-6 col-lg-6">
+                <img src="{{obj.image.url}}">
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

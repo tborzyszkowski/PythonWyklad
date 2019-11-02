@@ -63,7 +63,11 @@ print pickle.loads(pickle.dumps(b))
 
 
 lista = [1, "Ala", 1+2j, [1, 2]]
+<<<<<<< HEAD
 print pickle.dumps(lista)
+=======
+# print pickle.dumps(lista)
+>>>>>>> remotes/origin/master
 ll = pickle.loads(pickle.dumps(lista))
 print 'll = ', ll, ll is lista, ll == lista
 
@@ -110,3 +114,5 @@ print m
 # y = [x, 0]
 # y[1] = y
 # print y
+
+# m.deepcopy()

@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" media="screen" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" media="screen" href="{% static 'css/dataTables.bootstrap.css' %}">
+	<link rel="stylesheet" media="screen" href="{% static 'css/dataTables.tableTools.css' %}">
+
+	<title>Lista zakupów - Projekt Djanogo/CRUD</title>
+
+	<!--  -->
+
+	<style>
+        th {
+            word-break: break-word;
+        }
+        .footer{
+            background: #f5f5f5;
+            height: 60px;
+        }
+	</style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Lista zakupów</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            </div>
+        </div>
+    </nav>
+
+	<div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-8 col-xs-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Lista zakupów</div>
+                    <div class="panel-body">
+                        <table class="table table-striped table-bordered datatable" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Lp</th>
+                                    <th>Nazwa produktu</th>
+                                    <th>Ilość</th>
+                                    <th>Zdjęcie</th>
+                                    <th>Sklep</th>
+                                    <th>Kupione</th>
+                                    <th>Akcje</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% if latest_product_list %}
+                                {% for product in latest_product_list %}
+                                <tr>
+                                    <td>{{ forloop.counter }}</td>
+                                    <td>{{ product.name }}</td>
+                                    <td>{{ product.items }}</td>
+                                    <td><img src="{{ MEDIA_URL }}{{ product.image }}" style="width: 60px;"></td>
+                                    <td>{{ product.get_shop }}</td>
+                                    <td>
+                                        <form>
+                                            <input type="checkbox" name="checked" {{ product.get_checked }} />
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <a href="{% url 'mmapp:editdata' product.id %}">Edit</a> |
+                                        <a onclick="return confirm('Are you sure wat to delete ?');" href="{% url 'mmapp:deletedata' product.id %}">Delete</a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            {% elif getdata %}
+                            
+                                {% for product in getdata %}
+                                <tr>
+                                    <td>{{ forloop.counter }}</td> 
+                                    <td>{{ product.name }}</td>
+                                    <td>{{ product.items }}</td>
+                                    <td><img src="{{ MEDIA_URL }}{{ product.image }}" style="width: 60px;"></td>
+                                    <td>{{ product.get_shop }}</td>
+                                    <td>{{ product.checked }}</td>
+                                    <td>
+                                        <a href="{% url 'mmapp:editdata' product.id %}">Edit</a> |
+                                        <a onclick="return confirm('Are you sure wat to delete ?');" href="{% url 'mmapp:deletedata' product.id %}">Delete</a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            {% else %}
+                                <tr>
+                                    <td colspan="7">No Data Avaible ..</td>
+                                </tr>
+                            {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <div class="panel panel-default">
+                    {% if qid %}
+                    <div class="panel-heading">Edytuj produkt</div>
+                    <div class="panel-body">
+                        <form method="POST" action="{% url 'mmapp:updatedata' %}" enctype="multipart/form-data" accept-charset="UTF-8" class="test-form">
+                            <input type="hidden" name="qid" value="{{ data.pk }}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="name">Nazwa produktu</label>
+                                <input required="required" class="form-control" placeholder="Name" name="name" type="text" value="{{ data.name }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="items">Ilość</label>
+                                <input required="required" class="form-control" value="{{ data.items}}" placeholder="Ilość" name="items" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="photo">Zdjęcie</label>
+                                <input class="form-control" name="image" type="file">
+                                <img src="{{ MEDIA_URL }}{{ data.image }}" style="width: 200px;">
+                            </div>
+                            <div class="form-group">
+                                <label for="shop">Sklep</label>
+                                <select required="required" class="form-control" name="shop">
+                                    <option value="lidl"{% if data.shop == "lidl" %}selected="selected"{% endif %}>Lidl</option>
+                                    <option value="biedr"{% if data.shop == "biedr" %}selected="selected"{% endif %}>Biedronka</option>
+                                    <option value="auchan"{% if data.shop == "auchan" %}selected="selected"{% endif %}>Auchan</option>
+                                    <option value="tesco"{% if data.shop == "tesco" %}selected="selected"{% endif %}>Tesco</option>
+                                    <option value="inter"{% if data.shop == "inter" %}selected="selected"{% endif %}>Intermarche</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <input class="btn btn-primary" type="submit" value="Aktualizuj produkt">
+                            </div>
+                        </form>
+                    </div>
+                    {% else %}
+                    <div class="panel-heading">Dodaj produkt</div>
+                    <div class="panel-body">
+                        <form method="POST" action="{% url 'mmapp:savedata' %}" enctype="multipart/form-data" accept-charset="UTF-8" class="test-form">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="name">Nazwa produktu</label>
+                                <input required="required" class="form-control" placeholder="Name" name="name" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="items">Ilość</label>
+                                <input required="required" class="form-control" placeholder="ilosć" name="items" type="text">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="photo">Zdjęcie</label>
+                                <input required="required" class="form-control" name="image" type="file">
+                            </div>
+                           <div class="form-group">
+                                <label for="name">Sklep</label>
+                                <select required="required" class="form-control" name="shop">
+                                    <option value="" selected="selected">---WYBIERZ---</option>
+                                    <option value="lidl">Lidl</option>
+                                    <option value="biedr">Biedronka</option>
+                                    <option value="auchan">Auchan</option>
+                                    <option value="tesco">Tesco</option>
+                                    <option value="inter">Intermarche</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input class="btn btn-primary" type="submit" value="Dodaj produkt">
+                            </div>
+                        </form>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+        </div>
+    </footer>
+    <script type="text/javascript" src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.dataTables.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

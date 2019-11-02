@@ -4,7 +4,7 @@
 class NicNieRob:
     pass
 
-# print dir(NicNieRob)
+print dir(NicNieRob)
 
 # przykladowa klasa bez inicjalizacji
 
@@ -21,18 +21,19 @@ class MyClass:
 
 x = MyClass()
 y = MyClass()
-# print x.f()
-# print x.__class__.i, y.__class__.i
-# y.i = 54321
-# # y.__class__.i = 13579
-# print x.__class__.i, y.__class__.i
-# print x.f(), y.f()
-# print y.i, x.i
+print x.f()
+x.i = 10
+print x.__class__.i, y.__class__.i
+y.i = 54321
+# y.__class__.i = 13579
+print x.__class__.i, y.__class__.i
+print x.f(), y.f()
+print y.i, x.i
 
 
-# print x.__doc__
-# print x.f.__doc__
-# print '-'*20
+print x.__doc__
+print x.f.__doc__
+print '-'*20
 #
 # # klasa z inicjalizacja stanu klasy
 
@@ -51,7 +52,7 @@ class MojaKlasa:
 y = MojaKlasa(30, 40)
 y.wypisz()
 z = MojaKlasa()
-z.wypisz()
+z.wypisz() # -> MojaKlasa.wypisz(z)
 y.wypisz()
 MojaKlasa(13).wypisz()
 z.wypisz()

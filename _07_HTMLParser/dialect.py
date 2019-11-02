@@ -152,7 +152,7 @@ def translate(url, dialectName="chef"):
 	parser.close()
 	return parser.output()
 
-def test(url):
+def testMe(url):
 	"""test all dialects against URL"""
 	for dialect in ("chef", "fudd", "olde"):
 		outfile = "%s.html" % dialect
@@ -164,4 +164,9 @@ def test(url):
 
 if __name__ == "__main__":
 	# test("http://en.ug.edu.pl/")
+<<<<<<< HEAD
 	test("http://www.python.org/")
+=======
+	# test("http://www.wp.pl")
+	testMe("https://en.wikipedia.org/wiki/Konrad_Zuse")
+>>>>>>> remotes/origin/master

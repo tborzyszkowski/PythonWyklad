@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<link rel="stylesheet", href='{% static "css/cennik.css" %}'/>
+{% include "main.html" %}
+
+
+<div class="container">
+    <h1>CENNIK</h1>
+  <table class="table table-hover table-dark">
+    <tbody>
+      <tr>
+        <td class="nazwa">Pojedyńcze wejście</td>
+        <td class="cena">20 zł</td>
+      </tr>
+      <tr>
+        <td class="nazwa">Karnet miesiąc open</td>
+        <td class="cena">180 zł</td>
+      </tr>
+      <tr>
+        <td class="nazwa">Karnet miesiąc open student</td>
+        <td class="cena">120 zł</td>
+      </tr>
+      <tr>
+        <td class="nazwa">Karnet rok open</td>
+        <td class="cena">800 zł</td>
+      </tr>
+      <tr>
+        <td class="nazwa">Multisport*</td>
+        <td class="cena">0 zł</td>
+      </tr>
+      <tr>
+        <td class="nazwa">Beactive**</td>
+        <td class="cena">5 zł</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    * tylko jedne zajęcia dziennie, więcej zajęć dopłata 10zł zajecia<br/>
+    ** tylko jedne zajęcia dziennie, więcej zajęć dopłata 10zł zajecia
+  </p>
+</div>

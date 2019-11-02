@@ -1,0 +1,10 @@
+{% include "main.html" %}
+{% load staticfiles %}
+<div class ="container">
+          {{obj.get_your_choice_display}}
+          {{obj.get_day_choice_display}}
+          {{obj.get_hour_choice_display}}
+
+    <botton><a href="edit" class="btn btn-primary" role="button">Edytuj</a></botton>
+    <botton><a href="delete" class="btn btn-primary" role="button">Usuń</a></botton>
+</div>

@@ -26,7 +26,8 @@ class Prywatna:
 p = Prywatna()
 print p.a
 # print p.__b
-p._Prywatna__b
+print p._Prywatna__b
 # print p.__f()
 print p._Prywatna__f()
 print "--", dir(p)
+print p.__module__

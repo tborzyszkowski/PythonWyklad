@@ -63,8 +63,12 @@
 #     x, y, q = inst          # __getitem__ allows args to be unpacked directly
 #     print 'x =', x
 #     print 'y =', y
+<<<<<<< HEAD
 #     print 'q =', q
 
+=======
+#
+>>>>>>> remotes/origin/master
 # #
 #
 # print '5'*20
@@ -76,10 +80,14 @@
 #     this_fails()
 # except ZeroDivisionError, detail:
 #     print 'Handling run-time error:', detail
+<<<<<<< HEAD
 #
 
 # Bind the name getpass to the appropriate function
 # print '6'*20
+=======
+
+>>>>>>> remotes/origin/master
 #
 # try:
 #     import termios
