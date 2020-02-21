@@ -1,9 +1,0 @@
-pytest
-pytest-cov
-pytest-sugar
-isort
-flake8==2.4.1
-tox==2.1.1
-coverage==4.0
-mock==2.0.0
--r requirements.txt

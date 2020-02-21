@@ -1,1 +1,0 @@
-../example/fin.c
