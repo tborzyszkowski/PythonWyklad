@@ -10,4 +10,4 @@ for para in listaPrzypadkow:
         else:
             print "brak"
     else:
-        print "Jedno:", -(1.0)* c / a
+        print "Jedno:", (-1.0) * c / a
