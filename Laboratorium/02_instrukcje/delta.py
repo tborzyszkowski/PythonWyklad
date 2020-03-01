@@ -28,7 +28,6 @@ d = b * b - 4 * a * c
 #         ('x = %f' % ((-b)/(2.0*a)) if (d == 0) else "....")
 # print wynik
 
-
 if a == 0:
     if b == 0:
         if c == 0:

@@ -6,7 +6,7 @@ ax + by + c =0
 # c = 0
 przypadki = [(1, 0, 0), (1, 0, 1), (0, 1, 0), (0, 1, 1), (1, 1, 0), (1, 1, 1), (0, 0, 1)]
 
-for (a, b, c) in przypadki:
+1:
     res = ('duzo' if c == 0 else 'nie ma') if a == 0 else -c/float(a)
     print a, "x +", b, "y + ", c, "=", 0, "res =", res
 
