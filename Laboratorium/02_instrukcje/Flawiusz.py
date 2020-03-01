@@ -7,4 +7,4 @@ for (liczbaRycerzy, wynik) in przypadki:
         del listaRycerzy[i]
         i += 1
         i %= len(listaRycerzy)
-    print liczbaRycerzy, "Actual:", listaRycerzy[0] + 1, "Expected:", wynik
+    print "Rycerze:", liczbaRycerzy, "\tActual:", listaRycerzy[0] + 1, "\tExpected:", wynik, listaRycerzy[0] + 1 == wynik
