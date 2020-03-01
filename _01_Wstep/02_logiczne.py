@@ -12,7 +12,8 @@ print [1, 2, 3] and {1: 'aa', 4: 'qq'}
 
 # jaka bedzie wartosc wyrazenia ?
 print 0 or 'a' and 1 and not 0.0
-
+print 0 or ('a' and (1 and (not 0.0)))
+print (0 or 'a') and (1 and (not 0.0))
 # leniwe wartosciowanie
 
 
