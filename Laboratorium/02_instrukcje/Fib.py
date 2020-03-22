@@ -30,9 +30,10 @@ fibs = [fib3, fibonacciFast]
 results = {f.__name__: [] for f in fibs}
 print results
 
-r_begin = 180000
-r_end = 220000
-r_range = range(r_begin, r_end, 300)
+step = 3000
+r_begin = 2000*1000
+r_end = r_begin + 100 * step
+r_range = range(r_begin, r_end, step)
 
 for n in r_range:
     print "n =", n,
