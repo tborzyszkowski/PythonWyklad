@@ -29,7 +29,7 @@ def test1(arg1):
 def test2(arg2):
     """Test2_doc
     """
-    # global a
+    global a
     a = arg2
     b = arg2 + 1
     test1(b)

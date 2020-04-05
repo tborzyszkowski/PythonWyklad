@@ -2,6 +2,13 @@ import time
 import matplotlib.pylab as plt
 
 
+def fibonacci_rek(n):
+    if n < 2:
+        return n
+    else:
+        return fibonacci_rek(n-2) + fibonacci_rek(n-1)
+
+
 def fibonacci_linear(n):
     f1 = 0
     f2 = 1
