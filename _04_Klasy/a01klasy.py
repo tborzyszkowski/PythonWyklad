@@ -37,6 +37,7 @@ print '-'*20
 #
 # # klasa z inicjalizacja stanu klasy
 
+
 class MojaKlasa:
     i = 0
 

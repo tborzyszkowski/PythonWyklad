@@ -1,7 +1,7 @@
 # petla z wyjatkami
 
 # print '1'*20
-
+#
 # while True:
 #     try:
 #         x = int(raw_input("Podaj liczbe: "))
@@ -63,12 +63,9 @@
 #     x, y, q = inst          # __getitem__ allows args to be unpacked directly
 #     print 'x =', x
 #     print 'y =', y
-<<<<<<< HEAD
 #     print 'q =', q
 
-=======
 #
->>>>>>> remotes/origin/master
 # #
 #
 # print '5'*20
@@ -80,33 +77,29 @@
 #     this_fails()
 # except ZeroDivisionError, detail:
 #     print 'Handling run-time error:', detail
-<<<<<<< HEAD
-#
+# this_fails()
 
 # Bind the name getpass to the appropriate function
 # print '6'*20
-=======
-
->>>>>>> remotes/origin/master
 #
-# try:
-#     import termios
-#     import TERMIOS
-# except ImportError:
-#     try:
-#         import msvcrt
-#     except ImportError:
-#         try:
-#             from EasyDialogs import AskPassword
-#         except ImportError:
-#             # getpass = default_getpass
-#             print "No AskPassword"
-#         else:
-#             # getpass = AskPassword
-#             print "AskPassword"
-#     else:
-#         # getpass = win_getpass
-#         print "win_getpass"
-# else:
-#     # getpass = unix_getpass
-#     print "unix_getpass"
+try:
+    import termios
+    import TERMIOS
+except ImportError:
+    try:
+        import msvcrt
+    except ImportError:
+        try:
+            from EasyDialogs import AskPassword
+        except ImportError:
+            # getpass = default_getpass
+            print "No AskPassword"
+        else:
+            # getpass = AskPassword
+            print "AskPassword"
+    else:
+        # getpass = win_getpass
+        print "win_getpass"
+else:
+    # getpass = unix_getpass
+    print "unix_getpass"

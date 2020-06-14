@@ -1,10 +1,11 @@
 # liczby Fibonacciego
 
-def fibRek(n):
+
+def fib_rek(n):
     if n == 0 or n == 1:
         return n
     else:
-        return fibRek(n-1) + fibRek(n-2)
+        return fib_rek(n - 1) + fib_rek(n - 2)
 
 
 def fib(n):
@@ -36,9 +37,9 @@ def silnia(n):
         return (-1)*silnia((-1)*n)
 
 
-def a(n):
+def aa(n):
     return n
 
 
-def b(n):
-    return a(n)
+def bb(n):
+    return aa(n)

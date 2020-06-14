@@ -11,6 +11,7 @@ __date__ = "$Date: 2004/05/05 21:57:19 $"
 __copyright__ = "Copyright (c) 2001 Mark Pilgrim"
 __license__ = "Python"
 
+
 # While this is a good example script to teach about introspection,
 # in real life it has been superceded by PyDoc, which is part of the
 # standard library in Python 2.1 and later.
@@ -33,14 +34,15 @@ __license__ = "Python"
 
 
 def info(object, spacing=10, collapse=1):
-	"""Print methods and doc strings.
+    """Print methods and doc strings.
 
 	Takes module, class, list, dictionary, or string."""
-	methodList = [e for e in dir(object) if callable(getattr(object, e))]
-	processFunc = collapse and (lambda s: " ".join(s.split())) or (lambda s: s)
-	print "\n".join(["%s %s" % (method.ljust(spacing),
-		processFunc(str(getattr(object, method).__doc__))) for method in methodList])
+    methodList = [e for e in dir(object) if callable(getattr(object, e))]
+    processFunc = collapse and (lambda s: " ".join(s.split())) or (lambda s: s)
+    print "\n".join(["%s %s" % (method.ljust(spacing),
+                                processFunc(str(getattr(object, method).__doc__))) for method in methodList])
+
 
 # print __name__
 if __name__ == "__main__":
-	print help.__doc__
+    print info.__doc__

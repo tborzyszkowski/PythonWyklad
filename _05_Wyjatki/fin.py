@@ -9,4 +9,4 @@ def divide(x, y):
         print "executing finally clause"
 
 
-divide(1,0)
+divide(1,1)

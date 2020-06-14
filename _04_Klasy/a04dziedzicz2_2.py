@@ -33,8 +33,8 @@ class B2:
 class C(B1, B2):
 
     def __init__(self):
-        B2.__init__(self)
         B1.__init__(self)
+        B2.__init__(self)
 
     def g(self):
         return self.f()
@@ -42,7 +42,8 @@ class C(B1, B2):
     def h(self):
         return self.getI()
 
+
 c = C()
 c.__class__.i += 10
-print 'a = ', c.a, ' b = ', c.b, ' i = ', c.__class__.i
+print 'a = ', c.a, ' b = ', c.b, ' class.i = ', c.__class__.i, 'self.i = ', c.i
 print 'c.g() = ', c.g(), 'c.h() = ', c.h()

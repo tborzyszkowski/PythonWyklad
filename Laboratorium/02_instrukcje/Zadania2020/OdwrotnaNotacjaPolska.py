@@ -25,5 +25,6 @@ def wylicz(wyrazenie):
             raise ValueError("To wyrazenie jest jakies dziwne: %s" % element)
     return stos
 
+
 if __name__ == "__main__":
     print wylicz("1 2 + 3 *")

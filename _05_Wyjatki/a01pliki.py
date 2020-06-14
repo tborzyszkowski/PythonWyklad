@@ -10,7 +10,8 @@ f.write('Ala ma kota\n')
 t = ('a', 1, 3.14)
 f.write(str(t))
 f.write('\n')
-
+f.flush()
+f.write('Ola ma kota\n')
 f.close()
 
 print f

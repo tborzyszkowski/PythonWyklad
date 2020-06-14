@@ -1,7 +1,7 @@
 import sys
 
 print "Przed:\n", sys.path
-sys.path.append(r'C:\home\tomek\UG\Zajecia\Python\Wyklad\PythonWyklad\_03_Pakiety')
+sys.path.append(r'C:\home\gitHub\PythonWyklad\_03_Pakiety')
 print "Po:\n", sys.path
 
 import pakiet

@@ -1,11 +1,6 @@
-# atrybuty prywatne
-
-# prywatna zmienna modulu
 __b = 13
 
 print '__b = ', __b
-
-# prywatna funkcja
 
 
 def __prywatna_funkcja(a=1):
@@ -22,6 +17,7 @@ class Prywatna:
 
     def __f(self):
         print self.a, '  ', self.__b
+
 
 p = Prywatna()
 print p.a

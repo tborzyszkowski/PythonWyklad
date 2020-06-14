@@ -12,8 +12,8 @@ import re
 # print re.compile("^a", re.M).search("\na", 1).group()
 # print re.compile("^a", re.M).search("\na", 1).span()
 #
-# # re.compile("^a", re.M).search("ba", 1).group()
-# # re.compile("^a", re.M).search("ba", 1).span()
+# re.compile("^a", re.M).search("ba", 1).group()
+# re.compile("^a", re.M).search("ba", 1).span()
 #
 #
 # p = re.compile("a[bcde]*e")
@@ -28,11 +28,11 @@ import re
 #     print 'Match found: ', m.group()
 # else:
 #     print 'No match'
-
+#
 # it = p.finditer("aabbccddeeccaaeeddaabbccww")
 # for i in it:
 #     print i.span(), i.group()
-#
+
 # # match i search to nie to samo
 # print re.match('super', 'superstition').span()
 # print re.match('super', 'insuperable')

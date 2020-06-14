@@ -2,7 +2,7 @@
 
 
 class A:
-    def __init__(self, a=1):
+    def __init__(self, a = 1):
         self.a = a
 
     def m(self):
@@ -13,7 +13,7 @@ class A:
 
 
 class B(A):
-    def __init__(self, a=2, b=3):
+    def __init__(self, a = 2, b = 3):
         # A.__init__(self)
         A.__init__(self, a)  # trzeba wywolac inicjalizacje przodka
         self.b = b
@@ -24,6 +24,7 @@ class B(A):
     def superM(self):
         # return super
         return A.m(self)
+
 
 a = A()
 print a.m()
