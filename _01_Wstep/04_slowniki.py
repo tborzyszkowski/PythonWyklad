@@ -1,26 +1,26 @@
 # slowniki
 
-print '----------'
 d = {'ab': 12, 33: {1: 'q', 2: 'w'}, 'bb': 'cc'}
 
-print d.values()
-print d.keys()
+print(list(d.values()))
+print(list(d.keys()))
 
 # typ slownika
-print type(d)
-print len(d[33])
+print(type(d))
+print(len(d[33]))
 
 # operacje
-print d
+print(d)
 d['z'] = 'zzz'
-print d
+print(d)
 d['z'] = 'qqq'
-print d
+print(d)
+
 # kasowanie
 del d['z']
-print d
+print(d)
 d.clear()
-print d
+print(d)
 
 # metody dostepne dla typu dict
-print dir(dict)
+print(dir(dict))

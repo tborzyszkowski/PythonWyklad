@@ -19,7 +19,7 @@ import string
 print(dir(string))
 
 # opis funkcji count
-print(string.count.func_doc)
+print(string.ascii_uppercase.__doc__)
 
 # napisy formatowane
 
