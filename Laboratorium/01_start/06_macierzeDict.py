@@ -12,20 +12,20 @@ for w in range(n):
             wyn[w][k] += m1[w][c]*m2[c][k]
 
 for w in range(n):
-    print m1[w].values()
+    print(m1[w].values())
 print
 
 for w in range(n):
-    print m2[w].values()
+    print(m2[w].values())
 print
 
 for w in range(n):
-    print wyn[w].values()
+    print(wyn[w].values())
 
 ######
 # List version
 
-print "-- List version --"
+print("-- List version --")
 
 n = 2
 m1 = [ [randint(0, 5) for k in range(n)]  for w in range(n) ]
@@ -38,12 +38,12 @@ for w in range(n):
             wyn[w][k] += m1[w][c]*m2[c][k]
 
 for w in range(n):
-    print m1[w]
+    print(m1[w])
 print
 
 for w in range(n):
-    print m2[w]
+    print(m2[w])
 print
 
 for w in range(n):
-    print wyn[w]
+    print(wyn[w])
