@@ -20,13 +20,13 @@ print('------ wstawianie --------')
 l.append('z')
 print(l)
 
-l.insert(2,'qq')
+l.insert(2, 'qq')
 print(l)
 
-l.extend(['x','y','z'])
+l.extend(['x', 'y', 'z'])
 print(l)
 
-l.append(['x','y','z'])
+l.append(['x', 'y', 'z'])
 print(l)
 
 print(l[-1])
@@ -34,6 +34,10 @@ print(l[-1])
 print(l.index('z'))
 
 print(('z' in l), ('w' in l))
+
+value = 'aa'
+print((value in l) and (l.index(value)))
+
 
 print('--------- usuwaie ---------')
 print(l.pop())
