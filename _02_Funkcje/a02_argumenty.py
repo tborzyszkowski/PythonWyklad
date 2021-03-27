@@ -1,10 +1,5 @@
-# 02_argumenty
-#
-##########################################
-
-
 def test1(a, b=1, c=2):
-    print 'a : ', a, ' b : ', b, ' c : ', c
+    print('a : ', a, ' b : ', b, ' c : ', c)
 
 # Wykonaj
 # test1(0)
@@ -20,36 +15,36 @@ i = 1
 
 
 def f(a=i):
-    print 'a = ', a
+    print('a = ', a)
 
 i = 2
-print "f():", f()
+print("f():", f())
 # Jaki bedzie wynik powyzszego wywolania
 
 ##########################################
 # Argumenty (takze domyslne) sa referencjami do obiektow (czasem zmiennych)
 
 
-def g(a, L=[]):
+def g(a, L = []):
     L.append(a)
     return L
 
-print g(1)
-print g(2)
-print g(3)
+print(g(1))
+print(g(2))
+print(g(3))
 
 # jaki tu otrzymamy rezultat - wyjasnij
 
 
-def h(a, L=None):
+def h(a, L = None):
     if L is None:
         L = []
     L.append(a)
     return L
 
-print h(1)
-print h(2)
-print h(3)
+print(h(1))
+print(h(2))
+print(h(3))
 
 ##########################################
 # Jako parametrow funkcji moza uzywac rowniez:
@@ -59,14 +54,14 @@ print h(3)
 
 
 def pp(x=1, *arguments, **keywords):
-    print 'x = ', x
-    print '-' * 10
-    print keywords
-    print arguments
-    keys = keywords.keys()
+    print('x = ', x)
+    print('-' * 10)
+    print(keywords)
+    print(arguments)
+    keys = list(keywords.keys())
     keys.sort()
     for k in keys:
-        print k, ' : ', keywords[k]
+        print(k, ' : ', keywords[k])
 
 # Sprobuj
 pp(1)
@@ -76,17 +71,19 @@ pp('xxx', 'yyy', z='zzz', v='vvv')
 # pp(1, y=2, z=3, x=5)
 # pp(1, y=3, 2, z=5, 4)
 
-def printf(format, *args):
-    print format % args
 
-# Sprobuj 
+def printf(format, *args):
+    print(format % args)
+
+
+# Sprobuj
 printf('%s - %.3f', 'As', 123.45)
 
 # operator * moze byc takze uzywany do rozpakowywania argumentow
 # zgromadzinych w strukturach takich jak lista w celu uzycia ich komponentow
 # jako argumentow funkcji
 # Sprobuj
-print range(3, 10, 2)
+print(list(range(3, 10, 2)))
 # oraz
 lista = [3, 10, 2]
-print range(*lista)
+print(list(range(*lista)))

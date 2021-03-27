@@ -1,5 +1,3 @@
-# liczby Fibonacciego
-
 
 def fib_rek(n):
     if n == 0 or n == 1:
@@ -13,7 +11,7 @@ def fib(n):
     """
     a, b = 0, 1
     while b < n:
-        print b,
+        print(b,)
         a, b = b, a+b
 
 

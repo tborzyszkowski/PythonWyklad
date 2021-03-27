@@ -33,16 +33,25 @@ __license__ = "Python"
 #   http://www.onlamp.com/pub/a/python/2001/04/18/pydoc.html
 
 
-def info(object, spacing=10, collapse=1):
+def info(object_to_describe, spacing=10, collapse=1):
     """Print methods and doc strings.
 
-	Takes module, class, list, dictionary, or string."""
-    methodList = [e for e in dir(object) if callable(getattr(object, e))]
-    processFunc = collapse and (lambda s: " ".join(s.split())) or (lambda s: s)
-    print "\n".join(["%s %s" % (method.ljust(spacing),
-                                processFunc(str(getattr(object, method).__doc__))) for method in methodList])
+        Takes module, class, list, dictionary, or string.
+    """
+    def process_function(s):
+        if collapse:
+            return " ".join(s.split())
+        else:
+            return s
+
+    method_list = [e for e in dir(object_to_describe) if callable(getattr(object_to_describe, e))]
+    # process_function = collapse and (lambda s: " ".join(s.split())) or (lambda s: s)
+    return "\n".join(
+            ["%s %s" %
+             (method.ljust(spacing),
+              process_function(str(getattr(object_to_describe, method).__doc__)))
+                for method in method_list])
 
 
-# print __name__
 if __name__ == "__main__":
-    print info.__doc__
+    print(info.__doc__)

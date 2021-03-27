@@ -1,19 +1,19 @@
 import sys
 
-print sys.path
+print(sys.path)
 
 # import pierwszy
 # import drugi
 
 sys.path.append(r'C:\home\gitHub\PythonWyklad\_03_Pakiety\moduly')
 
-print sys.path
+print(sys.path)
 
-import pierwszy
-import drugi
+import moduly.pierwszy
+import moduly.drugi
 
-dir(pierwszy)
-dir(drugi)
+dir(moduly.pierwszy)
+dir(moduly.drugi)
 
 
 # Zadanie:

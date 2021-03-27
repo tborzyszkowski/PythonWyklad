@@ -93,7 +93,8 @@ import apihelper
 # # Powyzsze funkcje (i wiecej) pochodza z modulu __builtin__
 # # po uruchomieniu Pythona wszystkie funkcje tego modulu
 # # sa dostepne w biezacej przestrzeni nazw - tak jak by ktos wywolal niejawnie:
-# from __builtin__ import *
-# import __builtin__
+# from builtins import *
+# import builtins
+# print(dir(builtins))
 #
-# info(__builtin__, 20)
+# info(builtins, 20)

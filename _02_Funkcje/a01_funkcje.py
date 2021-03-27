@@ -22,8 +22,8 @@ def test1(arg1):
     I jeszcze.
     """
     a = arg1
-    print 'test1: LOCALS  :', locals()
-    print 'test1: GLOBALS :', globals()['a']
+    print('test1: LOCALS  :', locals())
+    print('test1: GLOBALS :', globals()['a'])
 
 
 def test2(arg2):
@@ -33,44 +33,47 @@ def test2(arg2):
     a = arg2
     b = arg2 + 1
     test1(b)
-    print 'test2:LOCALS  :', locals()
-    print 'test2:GLOBALS :', globals()['a']
+    a += 1
+    print('test2:LOCALS  :', locals())
+    print('test2:GLOBALS :', globals()['a'])
 
-print a, b
-# test1(3)
-# print '--------------'
-# test2(3)
-# print a, b
-#
-# print test1.__doc__
-# print test2.__doc__
-#
-# print locals.__doc__
-# print globals.__doc__
 
-# locals()['a'] = 5
-# print locals()['a'], a
+if __name__ == "__main__":
+    # print(a, b)
+    # test1(3)
+    # print('--------------')
+    # test2(7)
+    # print(a, b)
 
-# print globals()['a']
-# globals()['a'] = 6
-# print globals()['a']
+    print(test1.__doc__)
+    print(test2.__doc__)
 
-# print globals()['z']
-# globals()['z'] = 6
-# print globals()['z'], z
+    print(locals.__doc__)
+    print(globals.__doc__)
 
-# nastepnie sprawdzmy wyniki
-# import a01_funkcje
-#
-# a01_funkcje.a
-# a01_funkcje.b
-# a01_funkcje.test1(3)
-# a01_funkcje.test2(3)
+    locals()['a'] = 5
+    print(locals()['a'], a)
 
-# jakie wyniki otrzymamy wywolujac
-# 01_funkcje.test1.__doc__
-# 01_funkcje.test2.__doc__
-#
-# Sprawdz
-# locals.__doc__
-# globals.__doc__
+    print(globals()['a'])
+    globals()['a'] = 6
+    print(globals()['a'])
+
+    # print(globals()['z'])
+    # globals()['z'] = 6
+    # print(globals()['z'], z)
+
+    # nastepnie sprawdzmy wyniki
+    # import a01_funkcje
+    #
+    # a01_funkcje.a
+    # a01_funkcje.b
+    # a01_funkcje.test1(3)
+    # a01_funkcje.test2(3)
+
+    # jakie wyniki otrzymamy wywolujac
+    # 01_funkcje.test1.__doc__
+    # 01_funkcje.test2.__doc__
+    #
+    # Sprawdz
+    # locals.__doc__
+    # globals.__doc__
