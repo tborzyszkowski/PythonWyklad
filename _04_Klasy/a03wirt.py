@@ -28,6 +28,6 @@ class C(B):
 a = A()
 b = B()
 c = C()
-print 'A:', a.test(), a.testSelf()
-print 'B:', b.test(), b.testSuper(), b.testSelf()
-print 'C:', c.test(), c.testSuper(), c.testSelf()
+print('A:', a.test(), a.testSelf())  # 1 1
+print('B:', b.test(), b.testSuper(), b.testSelf())
+print('C:', c.test(), c.testSuper(), c.testSelf())

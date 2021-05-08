@@ -30,11 +30,11 @@ class B2:
     #     return self.__class__.i
 
 
-class C(B2, B1):
+class C(B1, B2):
 
     def __init__(self):
-        B1.__init__(self)
         B2.__init__(self)
+        B1.__init__(self)
 
     def g(self):
         return self.f()
@@ -44,5 +44,5 @@ class C(B2, B1):
 
 
 c = C()
-print 'a = ', c.a, ' b = ', c.b, ' i = ', c.__class__.i, ' c = ', c.c
-print 'c.g() = ', c.g(), 'c.h() = ', c.h()
+print('a = ', c.a, ' b = ', c.b, ' i = ', c.__class__.i, ' c = ', c.c)
+print('c.g() = ', c.g(), 'c.h() = ', c.h())

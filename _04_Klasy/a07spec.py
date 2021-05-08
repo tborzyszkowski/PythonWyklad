@@ -23,21 +23,21 @@ class D:
 
 d = D()
 
-print len(d), d
+print(len(d), d)
 d['ala'] = 321
 d['ala'] = (1, 2)
-print len(d['ala'])
-print len(d), d
+print(len(d['ala']))
+print(len(d), d)
 d['ola'] = 123
-print len(d), d
-print d['ala'], d['ola']
-print d.dane.keys()
+print(len(d), d)
+print(d['ala'], d['ola'])
+print(d.dane.keys())
 
 c = D()
-print c < d
+print(c < d)
 
-print str(c)
-print str(d)
-print c
-print d
-print c or d
+print(str(c))
+print(str(d))
+print(c)
+print(d)
+print(c or d)

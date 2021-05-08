@@ -27,7 +27,7 @@ __license__ = "Python"
 
 import os
 import sys
-from UserDict import UserDict
+from collections import UserDict
 
 
 def stripnulls(data):
@@ -88,5 +88,5 @@ def listDirectory(directory, fileExtList):
 
 if __name__ == "__main__":
     for info in listDirectory(r"C:\home", [".mp3"]):
-        print "\n".join(["%s=%s" % (k, v) for k, v in info.items()])
-        print
+        print("\n".join(["%s=%s" % (k, v) for k, v in info.items()]))
+

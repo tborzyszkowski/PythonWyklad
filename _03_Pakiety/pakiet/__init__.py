@@ -1,9 +1,9 @@
-__all__ = ["pierwszy", "drugi", "trzeci"]
+__all__ = ["pierwszy"] #, "drugi", "trzeci"]
 
-from pierwszy import *
-from drugi import *
-from trzeci import *
+from pakiet.pierwszy import *
+# from pakiet.drugi import *
+# from pakiet.trzeci import *
 
-print "Init modulu ", __name__
+print("Init modulu ", __name__)
 
 pakiet_x = 1

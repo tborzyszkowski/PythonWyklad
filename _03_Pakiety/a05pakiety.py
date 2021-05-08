@@ -1,11 +1,13 @@
 import sys
 
-print "Przed:\n", sys.path
+print("Przed:\n", sys.path)
 sys.path.append(r'C:\home\gitHub\PythonWyklad\_03_Pakiety')
-print "Po:\n", sys.path
+print("Po:\n", sys.path)
 
 import pakiet
-print dir(pakiet)
+print(dir(pakiet))
+
+print(pakiet.pierwszy.j_1_x)
 from pakiet import *
 # dir(pakiet)
 # dir(pierwszy)
@@ -18,14 +20,14 @@ from pakiet import *
 # dir(pakiet.pierwszy)
 # dir(pakiet.pierwszy.jeden_1)
 #
-import pakiet.trzeci
-dir(pakiet)
-dir(pakiet.trzeci)
-from pakiet.trzeci import *
-dir(pakiet)
-dir(pakiet.trzeci)
-from pakiet.trzeci import trzy_2, trzy_3
-dir(pakiet.trzeci)
+# import pakiet.trzeci
+# dir(pakiet)
+# dir(pakiet.trzeci)
+# from pakiet.trzeci import *
+# dir(pakiet)
+# dir(pakiet.trzeci)
+# from pakiet.trzeci import trzy_2, trzy_3
+# dir(pakiet.trzeci)
 
 
 # Jakie sa roznice w uzyciu komend:

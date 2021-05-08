@@ -54,5 +54,5 @@ class C(B1, B2):
 
 
 c = C()
-print 'a = ', c.a, ' b = ', c.b, ' i = ', c.__class__.i, ' j = ', c.__class__.j
-print 'c.f() = ', c.f(), ' c.getI() = ', c.getI(), 'c.h() = ', c.h()
+print('a = ', c.a, ' b = ', c.b, ' i = ', c.__class__.i, ' j = ', c.__class__.j)
+print('c.f() = ', c.f(), ' c.getI() = ', c.getI(), 'c.h() = ', c.h())

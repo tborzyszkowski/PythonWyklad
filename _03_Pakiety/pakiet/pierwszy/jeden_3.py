@@ -1,2 +1,2 @@
-print "Modul ", __name__, " zaladowany"
+print("Modul ", __name__, " zaladowany")
 
