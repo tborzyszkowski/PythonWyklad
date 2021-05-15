@@ -1,15 +1,15 @@
-# przyklad z tutoriala
-
 
 class MyError(Exception):
-    def __init__(self, value):
+    def __init__(self, value, args):
+        super(MyError, self).__init__(args)
         self.value = value
 
     def __str__(self):
-        return "MyError: "+repr(self.value)
+        return "MyError: "+repr(self.value)+repr(self.args)
+
 
 try:
-    raise MyError(2*2)
-except MyError, e:
-    print 'My exception occurred, value:', e.value, e.message, e.args
-    print e
+    raise MyError(2*2, "aaa")
+except MyError as e:
+    print('My exception occurred, value:', e.value, e.args)
+    print(e)

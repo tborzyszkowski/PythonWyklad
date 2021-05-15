@@ -3,7 +3,7 @@
 try:
     raise NameError('-- ale blad--')
 except NameError:
-    print '+++Byl blad ale go juz nie ma+++'
+    print('+++Byl blad ale go juz nie ma+++')
     raise  # i znow jest
 
 # try:

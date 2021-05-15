@@ -19,37 +19,45 @@ __license__ = "Python"
 import os
 import sys
 
-def stripnulls(data):
-    "strip whitespace and nulls"
+
+def strip_nulls(data):
+    """strip whitespace and nulls
+    """
     return data.replace("\00", " ").strip()
 
+
 class FileInfo(dict):
-    "store file metadata"
-    def __init__(self, filename=None):
-        self["name"] = filename
+    """store file metadata
+    """
+    def __init__(self, file_name=None):
+        super().__init__()
+        self["name"] = file_name
+
 
 class MP3FileInfo(FileInfo):
-    "store ID3v1.0 MP3 tags"
-    tagDataMap = {"title"   : (  3,  33, stripnulls),
-                  "artist"  : ( 33,  63, stripnulls),
-                  "album"   : ( 63,  93, stripnulls),
-                  "year"    : ( 93,  97, stripnulls),
-                  "comment" : ( 97, 126, stripnulls),
+    """store ID3v1.0 MP3 tags
+    """
+    tagDataMap = {"title"   : (3, 33, strip_nulls),
+                  "artist"  : (33, 63, strip_nulls),
+                  "album"   : (63, 93, strip_nulls),
+                  "year"    : (93, 97, strip_nulls),
+                  "comment" : (97, 126, strip_nulls),
                   "genre"   : (127, 128, ord)}
 
     def __parse(self, filename):
-        "parse ID3v1.0 tags from MP3 file"
+        """parse ID3v1.0 tags from MP3 file
+        """
         self.clear()
         try:
-            fsock = open(filename, "rb", 0)
+            f_sock = open(filename, "rb", 0)
             try:
-                fsock.seek(-128, 2)
-                tagdata = fsock.read(128)
+                f_sock.seek(-128, 2)
+                tag_data = f_sock.read(128)
             finally:
-                fsock.close()
-            if tagdata[:3] == 'TAG':
+                f_sock.close()
+            if tag_data[:3] == 'TAG':
                 for tag, (start, end, parseFunc) in self.tagDataMap.items():
-                    self[tag] = parseFunc(tagdata[start:end])
+                    self[tag] = parseFunc(tag_data[start:end])
         except IOError:
             pass
 
@@ -58,18 +66,22 @@ class MP3FileInfo(FileInfo):
             self.__parse(item)
         FileInfo.__setitem__(self, key, item)
 
-def listDirectory(directory, fileExtList):
-    "get list of file info objects for files of particular extensions"
-    fileList = [os.path.normcase(f) for f in os.listdir(directory)]
-    fileList = [os.path.join(directory, f) for f in fileList \
-                if os.path.splitext(f)[1] in fileExtList]
-    def getFileInfoClass(filename, module=sys.modules[FileInfo.__module__]):
-        "get file info class from filename extension"
+
+def list_directory(directory, file_extension_list):
+    """get list of file info objects for files of particular extensions
+    """
+    file_list = [os.path.normcase(f) for f in os.listdir(directory)]
+    file_list = [os.path.join(directory, f) for f in file_list \
+                if os.path.splitext(f)[1] in file_extension_list]
+
+    def get_file_info_class(filename, module=sys.modules[FileInfo.__module__]):
+        """get file info class from filename extension
+        """
         subclass = "%sFileInfo" % os.path.splitext(filename)[1].upper()[1:]
         return hasattr(module, subclass) and getattr(module, subclass) or FileInfo
-    return [getFileInfoClass(f)(f) for f in fileList]
+    return [get_file_info_class(f)(f) for f in file_list]
+
 
 if __name__ == "__main__":
-    for info in listDirectory(r"C:\home", [".mp3"]):
-        print "\n".join(["%s=%s" % (k, v) for k, v in info.items()])
-        print "KONIEC"
+    for info in list_directory("G:\\", [".mp3"]):
+        print("\n".join(["%s=%s" % (k, v) for k, v in info.items()]))

@@ -1,19 +1,19 @@
 class A(object):
     def __init__(self):
         super(A, self).__init__()
-        print 'init A'
+        print('init A')
 
 
 class B(object):
     def __init__(self):
         super(B, self).__init__()
-        print 'init B'
+        print('init B')
 
 
 class C(B, A):
     def __init__(self):
         super(C, self).__init__()
-        print 'init C'
+        print('init C')
 
 
 c = C()
