@@ -163,10 +163,8 @@ def testMe(url):
 		webbrowser.open_new(outfile)
 
 if __name__ == "__main__":
-	# test("http://en.ug.edu.pl/")
-<<<<<<< HEAD
-	test("http://www.python.org/")
-=======
+	# testMe("http://en.ug.edu.pl/")
+	# testMe("http://www.python.org/")
 	# test("http://www.wp.pl")
 	testMe("https://en.wikipedia.org/wiki/Konrad_Zuse")
->>>>>>> remotes/origin/master
+
