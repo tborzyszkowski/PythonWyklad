@@ -1,12 +1,18 @@
 import math
 
-samples = [((1, 2, 1), {'wynik': 1, 'x1': -1, 'x2': None}),
-           ((1, 0 , 1), {'wynik': 0, 'x1': None, 'x2': None}),
-           ((1, -5 , 6), {'wynik': 2, 'x1': 2, 'x2': 3})]
+samples = [{'a': 1, 'b': 2, 'c': 1,
+            'expected': {'wynik': 1, 'x1': -1, 'x2': None},
+            'actual': None
+            },
+           {'a': 1, 'b': 2, 'c': 1,
+            'expected': {'wynik': 1, 'x1': -1, 'x2': None},
+            'actual': None
+            }
+           ]
 
 for sample in samples:
     result = {'wynik': None, 'x1': None, 'x2': None}
-    a, b, c = sample[0]
+    a, b, c = (sample['a'], sample['b'], sample['c'])
     delta = b*b - (4*a*c)
     if delta > 0:
         result['wynik'] = 2
@@ -17,7 +23,11 @@ for sample in samples:
         result['x1'] = (-b + math.sqrt(delta)) / 2
     else:
         result['wynik'] = 0
-    if result == sample[1]:
-        print(sample, result, "OK")
+    sample['actual'] = result
+
+
+for sample in samples:
+    if sample['expected'] == sample['actual']:
+        print(sample, "OK")
     else:
-        print(sample, result, "NOT OK")
+        print(sample, "NOT OK")
