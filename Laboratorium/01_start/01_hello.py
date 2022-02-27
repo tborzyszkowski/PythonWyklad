@@ -1,2 +1,2 @@
-print "Ala ma kota"
-print 1 + 3
+print("Ala ma kota")
+print(1 + 3)
