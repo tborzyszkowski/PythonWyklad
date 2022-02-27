@@ -1,23 +1,23 @@
 
-# a ,b, c =  (1, 2, 1)
+a ,b, c =  (1, 2, 1)
 
-# wynik = ""
-# if a == 0:
-#     if b == 0:
-#         if c == 0:
-#             wynik = "NW"
-#         else:
-#             wynik = "B"
-#     else:
-#         wynik = "Jedno"
-# else:
-#     if (b * b - 4 * a * c) < 0:
-#         wynik = "B"
-#     else:
-#         if (b * b - 4 * a * c) > 0:
-#             wynik = "Dwa"
-#         else:
-#             wynik = "Jedno"
+wynik = ""
+if a == 0:
+    if b == 0:
+        if c == 0:
+            wynik = "NW"
+        else:
+            wynik = "B"
+    else:
+        wynik = "Jedno"
+else:
+    if (b * b - 4 * a * c) < 0:
+        wynik = "B"
+    else:
+        if (b * b - 4 * a * c) > 0:
+            wynik = "Dwa"
+        else:
+            wynik = "Jedno"
 
 
 testy=  [(0, 0, 0, "NW"), (1, 2, 1, "Jedno")]
