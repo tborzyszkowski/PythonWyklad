@@ -7,6 +7,10 @@ samples = [{'a': 1, 'b': 2, 'c': 1,
            {'a': 1, 'b': 2, 'c': 1,
             'expected': {'wynik': 1, 'x1': -1, 'x2': None},
             'actual': None
+            },
+           {'a': 0, 'b': 2, 'c': 0,
+            'expected': {'wynik': 1, 'x1': 0, 'x2': None},
+            'actual': None
             }
            ]
 
