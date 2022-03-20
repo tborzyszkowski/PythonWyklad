@@ -56,3 +56,6 @@ class EuklidesMultiTest(unittest.TestCase):
         actual_value = Euklides.euklides_multi(*list_of_numbers)
         self.assertEqual(4, actual_value)
 
+
+if __name__ == "__main__":
+    unittest.main()
