@@ -45,11 +45,20 @@ class EuklidesTest(unittest.TestCase):
 
 
 class EuklidesMultiTest(unittest.TestCase):
-    def test_for_two_prime_numbers(self):
+    def test_for_three_numbers(self):
         list_of_numbers = [12, 16, 36]
         actual_value = Euklides.euklides_multi(*list_of_numbers)
         self.assertEqual(4, actual_value)
 
+    def test_for_one_numbers(self):
+        list_of_numbers = [8]
+        actual_value = Euklides.euklides_multi(*list_of_numbers)
+        self.assertEqual(8, actual_value)
+
+    def test_for_no_numbers(self):
+        list_of_numbers = []
+        with self.assertRaises(TypeError):
+            Euklides.euklides_multi(*list_of_numbers)
 
 
 if __name__ == "__main__":

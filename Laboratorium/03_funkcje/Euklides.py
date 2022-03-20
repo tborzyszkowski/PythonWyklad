@@ -45,7 +45,7 @@ if __name__ == '__main__':
     #     return reduce(euklidesMod, args)
 
     # lista = [16, 4, 8]
-    print(euklides_multi(9, 6, 12, 99, 30))
+    print(euklides_multi(1,2,3,4))
 
     # print reduce(lambda x,y: x+y,[1,2,3])
 
