@@ -22,6 +22,19 @@ class EuklidesTest(unittest.TestCase):
         )
         self.assertEqual(second_prime_number, actual_value)
 
+    def test_for_negative_number(self):
+        first_number = 36
+        second_number = -18
+        actual_value = Euklides.euklides(first_number, second_number)
+        self.assertEqual(18, actual_value)
+
+    def test_for_zero(self):
+        first_number = 0
+        second_number = 18
+        actual_value = Euklides.euklides(first_number, second_number)
+        self.assertEqual(-1, actual_value)
+
+
 class EuklidesMultiTest(unittest.TestCase):
     def test_for_two_prime_numbers(self):
         list_of_numbers = [12, 16, 36]

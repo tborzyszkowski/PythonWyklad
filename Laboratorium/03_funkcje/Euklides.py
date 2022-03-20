@@ -22,6 +22,10 @@ def euklidesMod(a, b):
 
 
 def euklides(a, b):
+    if a == 0 or b == 0:
+        return -1
+    a = -a if a < 0 else a
+    b = -b if b < 0 else b
     while a != b:
         if a > b:
             a -= b
