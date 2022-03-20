@@ -1,6 +1,7 @@
 import unittest
 import Euklides
 
+
 class EuklidesTest(unittest.TestCase):
     def test_for_two_prime_numbers(self):
         # Arrange
@@ -24,7 +25,7 @@ class EuklidesTest(unittest.TestCase):
 class EuklidesMultiTest(unittest.TestCase):
     def test_for_two_prime_numbers(self):
         list_of_numbers = [12, 16, 36]
-        actual_value = Euklides.euklides_multi(Euklides.euklides, *list_of_numbers)
+        actual_value = Euklides.euklides_multi(*list_of_numbers)
         self.assertEqual(4, actual_value)
 
 
