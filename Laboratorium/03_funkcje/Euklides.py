@@ -28,62 +28,64 @@ def euklides(a, b):
             b -= a
     return a
 
-# print euklides(160, 120)
+
+if __name__ == '__main__':
+    # print euklides(160, 120)
 
 
-def euklides2(*args):
-    return reduce(euklidesMod, args)
+    # def euklides2(*args):
+    #     return reduce(euklidesMod, args)
 
-# lista = [16, 4, 8]
-# print euklides2(9, 6, 12, 99, 30)
+    # lista = [16, 4, 8]
+    # print euklides2(9, 6, 12, 99, 30)
 
-# print reduce(lambda x,y: x+y,[1,2,3])
+    # print reduce(lambda x,y: x+y,[1,2,3])
 
-# print map(lambda x: x+1, [1])
+    # print map(lambda x: x+1, [1])
 
-if sys.platform == 'win32':
-    # On Windows, the best timer is time.clock
-    default_timer = time.clock
-else:
-    # On most other platforms the best timer is time.time
-    default_timer = time.time
-
-
-
-#big1 = random.getrandbits(256)
-#big2 = random.getrandbits(256)
-fst = 10000000000L
-snd = 10000010000L
-
-start = default_timer()
-
-big3 = filter(is_prime, range(fst, snd))
-
-stop = default_timer()
-print 'Time is_prime:', stop - start
-
-print len(big3)
-
-prime = 0
-if big3:
-    prime = big3[0]
-else:
-    prime = 997
-print prime
+    if sys.platform == 'win32':
+        # On Windows, the best timer is time.clock
+        default_timer = time.clock
+    else:
+        # On most other platforms the best timer is time.time
+        default_timer = time.time
 
 
-start = default_timer()
-lista = []
-for prime in big3:
-    lista.append(
-        (prime, euklidesMod(prime * prime, prime * prime * prime))
-    )
-stop = default_timer()
 
-print 'Time euklidesMod:', (stop - start)
+    #big1 = random.getrandbits(256)
+    #big2 = random.getrandbits(256)
+    fst = 10000000000
+    snd = 10000010000
 
-# start = default_timer()
-# for prime in big3:
-#     print euklides(prime * prime, prime * prime * prime)
-# stop = default_timer()
-# print 'Time euklides:', stop - start
+    start = default_timer()
+
+    big3 = filter(is_prime, range(fst, snd))
+
+    stop = default_timer()
+    print('Time is_prime:', stop - start)
+
+    print(len(big3))
+
+    prime = 0
+    if big3:
+        prime = big3[0]
+    else:
+        prime = 997
+    print(prime)
+
+
+    start = default_timer()
+    lista = []
+    for prime in big3:
+        lista.append(
+            (prime, euklidesMod(prime * prime, prime * prime * prime))
+        )
+    stop = default_timer()
+
+    print('Time euklidesMod:', (stop - start))
+
+    # start = default_timer()
+    # for prime in big3:
+    #     print euklides(prime * prime, prime * prime * prime)
+    # stop = default_timer()
+    # print 'Time euklides:', stop - start
