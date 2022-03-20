@@ -1,3 +1,4 @@
+from functools import reduce
 
 def mult(m1, m2):
     n = len(m1)

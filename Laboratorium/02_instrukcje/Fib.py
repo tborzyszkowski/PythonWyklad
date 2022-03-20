@@ -24,31 +24,31 @@ def fib1(n):
 
 
 # fibs = [fib2, fib3]
-# fibs = [fib1, fib2]
-fibs = [fib3, fibonacciFast]
+fibs = [fib1, fib2]
+# fibs = [fib3, fibonacciFast]
 
 results = {f.__name__: [] for f in fibs}
-print results
+print(results)
 
-step = 3000
-r_begin = 2000*1000
-r_end = r_begin + 100 * step
+step = 1
+r_begin = 20
+r_end = r_begin + 10 * step
 r_range = range(r_begin, r_end, step)
 
 for n in r_range:
-    print "n =", n,
+    print("n =", n)
     for f in fibs:
-        start_time = time.clock()
+        start_time = time.time()
         f(n)
-        czas = time.clock() - start_time
+        czas = time.time() - start_time
         results[f.__name__].append(czas)
-        print czas, "\t",
-    print "\n"
-print results
+        print (czas, "\t")
+    print("\n")
+print (results)
 
 
-# plt.plot(r_range, results["fib1"], linestyle='--', color='r')
-# plt.plot(r_range, results["fib2"], linestyle='-', color='g')
-plt.plot(r_range, results["fib3"], linestyle='-', color='b')
-plt.plot(r_range, results["fibonacciFast"], linestyle='-', color='r')
+plt.plot(r_range, results["fib1"], linestyle='--', color='r')
+plt.plot(r_range, results["fib2"], linestyle='-', color='g')
+# plt.plot(r_range, results["fib3"], linestyle='-', color='b')
+# plt.plot(r_range, results["fibonacciFast"], linestyle='-', color='r')
 plt.show()
