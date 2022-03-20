@@ -12,6 +12,15 @@ class EuklidesTest(unittest.TestCase):
         # Assert
         self.assertEqual(1, actual_value)
 
+    def test_for_two_numbers(self):
+        # Arrange
+        first_number = 1024
+        second_number = 256
+        # Act
+        actual_value = Euklides.euklides(first_number, second_number)
+        # Assert
+        self.assertEqual(256, actual_value)
+
     def test_for_two_big_composed_numbers(self):
         first_prime_number = 64781
         second_prime_number = 68041
