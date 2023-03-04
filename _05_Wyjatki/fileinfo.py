@@ -27,16 +27,16 @@ __license__ = "Python"
 
 import os
 import sys
-from UserDict import UserDict
+#from UserDict import UserDict
 
 def stripnulls(data):
     "strip whitespace and nulls"
     return data.replace("\00", " ").strip()
 
-class FileInfo(UserDict):
+class FileInfo(dict):
     "store file metadata"
     def __init__(self, filename=None):
-        UserDict.__init__(self)
+        dict.__init__(self)
         self["name"] = filename
 
 
@@ -78,10 +78,14 @@ def listDirectory(directory, fileExtList):
     def getFileInfoClass(filename, module=sys.modules[FileInfo.__module__]):
         "get file info class from filename extension"
         subclass = "%sFileInfo" % os.path.splitext(filename)[1].upper()[1:]
-        return hasattr(module, subclass) and getattr(module, subclass) or FileInfo
+        checkattr = hasattr(module, subclass)
+        myclass = FileInfo
+        if checkattr:
+            myclass = getattr(module, subclass)
+        return myclass
     return [getFileInfoClass(f)(f) for f in fileList]
 
 if __name__ == "__main__":
-    for info in listDirectory(r"D:\W8\ffff\muzyka\empire of the sun-1987-williams", [".mp3"]):
-        print "\n".join(["%s=%s" % (k, v) for k, v in info.items()])
-        print
+    for info in listDirectory(r"C:\home\tomek\UG\Zajecia\Python\Wyk\_04", [".mp3"]):
+        print("\n".join(["%s=%s" % (k, v) for k, v in info.items()]))
+        print()

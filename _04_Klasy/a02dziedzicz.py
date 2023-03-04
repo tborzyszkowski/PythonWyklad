@@ -4,10 +4,8 @@
 class A:
     def __init__(self, a = 1):
         self.a = a
-
     def m(self):
         return self.a
-
     def test(self, a_value):
         print(self.m() + a_value)
 
@@ -17,10 +15,8 @@ class B(A):
         # A.__init__(self)
         A.__init__(self, a)  # trzeba wywolac inicjalizacje przodka
         self.b = b
-
     def m(self):
         return self.a + self.b
-
     def super_m(self):
         # return super
         return A.m(self)

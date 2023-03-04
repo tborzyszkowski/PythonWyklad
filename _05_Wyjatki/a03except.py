@@ -1,7 +1,7 @@
 # petla z wyjatkami
 
-# print '1'*20
-#
+# print('1'*20)
+
 # while True:
 #     try:
 #         x = int(input("Podaj liczbe: "))
@@ -112,7 +112,7 @@ def exception_return():
     try:
         result += 1
         print("try", result)
-        # return result
+        return result
         raise
         # y = 1 / 0
     except ZeroDivisionError as e:
@@ -125,7 +125,7 @@ def exception_return():
     finally:
         result += 1
         print("finally", result)
-        return result
+        # return result
 
 
 a = exception_return()

@@ -55,4 +55,6 @@ class C(B1, B2):
 
 c = C()
 print('a = ', c.a, ' b = ', c.b, ' i = ', c.__class__.i, ' j = ', c.__class__.j)
+# a = 21 b = 11  i = 4 j = -1
 print('c.f() = ', c.f(), ' c.getI() = ', c.getI(), 'c.h() = ', c.h())
+# c.f() = -10 c.getI() = 3 c.h() = -7

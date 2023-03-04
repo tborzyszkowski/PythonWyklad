@@ -14,7 +14,7 @@ a = 1
 b = 2
 
 
-def test1(arg1):
+def first_try(arg1):
     """To jest pierwsza linia opisu
 
     A to sa kolejne
@@ -26,27 +26,27 @@ def test1(arg1):
     print('test1: GLOBALS :', globals()['a'])
 
 
-def test2(arg2):
+def second_try(arg2):
     """Test2_doc
     """
     global a
     a = arg2
     b = arg2 + 1
-    test1(b)
+    first_try(b)
     a += 1
     print('test2:LOCALS  :', locals())
     print('test2:GLOBALS :', globals()['a'])
 
 
 if __name__ == "__main__":
-    # print(a, b)
-    # test1(3)
-    # print('--------------')
-    # test2(7)
-    # print(a, b)
+    print(a, b)
+    first_try(3)
+    print('--------------')
+    second_try(7)
+    print(a, b)
 
-    print(test1.__doc__)
-    print(test2.__doc__)
+    print(first_try.__doc__)
+    print(second_try.__doc__)
 
     print(locals.__doc__)
     print(globals.__doc__)

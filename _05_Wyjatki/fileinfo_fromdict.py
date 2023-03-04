@@ -83,5 +83,5 @@ def list_directory(directory, file_extension_list):
 
 
 if __name__ == "__main__":
-    for info in list_directory("G:\\", [".mp3"]):
+    for info in list_directory(r"C:\home\tomek\UG\Zajecia\Python\Wyk\_04", [".mp3"]):
         print("\n".join(["%s=%s" % (k, v) for k, v in info.items()]))

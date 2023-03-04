@@ -30,8 +30,8 @@ import re
 #     print('No match')
 
 # it = p.finditer("aabbccddeeccaaeeddaabbccww")
-# for i in it:
-#     print(i.span(), i.group())
+for i in it:
+    print(i.span(), i.group())
 # print(p.findall("aabbccddeeccaaeeddaabbccww"))
 
 # # match i search to nie to samo

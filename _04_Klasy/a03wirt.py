@@ -5,7 +5,7 @@ class A:
     def test(self):
         return self.m()
 
-    def testSelf(self):
+    def test_self(self):
         return self.test()
 
 
@@ -13,7 +13,7 @@ class B(A):
     def m(self):
         return 2
 
-    def testSuper(self):
+    def test_super(self):
         return A.test(self)
 
 
@@ -21,13 +21,18 @@ class C(B):
     def m(self):
         return 3
 
-    def testSuper(self):
+    def test_super(self):
         return B.m(self)
 
 
-a = A()
-b = B()
-c = C()
-print('A:', a.test(), a.testSelf())  # 1 1
-print('B:', b.test(), b.testSuper(), b.testSelf())
-print('C:', c.test(), c.testSuper(), c.testSelf())
+if __name__ == "main":
+    a = A()
+    b = B()
+    c = C()
+    print('A:', a.test(), a.test_self())  # 1 1
+    print('B:', b.test(), b.test_super(), b.test_self())
+    print('C:', c.test(), c.test_super(), c.test_self())
+
+# c.test() = A.test(c) = c.m() = C.m(c) = 3
+# c.testSuper() = C.testSuper(c) = B.m(c) = 2
+# c.testSelf() = A.testSelf(c) = c.test() = 3

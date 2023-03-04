@@ -1,13 +1,15 @@
+# a*x*x + b*x + c = 0
 import math
 
-samples = [{'a': 1, 'b': 2, 'c': 1,
-            'expected': {'wynik': 1, 'x1': -1, 'x2': None},
-            'actual': None
-            },
-           {'a': 1, 'b': 2, 'c': 1,
-            'expected': {'wynik': 1, 'x1': -1, 'x2': None},
-            'actual': None
-            },
+samples = [
+           #  {'a': 1, 'b': 2, 'c': 1,
+           #  'expected': {'wynik': 1, 'x1': -1, 'x2': None},
+           #  'actual': None
+           #  },
+           # {'a': 1, 'b': 2, 'c': 1,
+           #  'expected': {'wynik': 1, 'x1': -1, 'x2': None},
+           #  'actual': None
+           #  },
            {'a': 0, 'b': 2, 'c': 0,
             'expected': {'wynik': 1, 'x1': 0, 'x2': None},
             'actual': None

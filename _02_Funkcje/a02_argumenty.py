@@ -1,3 +1,6 @@
+from functools import partial
+
+
 def test1(a, b=1, c=2):
     print('a : ', a, ' b : ', b, ' c : ', c)
 
@@ -55,7 +58,6 @@ print(h(3))
 
 def pp(x=1, *arguments, **keywords):
     print('x = ', x)
-    print('-' * 10)
     print(keywords)
     print(arguments)
     keys = list(keywords.keys())
@@ -87,3 +89,14 @@ print(list(range(3, 10, 2)))
 # oraz
 lista = [3, 10, 2]
 print(list(range(*lista)))
+
+
+def multi(x, y):
+    return x * y
+
+def double_it(x):
+    multi(x, 2)
+
+f1 = partial(multi, 2)
+
+f1(5)

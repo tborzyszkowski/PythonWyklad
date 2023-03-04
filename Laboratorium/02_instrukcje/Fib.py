@@ -23,16 +23,16 @@ def fib1(n):
         return fib1(n-1) + fib1(n-2)
 
 
-# fibs = [fib2, fib3]
-fibs = [fib1, fib2]
+fibs = [fib2, fib3]
+# fibs = [fib1, fib2]
 # fibs = [fib3, fibonacciFast]
 
 results = {f.__name__: [] for f in fibs}
 print(results)
 
-step = 1
-r_begin = 20
-r_end = r_begin + 10 * step
+step = 5000
+r_begin = 100*1000
+r_end = r_begin + 50 * step
 r_range = range(r_begin, r_end, step)
 
 for n in r_range:
@@ -47,8 +47,8 @@ for n in r_range:
 print (results)
 
 
-plt.plot(r_range, results["fib1"], linestyle='--', color='r')
+# plt.plot(r_range, results["fib1"], linestyle='--', color='r')
 plt.plot(r_range, results["fib2"], linestyle='-', color='g')
-# plt.plot(r_range, results["fib3"], linestyle='-', color='b')
+plt.plot(r_range, results["fib3"], linestyle='-', color='b')
 # plt.plot(r_range, results["fibonacciFast"], linestyle='-', color='r')
 plt.show()

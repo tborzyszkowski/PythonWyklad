@@ -49,6 +49,13 @@ print(((jesli(ff))(1))(2))
 #   a) pary i rzutowania
 #   b) liczby naturalne
 
+# Liczby
+# source: https://en.wikipedia.org/wiki/Church_encoding
+zero = (lambda f:(lambda x: x))
+jeden = (lambda f:(lambda x: f(x)))
+dwa = (lambda f:(lambda x: f(f(x))))
+
+plus = (lambda m: (lambda n: (lambda f: (lambda x: m(f)( n(f)(x) ) ))))
 ############################
 # narzedzia programowania funkcyjnego
 #

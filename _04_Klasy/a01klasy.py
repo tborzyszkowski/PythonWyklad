@@ -13,7 +13,6 @@ class MyClass:
     """A simple example class.
     """
     i = 12345
-
     def f(self):
         """Opis funkcji
         """
@@ -43,12 +42,10 @@ print('-'*20)
 
 class MojaKlasa:
     i = 0
-
     def __init__(self, a=10, b=20):
         self.__class__.i += 1
         self.a = a
         self.b = b
-
     def wypisz(self):
         print(self.i, self.a, self.b)
 

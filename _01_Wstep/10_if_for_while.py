@@ -33,7 +33,7 @@ else:
 for x in range(0, 20, 3):
     print(x)
 else:
-    print('KONIEC')
+    print('KONIEC', x)
 
 n = 5
 x = 1
