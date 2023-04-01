@@ -1,7 +1,7 @@
 # if, for, while
 
 # --- prosty test
-x = int(input('Podaj liczbe od 1 do 10: '))
+x = 10 #int(input('Podaj liczbe od 1 do 10: '))
 if x < 0:
     print('Tylko tyle?')
 elif 0 <= x <= 10:

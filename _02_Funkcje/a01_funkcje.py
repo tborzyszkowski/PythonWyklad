@@ -13,7 +13,6 @@ Opis modulu
 a = 1
 b = 2
 
-
 def first_try(arg1):
     """To jest pierwsza linia opisu
 

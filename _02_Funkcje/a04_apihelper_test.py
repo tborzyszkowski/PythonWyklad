@@ -5,15 +5,15 @@
 
 from apihelper import info
 # li = []
-# info(li)
+# print(info(li))
 
 # ##############################
 # # przyklad dzialania na module
 #
-# import math
-# info(math)
-# info(math, 30)
-# info(math, 20, 0)
+import math
+# print(info(math))
+# print(info(math, 30))
+# print(info(math, 20, 0))
 
 # ##############################
 # # Funkcja: type
@@ -23,10 +23,10 @@ from apihelper import info
 # print type(li)
 #
 import apihelper
-# print type(apihelper)
-#
-# import types
+# print(type(apihelper))
 
+import types
+#
 # print type(apihelper) == types.ModuleType
 # print isinstance(apihelper, types.ModuleType)
 # print type(types.ModuleType)
@@ -58,8 +58,8 @@ import apihelper
 # ##############################
 # # Funkcja: callable
 #
-# print callable(apihelper)
-# print callable(apihelper.info)
+print(callable(apihelper))
+print(callable(apihelper.info))
 #
 # # oddaje True gdy obiekt mozna wywolac
 #

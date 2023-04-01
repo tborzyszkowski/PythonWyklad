@@ -98,7 +98,7 @@ def add(x, y):
     return x+y
 
 
-print([el for el in reduce(add, range(1, 11))])
+print(reduce(add, range(1, 11)))
 
 
 # przyklad sumowania list
