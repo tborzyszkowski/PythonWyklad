@@ -52,7 +52,7 @@ class MP3FileInfo(FileInfo):
             f_sock = open(filename, "rb", 0)
             try:
                 f_sock.seek(-128, 2)
-                tag_data = f_sock.read(128)
+                tag_data = f_sock.read(128).decode('ascii')
             finally:
                 f_sock.close()
             if tag_data[:3] == 'TAG':
