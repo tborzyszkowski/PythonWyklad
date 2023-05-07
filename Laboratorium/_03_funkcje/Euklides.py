@@ -70,9 +70,9 @@ if __name__ == '__main__':
 
     big3 = filter(is_prime, range(fst, snd))
 
+    lista = [x for x in big3]
     stop = default_timer()
     print('Time is_prime:', stop - start)
-    lista = [x for x in big3]
     print(len(lista))
 
     prime = 0

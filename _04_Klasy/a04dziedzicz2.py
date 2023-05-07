@@ -43,8 +43,9 @@ class C(B2, B1):
         return self.getI()
 
 
-c = C()
-print('a = ', c.a, ' b = ', c.b, ' i = ', c.__class__.i, ' c = ', c.c)
-# a = 100 b = 200 i = -1 c = 15
-print('c.g() = ', c.g(), 'c.h() = ', c.h())
-# c.g() = 20 000  c.h() = -1
+if __name__ == "__main__":
+    c = C()
+    print('a = ', c.a, ' b = ', c.b, ' i = ', c.__class__.i, ' c = ', c.c)
+    # a = 100 b = 200 i = -1 c = 15
+    print('c.g() = ', c.g(), 'c.h() = ', c.h())
+    # c.g() = 20 000  c.h() = -1

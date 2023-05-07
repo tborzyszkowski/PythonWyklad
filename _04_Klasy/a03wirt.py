@@ -25,7 +25,7 @@ class C(B):
         return B.m(self)
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     a = A()
     b = B()
     c = C()
@@ -33,6 +33,7 @@ if __name__ == "main":
     print('B:', b.test(), b.test_super(), b.test_self())
     print('C:', c.test(), c.test_super(), c.test_self())
 
+# b.test() = B.test(b) = A.test(b) = b.m() = 2
 # c.test() = A.test(c) = c.m() = C.m(c) = 3
 # c.testSuper() = C.testSuper(c) = B.m(c) = 2
 # c.testSelf() = A.testSelf(c) = c.test() = 3

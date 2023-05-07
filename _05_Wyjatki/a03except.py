@@ -8,8 +8,10 @@
 #         y = 1 / x
 #         print(y)
 #         break
-#     except ValueError:
-#         print("+++ Chodzilo o liczbe +++")
+#     # except Exception as e:
+#     #     print("Exception: ", str(e))
+#     except ValueError as e:
+#         print("+++ Chodzilo o liczbe +++:", e)
 #     except ZeroDivisionError as e:
 #         print(e)
 
@@ -25,13 +27,22 @@
 #     print(s.strip())
 #     i = int(s.strip())
 #     i = 1/i
-#     # raise NameError
+#     a = [1, 2, 3]
+#     # a[4] = 5
+#     raise NameError
+# except FileNotFoundError as e:
+#     print("FileNotFoundError:", e)
+#     print(type(e))
+#     print(dir(e))
 # except IOError as e:
 #     print("I/O error(%s): %s" % e)
 # except ValueError:
 #     print("Could not convert data to an integer.")
 # except ZeroDivisionError as e:
 #     print("ZeroDivisionError:", e)
+# except IndexError as e:
+#     print("IndexError:", e)
+#     a = a + [0, 5]
 # except Exception as e:
 #     print("Unexpected error:", sys.exc_info()) # [0]
 #     print(type(e))
@@ -108,9 +119,11 @@
 #     print("unix_getpass")
 
 def exception_return():
-    result = 1
+    # result = 1
+    # result = [1]
+    result = "Ala"
     try:
-        result += 1
+        result += "Ma"
         print("try", result)
         return result
         raise
@@ -123,7 +136,7 @@ def exception_return():
         print("NameError")
         raise
     finally:
-        result += 1
+        result += "Kota"
         print("finally", result)
         # return result
 

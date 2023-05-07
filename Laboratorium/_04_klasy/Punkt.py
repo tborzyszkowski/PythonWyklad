@@ -105,5 +105,5 @@ b = Punkt(1, 0)
 c = Punkt(0, 1)
 
 t = Trojkat(a, b, c)
-print t.pole()
-print t.obwod()
+print(t.pole())
+print(t.obwod())

@@ -44,6 +44,21 @@ class CalculatorTestCase(unittest.TestCase):
         self.calculator.substr(2)
         self.assertEqual(-3, self.calculator.state)
 
+    def test_didive_by_zero_isError(self):
+        self.calculator.state = 8
+        self.calculator.div(0)
+        self.assertTrue(self.calculator.isError)
+
+    def test_seven_didive_by_two_three(self):
+        self.calculator.state = 7
+        self.calculator.div(2)
+        self.assertEqual(3.5, self.calculator.state)
+
+    def test_having_error_after_reset_no_error(self):
+        self.calculator.isError = True
+        self.calculator.reset()
+        self.assertFalse(self.calculator.isError)
+
 
 if __name__ == '__main__':
     unittest.main()

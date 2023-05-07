@@ -43,7 +43,8 @@ class C(B1, B2):
         return self.getI()
 
 
-c = C()
-c.__class__.i += 10
-print('a = ', c.a, ' b = ', c.b, ' class.i = ', c.__class__.i, 'self.i = ', c.i)
-print('c.g() = ', c.g(), 'c.h() = ', c.h())
+if __name__ == "__main__":
+    c = C()
+    c.__class__.i += 10
+    print('a = ', c.a, ' b = ', c.b, ' class.i = ', c.__class__.i, 'self.i = ', c.i)
+    print('c.g() = ', c.g(), 'c.h() = ', c.h())

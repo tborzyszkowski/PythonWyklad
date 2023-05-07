@@ -19,11 +19,12 @@ class Prywatna:
         print(self.a, '  ', self.__b)
 
 
-p = Prywatna()
-print(p.a)
-# print(p.__b)
-print(p._Prywatna__b)
-# print p.__f()
-print(p._Prywatna__f())
-print("--", dir(p))
-print(p.__module__)
+if __name__ == "__main__":
+    p = Prywatna()
+    print(p.a)
+    # print(p.__b)
+    print(p._Prywatna__b)
+    # print p.__f()
+    print(p._Prywatna__f())
+    print("--", dir(p))
+    print(p.__module__)

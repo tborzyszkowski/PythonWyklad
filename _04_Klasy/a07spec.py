@@ -20,24 +20,31 @@ class D:
     def __lt__(self, other):
         return len(self) < len(other)
 
+    def __bool__(self):
+        return False if len(self.dane) % 2 == 0 else True
 
-d = D()
 
-print(len(d), d)
-d['ala'] = 321
-d['ala'] = (1, 2)
-print(len(d['ala']))
-print(len(d), d)
-d['ola'] = 123
-print(len(d), d)
-print(d['ala'], d['ola'])
-print(d.dane.keys())
+if __name__ == "__main__":
+    d = D()
 
-c = D()
-print(c < d)
+    print(len(d), d)
+    d['ala'] = 321
+    d['ala'] = (1, 2)
+    print(len(d['ala']))
+    print(len(d), d)
+    d['ola'] = 123
+    print(len(d), d)
+    print(d['ala'], d['ola'])
+    print(d.dane.keys())
 
-print(str(c))
-print(str(d))
-print(c)
-print(d)
-print(c or d)
+    c = D()
+    print(c < d)
+
+    print(str(c))
+    print(str(d))
+    print(repr(c))
+    print(d)
+    c['zuza'] = 98756
+    d['janek'] = 24678
+    print(c or d)
+    print(c and d)
