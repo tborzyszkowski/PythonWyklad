@@ -28,8 +28,8 @@ if __name__ == "__main__":
 
 	# usock = urllib.urlopen("https://stackoverflow.com/questions/tagged/python")
 
-	usock = urllib.urlopen("http://www.wp.pl/")
-	# usock = urllib.urlopen("https://inf.ug.edu.pl/")
+	# usock = urllib.urlopen("http://www.wp.pl/")
+	usock = urllib.urlopen("https://inf.ug.edu.pl/")
 	parser = URLLister()
 	parser.feed(usock.read())
 	parser.close()

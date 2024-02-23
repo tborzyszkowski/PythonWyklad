@@ -3,15 +3,6 @@ def f(arg):
     print(locals())
 
 
-f(7)
-f('aaa')
-
-print(globals())
-#
-# # -------------------
-# print 20*'-'
-#
-
 
 def g(arg):
     x = 1
@@ -21,8 +12,13 @@ def g(arg):
 
 
 z = 7
-print("z = ", z)
-g(3)
-globals()["z"] = 8
-print("z = ", z)
-#
+
+if __name__ == "__main__":
+    # f(7)
+    # f('aaa')
+    # print(globals())
+    print("z = ", z)
+    g(3)
+    globals()["z"] = 8
+    print("z = ", z)
+

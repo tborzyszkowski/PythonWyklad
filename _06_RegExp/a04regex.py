@@ -2,7 +2,7 @@ import re
 
 # p = re.compile(r'\W+')
 # print (p.split('This is a test, short and sweet, of split().'))
-# #
+# # #
 # print(p.split('This is a test, short and sweet, of split().', 3))
 # # #
 # print(p.split('This... is a test.'))
@@ -22,7 +22,7 @@ import re
 # print(p.subn('colour', 'no blue at all')[1])
 #
 # p = re.compile('x+')
-# print p.sub('-', 'abxxxxxxd')
+# print(p.sub('-', 'abxxxxxxd'))
 # #
 # # # Argumentem sub() moze byc funkcja,
 # # # ktora bedzie wywolana na kazdym dopasowaniu wzorca
@@ -30,11 +30,11 @@ import re
 #
 
 
-def hexrepl(match):
-    "Return the hex string for a decimal number"
-    value = int(match.group())
-    return hex(value)
-
+# def hexrepl(match):
+#     "Return the hex string for a decimal number"
+#     value = int(match.group())
+#     return hex(value)
+#
 # p = re.compile(r'\d+')
 # print(p.sub(hexrepl, 'Call 65490 for printing, 49152 for user code 15 16 14 15.'))
 p = re.compile(r'^(a+)+$')

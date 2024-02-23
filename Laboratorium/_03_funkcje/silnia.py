@@ -29,8 +29,8 @@ if __name__ == "__main__":
     print("Bubble time:   ", (t2 - t1).total_seconds() * 1000)
 
     t1 = datetime.now()
-    print(len(str(silnia_rek(n))))
-    # print(silnia_reduce(n))
+    # print(len(str(silnia_rek(n))))
+    print(len(str(silnia_reduce(n))))
     t2 = datetime.now()
     print("Bubble time:   ", (t2 - t1).total_seconds() * 1000)
 
