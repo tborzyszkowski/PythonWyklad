@@ -4,7 +4,7 @@
 from silnia import *
 
 if __name__ == '__main__':
-    # print("Ala ma kota")
+    print("Ala ma kota")
     # print(1 + 3)
     #
     # print(type(1+2.0))

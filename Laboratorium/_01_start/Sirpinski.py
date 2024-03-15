@@ -9,12 +9,12 @@ def in_carpet(x, y):
         y /= 3
  
 def carpet(n):
-    for i in xrange(3 ** n):
-        for j in xrange(3 ** n):
+    for i in range(3 ** n):
+        for j in range(3 ** n):
             if in_carpet(i, j):
-                print '*',
+                print('*')
             else:
-                print ' ',
-        print
+                print(' '),
+        print("\n")
 
 carpet(3)
