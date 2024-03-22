@@ -5,7 +5,7 @@
 # globals()
 # import a01_funkcje
 # locals()
-# globals()
+#
 """
 Opis modulu
 """
@@ -21,9 +21,10 @@ def first_try(arg1):
     I jeszcze.
     """
     a = arg1
-    print('test1: LOCALS  :', locals())
-    print('test1: GLOBALS :', globals()['a'])
-
+    global b
+    print('test1: LOCALS   :', locals())
+    print('test1: GLOBALS a:', globals()['a'])
+    print('test1: GLOBALS b:', globals()['b'])
 
 def second_try(arg2):
     """Test2_doc

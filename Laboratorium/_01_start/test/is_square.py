@@ -13,5 +13,6 @@ for case in cases:
         i += 1
 
     print(case, ": ", result == case[1])
+
 #================
 

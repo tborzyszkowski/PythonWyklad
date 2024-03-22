@@ -15,7 +15,7 @@
 #     print(x, len(x))
 
 # # --- co to?
-# x = 10 #int(input('Podaj liczbe: '))
+# x = 993 #int(input('Podaj liczbe: '))
 # jest = True
 # y = 2
 # while (y < x) and jest:
@@ -35,11 +35,11 @@
 # else:
 #     print('KONIEC', x)
 #
-# n = 5
-# x = 1
-# w = 1
-# while x < n:
-#     x += 1
-#     w *= x
-# else:
-#     print(w)
+n = 5
+x = 1
+w = 1
+while x < n:
+    x += 1
+    w *= x
+else:
+    print(w)
