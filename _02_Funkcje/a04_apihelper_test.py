@@ -20,25 +20,25 @@ import math
 # type(1)
 #
 # li = []
-# print type(li)
+# print(type(li))
 #
 import apihelper
 # print(type(apihelper))
 
 import types
 #
-# print type(apihelper) == types.ModuleType
-# print isinstance(apihelper, types.ModuleType)
-# print type(types.ModuleType)
+# print(type(apihelper) == types.ModuleType)
+# print(isinstance(apihelper, types.ModuleType))
+# print(type(types.ModuleType))
 #
 # # type - funkcja bierze "cokolwiek" i oddaje tego typ "czegos"
 #
 # ##############################
 # # Funkcja: str
 #
-# print str(1)
-# print str(apihelper)
-# print str(None)
+# print( str(1))
+# print( str(apihelper) )
+# print( str(None) )
 #
 # # str - daje reprezentacje napisowa dowolnego elementu
 #
@@ -46,20 +46,20 @@ import types
 # # Funkcja: dir
 #
 # li = []
-# print dir(li)
+# print(dir(li))
 #
 # d = {}
-# print dir(d)
+# print(dir(d))
 #
-# print dir(apihelper)
+# print(dir(apihelper))
 #
 # # zawartosc obiektu
 #
 # ##############################
 # # Funkcja: callable
 #
-print(callable(apihelper))
-print(callable(apihelper.info))
+# print(callable(apihelper))
+# print(callable(apihelper.info))
 #
 # # oddaje True gdy obiekt mozna wywolac
 #
@@ -84,10 +84,10 @@ print(callable(apihelper.info))
 # # Funkcja: join, split
 #
 # s = "Ala    ma\n kota\ti\tAsa."
-# print s
-# print s.split()
-# print " ".join(s.split())
-# print "\n".join(s.split())
+# print(s)
+# print(s.split())
+# print(" ".join(s.split()))
+# print("\n".join(s.split()))
 #
 # ##############################
 # # Powyzsze funkcje (i wiecej) pochodza z modulu __builtin__

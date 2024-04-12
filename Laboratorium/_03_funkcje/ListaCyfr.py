@@ -16,9 +16,9 @@ def slownie2(liczba):
         a = a / 10
     return wyn
 
-print slownie2(01234)
+print(slownie2(1234))
 
-print kwotaslownie(0)
+print(kwotaslownie(0))
 # print lslownie(123)
 
 def slownie3(liczba):
@@ -26,8 +26,8 @@ def slownie3(liczba):
              'piec', 'szesc', 'siedem', 'osiem', 'dziewiec']
     return map(lambda x: cyfry[int(x)], str(liczba))
 
-print slownie3(1234)
+print(slownie3(1234))
 
 a = 0xff
 
-print a, hex(a), oct(a), bin(a)
+print(a, hex(a), oct(a), bin(a))

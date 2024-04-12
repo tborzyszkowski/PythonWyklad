@@ -24,10 +24,10 @@ trzy = succ(dwa)
 f = (lambda x: x * 2)
 zz = 1
 
-print zero(f, zz)
-print jeden(f, zz)
-print dwa(f, zz)
-print trzy(f, zz)
+print(zero(f, zz))
+print(jeden(f, zz))
+print(dwa(f, zz))
+print(trzy(f, zz))
 #
 # # Fixed-point combinator
 # # https://en.wikipedia.org/wiki/Fixed-point_combinator
@@ -36,11 +36,11 @@ print trzy(f, zz)
 
 Z = lambda f: (lambda x: f(lambda *args: x(x)(*args)))(lambda x: f(lambda *args: x(x)(*args)))
 add = Z(lambda f: lambda a, b: b if a <= 0 else 1 + f(a - 1, b))
-print add(1, 1)
-print add(100, 200)
+print(add(1, 1))
+print(add(100, 200))
 
 # Y combinator
 
 Y = lambda g: (lambda f: g(lambda arg: f(f)(arg)))(lambda f: g(lambda arg: f(f)(arg)))
 factorial = Y(lambda f: (lambda num: num and num * f(num - 1) or 1))
-print factorial(5)
+print(factorial(5))

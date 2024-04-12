@@ -10,12 +10,12 @@
 #     print('Za duzo')
 
 # # --- iteracja
-# a = ['Ala', 'ma', 'kota']
+# a = ['Ala', 'ma', 'kota', (1, 2, 3)]
 # for x in a:
 #     print(x, len(x))
 
 # # --- co to?
-# x = 993 #int(input('Podaj liczbe: '))
+# x = 997 #int(input('Podaj liczbe: '))
 # jest = True
 # y = 2
 # while (y < x) and jest:
@@ -27,7 +27,7 @@
 #     print('TAK')
 # else:
 #     print('NIE')
-#
+
 # # --- petla z else
 #
 # for x in range(0, 20, 3):

@@ -43,9 +43,8 @@ def info(object_to_describe, spacing=10, collapse=1):
             return " ".join(s.split())
         else:
             return s
-
     method_list = [e for e in dir(object_to_describe) if callable(getattr(object_to_describe, e))]
-    # process_function = collapse and (lambda s: " ".join(s.split())) or (lambda s: s)
+    process_function = collapse and (lambda s: " ".join(s.split())) or (lambda s: s)
     return "\n".join(
             ["%s %s" %
              (method.ljust(spacing),

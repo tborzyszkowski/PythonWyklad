@@ -22,6 +22,7 @@ def first_try(arg1):
     """
     a = arg1
     global b
+    b = arg1 + 1
     print('test1: LOCALS   :', locals())
     print('test1: GLOBALS a:', globals()['a'])
     print('test1: GLOBALS b:', globals()['b'])

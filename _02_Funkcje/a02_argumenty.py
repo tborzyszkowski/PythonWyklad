@@ -16,7 +16,6 @@ def test1(a, b=1, c=2):
 
 i = 1
 
-
 def f(a=i):
     print('a = ', a)
 
@@ -58,8 +57,8 @@ print(h(3))
 
 def pp(x=1, *arguments, **keywords):
     print('x = ', x)
-    print(keywords)
     print(arguments)
+    print(keywords)
     keys = list(keywords.keys())
     keys.sort()
     for k in keys:
@@ -95,7 +94,7 @@ def multi(x, y):
     return x * y
 
 def double_it(x):
-    multi(x, 2)
+    return multi(x, 2)
 
 f1 = partial(multi, 2)
 

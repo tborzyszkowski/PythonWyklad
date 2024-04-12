@@ -9,4 +9,4 @@ for x in l:
     if x in d:
         d2[x] = d[x]
 
-print d2
+print(d2)
