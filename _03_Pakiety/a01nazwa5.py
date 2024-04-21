@@ -13,11 +13,10 @@ def nazwa():
 def nazwa():
     print(__name__)
     print("aqqqq = ", a)
+    print(a01nazwa.nazwa())
 
 
-a01nazwa.nazwa
-a01nazwa.nazwa()
-nazwa()
+if __name__ == '__main__':
+    a01nazwa.nazwa()
+    nazwa()
 
-
-nazwa()

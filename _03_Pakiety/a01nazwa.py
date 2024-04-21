@@ -12,6 +12,7 @@ def nazwa():
     print(__name__)
     variable_a = 1
     print("variable_a = ", variable_a)
+    return 0
 
 
 if __name__ == "__main__":
