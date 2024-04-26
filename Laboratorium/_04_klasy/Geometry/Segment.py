@@ -12,7 +12,7 @@ class Segment:
 
     @start.setter
     def start(self, value):
-        if self.is_valid(value):
+        if is_valid(value):
             self.__start = value
         else:
             self.__start = Point(0, 0)
@@ -23,10 +23,11 @@ class Segment:
 
     @end.setter
     def end(self, value):
-        if self.is_valid(value):
+        if is_valid(value):
             self.__end = value
         else:
             self.__end = Point(0, 0)
 
-    def is_valid(self, point):
-        return point.distance(Point()) > 0
+    @staticmethod
+    def is_valid(point):
+        return point.distance(Point(0, 0)) > 1

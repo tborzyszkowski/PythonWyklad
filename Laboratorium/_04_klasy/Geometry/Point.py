@@ -12,7 +12,7 @@ class Point:
 
     @x.setter
     def x(self, x):
-        if self.is_valid(x):
+        if Point.is_valid(x):
            self.__x = x
         else:
             raise Exception()
@@ -31,8 +31,9 @@ class Point:
     def __str__(self):
         return "("+str(self.x)+", "+ str(self.y) + ")"
 
-    def is_valid(self, val):
-        return val >=0;
+    @staticmethod
+    def is_valid(value):
+        return value >=0;
 
 if __name__ == "__main__":
     # try:

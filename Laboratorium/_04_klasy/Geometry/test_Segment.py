@@ -1,19 +1,20 @@
 import unittest
+from unittest.mock import Mock
 
 from Laboratorium._04_klasy.Geometry.Point import Point
 from Laboratorium._04_klasy.Geometry.Segment import Segment
 
 
 class SegmentTest(unittest.TestCase):
-    def test_start(self):
-        point_start = Point(1, 1)
-        segment = Segment(point_start)
+    def test_isvalid_true(self):
+        point = Mock(Point)
+        point.distance.return_value = 2
+        result = Segment.is_valid(point)
+        self.assertTrue(result)
 
-        self.assertEqual(segment.start.x, 1)
-
-    def test_start_negative(self):
-        point_start = Point(-1, 1)
-        segment = Segment(point_start)
-
-        self.assertEqual(segment.start.x, 0)
+    def test_isvalid_true(self):
+        point = Mock(Point)
+        point.distance.return_value = 0
+        result = Segment.is_valid(point)
+        self.assertFalse(result)
 
