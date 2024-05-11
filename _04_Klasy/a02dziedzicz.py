@@ -7,7 +7,7 @@ class A:
     def m(self):
         return self.a
     def test(self, a_value):
-        print(self.m() + a_value)
+        return self.m() + a_value
 
 
 class B(A):
@@ -25,9 +25,9 @@ class B(A):
 if __name__ == "__main__":
     a = A()
     print(a.m())
-    a.test(2)
+    print(a.test(2))
 
     b = B()
     print(b.m())
-    b.test(3)
+    print(b.test(3))
     print(b.super_m())

@@ -33,7 +33,7 @@ class B2:
 class C(B1, B2):
 
     def __init__(self):
-        # B1.__init__(self)
+        B1.__init__(self)
         B2.__init__(self)
 
     def g(self):

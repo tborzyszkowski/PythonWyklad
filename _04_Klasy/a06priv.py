@@ -1,8 +1,5 @@
 __b = 13
 
-print('__b = ', __b)
-
-
 def __prywatna_funkcja(a=1):
     print('Wewnatrz prywatnej funkcji, a = ', a)
 
@@ -20,6 +17,7 @@ class Prywatna:
 
 
 if __name__ == "__main__":
+    print(__b)
     p = Prywatna()
     print(p.a)
     # print(p.__b)
