@@ -8,8 +8,9 @@ class MyError(Exception):
         return "MyError: "+repr(self.value)+repr(self.args)
 
 
-try:
-    raise MyError(2*2, "aaa")
-except MyError as e:
-    print('My exception occurred, value:', e.value, e.args)
-    print(e)
+if __name__ == '__main__':
+    try:
+        raise MyError(2*2, "aaa")
+    except MyError as e:
+        print('My exception occurred, value:', e.value, e.args)
+        print(e)

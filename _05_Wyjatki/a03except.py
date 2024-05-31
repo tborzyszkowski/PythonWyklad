@@ -8,13 +8,13 @@
 #         y = 1 / x
 #         print(y)
 #         break
-#     # except Exception as e:
-#     #     print("Exception: ", str(e))
 #     except ValueError as e:
 #         print("+++ Chodzilo o liczbe +++:", e)
 #     except ZeroDivisionError as e:
 #         print(e)
-
+#     except Exception as e:
+#         print("Exception: ", str(e))
+#
 
 # pliki i wyjatki
 # print '2'*20
@@ -29,7 +29,7 @@
 #     i = 1/i
 #     a = [1, 2, 3]
 #     # a[4] = 5
-#     raise NameError
+#     # raise NameError
 # except FileNotFoundError as e:
 #     print("FileNotFoundError:", e)
 #     print(type(e))
@@ -46,7 +46,7 @@
 # except Exception as e:
 #     print("Unexpected error:", sys.exc_info()) # [0]
 #     print(type(e))
-#     # raise
+#     raise
 # else:
 #     print("Else part")
 
@@ -77,7 +77,7 @@
 #     print('x =', x)
 #     print('y =', y)
 #     print('q =', q)
-
+#
 #
 # #
 #
@@ -118,28 +118,28 @@
 #     # getpass = unix_getpass
 #     print("unix_getpass")
 
-def exception_return():
-    # result = 1
-    # result = [1]
-    result = "Ala"
-    try:
-        result += "Ma"
-        print("try", result)
-        return result
-        raise
-        # y = 1 / 0
-    except ZeroDivisionError as e:
-        result += 1
-        print("except", result)
-        print(e)
-    except NameError:
-        print("NameError")
-        raise
-    finally:
-        result += "Kota"
-        print("finally", result)
-        # return result
-
-
-a = exception_return()
-print(a)
+# def exception_return():
+#     # result = 1
+#     # result = [1]
+#     result = "Ala"
+#     try:
+#         result += "Ma"
+#         print("try", result)
+#         return result
+#         raise
+#         # y = 1 / 0
+#     except ZeroDivisionError as e:
+#         result += 1
+#         print("except", result)
+#         print(e)
+#     except NameError:
+#         print("NameError")
+#         raise
+#     finally:
+#         result += "Kota"
+#         print("finally", result)
+#         return result
+#
+#
+# a = exception_return()
+# print(a)

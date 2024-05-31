@@ -1,6 +1,6 @@
 class D:
-    def __init__(self):
-        self.dane = {}
+    def __init__(self, dane = None):
+        self.dane = {} if dane is None else dane
 
     def __len__(self):
         return 2 * len(self.dane)
