@@ -1,8 +1,8 @@
 import unittest
 from unittest.mock import Mock
 
-from test_doubles.TirePressure.alarm import Alarm
-from test_doubles.TirePressure.sensor import Sensor
+from .alarm import Alarm
+from .sensor import Sensor
 
 class StubSensor:
     def sample_pressure(self):

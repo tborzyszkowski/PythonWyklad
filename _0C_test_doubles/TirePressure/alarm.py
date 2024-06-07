@@ -1,4 +1,4 @@
-from test_doubles.TirePressure.sensor import Sensor
+from .sensor import Sensor
 
 
 class Alarm:

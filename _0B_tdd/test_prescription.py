@@ -4,7 +4,7 @@
 import unittest
 from datetime import date, timedelta
 
-from src.tdd.prescription import Prescription
+from .prescription import Prescription
 
 
 def days_ago(days):

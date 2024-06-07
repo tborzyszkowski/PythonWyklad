@@ -3,9 +3,9 @@
 
 import unittest
 
-from src.tdd.patient import Patient
-from src.tdd.prescription import Prescription
-from src.tdd.test_prescription import days_ago
+from _0B_tdd.patient import Patient
+from _0B_tdd.prescription import Prescription
+from _0B_tdd.test_prescription import days_ago
 
 
 class TestPatient(unittest.TestCase):

@@ -3,7 +3,7 @@
 
 import unittest
 
-from src.tdd.telemetry import *
+from _0B_tdd.telemetry import *
 
 
 class TelemetryDiagnosticControlsTest(unittest.TestCase):

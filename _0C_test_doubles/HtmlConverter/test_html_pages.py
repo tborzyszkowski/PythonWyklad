@@ -1,6 +1,6 @@
 import unittest
 import io
-from src.test_doubles.HtmlConverter.html_pages import HtmlPagesConverter
+from .html_pages import HtmlPagesConverter
 
 
 class HtmlConverterTests(unittest.TestCase):
