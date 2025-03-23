@@ -20,17 +20,15 @@ result = x + y
 print(x, " + ", y, " = ", result)
 print(x - y)
 print(x * y)
-print(x / y)  # dzielenie calkowite
-print(x // y)  # zaokraglenie w dol dzielenia calkowitego
+print(x / y)
+print(x // y)
 # 3/0.7 3//0.7
 
 print(x % y)  # reszta z dzielenia
 print(-x)
 print(+x)
 print(abs(x))  # wartosc bezwzgledna
-# print(int(x))  # konwersja do int
-# print(long(x))
-# print(float(x))
+
 c = complex(x, y)
 print(c.conjugate())  # sprzezona do danej zespolonej
 print(divmod(x, y))  # para (x // y, x % y)

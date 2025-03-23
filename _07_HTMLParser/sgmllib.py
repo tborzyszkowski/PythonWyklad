@@ -382,8 +382,8 @@ class SGMLParser(markupbase.ParserBase):
     # Example -- report an unbalanced </...> tag.
     def report_unbalanced(self, tag):
         if self.verbose:
-            print '*** Unbalanced </' + tag + '>'
-            print '*** Stack:', self.stack
+            print('*** Unbalanced </' + tag + '>')
+            print('*** Stack:', self.stack)
 
     def convert_charref(self, name):
         """Convert character reference, may be overridden."""

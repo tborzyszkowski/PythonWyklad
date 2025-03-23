@@ -13,12 +13,13 @@ Opis modulu
 a = 1
 b = 2
 
-def first_try(arg1):
-    """To jest pierwsza linia opisu
 
-    A to sa kolejne
-    I jeszcze
-    I jeszcze.
+def first_try(arg1):
+    """
+    Opis funcji
+
+    :param arg1: pierwszy parametr funkcji
+    :return: brak wartosci zwracanej
     """
     a = arg1
     global b
@@ -26,6 +27,7 @@ def first_try(arg1):
     print('test1: LOCALS   :', locals())
     print('test1: GLOBALS a:', globals()['a'])
     print('test1: GLOBALS b:', globals()['b'])
+
 
 def second_try(arg2):
     """Test2_doc

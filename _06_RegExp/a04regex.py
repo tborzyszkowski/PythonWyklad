@@ -30,16 +30,16 @@ import re
 #
 
 
-def hexrepl(match):
-    "Return the hex string for a decimal number"
-    value = int(match.group())
-    return hex(value)
-
-p = re.compile(r'\d+')
-print(p.sub(hexrepl, 'Call 65490 for printing, 49152 for user code 15 16 14 15.'))
-p = re.compile(r'^(a+)+$')
-m = p.match("a"*30+"!")
-if m:
-    print(m.span())
-else:
-    print("---")
+# def hexrepl(match):
+#     "Return the hex string for a decimal number"
+#     value = int(match.group())
+#     return hex(value)
+#
+# p = re.compile(r'\d+')
+# print(p.sub(hexrepl, 'Call 65490 for printing, 49152 for user code 15 16 14 15.'))
+# p = re.compile(r'^(a+)+$')
+# m = p.match("a"*30+"!")
+# if m:
+#     print(m.span())
+# else:
+#     print("---")

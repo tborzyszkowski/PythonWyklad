@@ -38,10 +38,10 @@ import re
 # print(p.findall("aabbccddeeccaaeeddaabbccww"))
 
 # # match i search to nie to samo
-print(re.match('super', 'superstition').span())
-print(re.match('super', 'insuperable'))
-
-print(re.search('super', 'superstition').span())
-print(re.search('super', 'insuperable').span())
-result = re.search('super', 'insuperable')
-print( result.span(), result.start(), result.end())
+# print(re.match('super', 'superstition').span())
+# print(re.match('super', 'insuperable'))
+#
+# print(re.search('super', 'superstition').span())
+# print(re.search('super', 'insuperable').span())
+# result = re.search('super', 'insuperable')
+# print( result.span(), result.start(), result.end())

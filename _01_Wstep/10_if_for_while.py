@@ -13,9 +13,10 @@
 # a = ['Ala', 'ma', 'kota', (1, 2, 3)]
 # for x in a:
 #     print(x, len(x))
+#     # a.append([1])
 
 # # --- co to?
-# x = 997 #int(input('Podaj liczbe: '))
+# x = 997 * 997 #int(input('Podaj liczbe: '))
 # jest = True
 # y = 2
 # while (y < x) and jest:
@@ -35,11 +36,18 @@
 # else:
 #     print('KONIEC', x)
 #
-n = 5
-x = 1
-w = 1
-while x < n:
-    x += 1
-    w *= x
+# print(globals())
+# if True:
+#     x = 5
+#     print(globals())
+# print(x)
+# print(globals())
+
+n = 10000
+licznik = 1
+wynik = 1
+while licznik <= n:
+    wynik *= licznik
+    licznik += 1
 else:
-    print(w)
+    print(wynik)

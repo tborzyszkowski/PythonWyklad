@@ -163,8 +163,9 @@ def testMe(url):
 		webbrowser.open_new(outfile)
 
 if __name__ == "__main__":
-	#testMe("http://en.ug.edu.pl/")
-	#testMe("http://www.python.org/")
-	# test("http://www.wp.pl")
-	testMe("https://en.wikipedia.org/wiki/Konrad_Zuse")
+	# testMe("http://en.ug.edu.pl/")
+	# testMe("http://www.python.org/")
+	# testMe("http://www.wp.pl")
+	testMe("http://bbc.com")
+	# testMe("https://en.wikipedia.org/wiki/Konrad_Zuse")
 
