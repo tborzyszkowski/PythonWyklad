@@ -18,7 +18,15 @@ def setO(i, j):
     global data
     data[i][j] = 2
 
+def the_same_in_some_row(who):
+    the_same = True
+    for row in data:
+        for i in range(len(row)):
+            if row[i] != who:
+                the_same = False
+                break
+    return the_same
 
 def who_win():
     global data
-    return 1
+    return 1 if the_same_in_some_row(1) else 2

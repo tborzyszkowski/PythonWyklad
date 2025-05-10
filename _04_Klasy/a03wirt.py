@@ -8,14 +8,12 @@ class A:
     def test_self(self):
         return self.test()
 
-
 class B(A):
     def m(self):
         return 2
 
     def test_super(self):
         return A.test(self)
-
 
 class C(B):
     def m(self):
@@ -24,14 +22,11 @@ class C(B):
     def test_super(self):
         return B.m(self)
 
-
 if __name__ == "__main__":
-    a = A()
-    b = B()
-    c = C()
+    a, b, c = A(), B(), C()
     print('A:', a.test(), a.test_self())  # 1 1
-    print('B:', b.test(), b.test_super(), b.test_self()) # 2 2 2 |
-    print('C:', c.test(), c.test_super(), c.test_self()) # 3 2 3
+    print('B:', b.test(), b.test_super(), b.test_self()) # 2 1 2
+    print('C:', c.test(), c.test_super(), c.test_self()) # 3 1/2 3
 
 # b.test() = B.test(b) = A.test(b) = b.m() = B.m(b) = 2
 # b.test_super() = B.test_super(b) = A.test(b) = b.m() = B.m(b) = 2

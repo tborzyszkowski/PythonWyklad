@@ -57,10 +57,11 @@ class MP3FileInfo(FileInfo):
         try:
             fsock = open(filename, "rb", 0)
             try:
-                fsock.seek(-128, 2)
-                tagdata = fsock.read(128)
+                fsock.seek(-128, os.SEEK_END)
+                tagdata_bin = fsock.read(128)
             finally:
                 fsock.close()
+            tagdata = tagdata_bin.decode("utf-8")
             if tagdata[:3] == 'TAG':
                 for tag, (start, end, parseFunc) in self.tagDataMap.items():
                     self[tag] = parseFunc(tagdata[start:end])
@@ -87,6 +88,6 @@ def listDirectory(directory, fileExtList):
 
 
 if __name__ == "__main__":
-    for info in listDirectory(r"C:\home", [".mp3"]):
+    for info in listDirectory(r"C:\home\tomek\UG\Zajecia\Python\Wyk\_04", [".mp3"]):
         print("\n".join(["%s=%s" % (k, v) for k, v in info.items()]))
 

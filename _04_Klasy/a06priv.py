@@ -22,7 +22,7 @@ if __name__ == "__main__":
     print(p.a)
     # print(p.__b)
     print(p._Prywatna__b)
-    # print p.__f()
+    # print(p.__f())
     print(p._Prywatna__f())
     print("--", dir(p))
     print(p.__module__)

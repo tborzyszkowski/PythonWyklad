@@ -1,45 +1,45 @@
 # proste definicje klas
 
 
-class NicNieRob:
-    pass
-
-print(dir(NicNieRob))
+# class NicNieRob:
+#     pass
+#
+# print(dir(NicNieRob))
 
 # przykladowa klasa bez inicjalizacji
 
 
-class MyClass:
-    """A simple example class.
-    """
-    i = 12345
-    def f(self):
-        """Opis funkcji
-        """
-        return 'hello world %d' % self.__class__.i
-
-
-x = MyClass()
-y = MyClass()
-print(x.f())
-# x.f() --> MyClass.f(x)
-
-x.i = 10
-print(x.__class__.i, y.__class__.i)
-y.i = 54321
-# y.__class__.i = 13579
-print(x.__class__.i, y.__class__.i)
-print(x.f(), y.f())
-print(y.i, x.i)
-
-
-print(x.__doc__)
-print(x.f.__doc__)
-print('-'*20)
+# class MyClass:
+#     """A simple example class.
+#     """
+#     i = 12345
+#     def f(self):
+#         """Opis funkcji
+#         """
+#         return 'hello world %d' % self.__class__.i
 #
-# # klasa z inicjalizacja stanu klasy
-
-
+#
+# x = MyClass()
+# y = MyClass()
+# print(x.f())
+# # x.f() --> MyClass.f(x)
+#
+# x.i = 10
+# print(x.__class__.i, y.__class__.i)
+# y.i = 54321
+# # y.__class__.i = 13579
+# print(x.__class__.i, y.__class__.i)
+# print(x.f(), y.f())
+# print(y.i, x.i)
+# #
+# #
+# print(x.__doc__)
+# print(x.f.__doc__)
+# print('-'*20)
+#
+# # # klasa z inicjalizacja stanu klasy
+#
+#
 class MojaKlasa:
     i = 0
     def __init__(self, a=10, b=20):
