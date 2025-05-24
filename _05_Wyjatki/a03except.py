@@ -18,37 +18,39 @@
 
 # pliki i wyjatki
 # print '2'*20
-#
-# import sys
-#
-# try:
-#     f = open('myfile.txt')
-#     s = f.readline()
-#     print(s.strip())
-#     i = int(s.strip())
-#     i = 1/i
-#     a = [1, 2, 3]
-#     # a[4] = 5
-#     # raise NameError
-# except FileNotFoundError as e:
-#     print("FileNotFoundError:", e)
-#     print(type(e))
-#     print(dir(e))
-# except IOError as e:
-#     print("I/O error(%s): %s" % e)
-# except ValueError:
-#     print("Could not convert data to an integer.")
-# except ZeroDivisionError as e:
-#     print("ZeroDivisionError:", e)
-# except IndexError as e:
-#     print("IndexError:", e)
-#     a = a + [0, 5]
-# except Exception as e:
-#     print("Unexpected error:", sys.exc_info()) # [0]
-#     print(type(e))
-#     raise
-# else:
-#     print("Else part")
+
+import sys
+
+try:
+    f = open('myfile.txt')
+    s = f.readline()
+    print(s.strip())
+    i = int(s.strip())
+    i = 1/i
+    # a = [1, 2, 3]
+    # a[4] = 5
+    # raise NameError
+except FileNotFoundError as e:
+    print("FileNotFoundError:", e)
+    print(type(e))
+    print(dir(e))
+    print(e.args)
+    # print(e.with_traceback())
+except IOError as e:
+    print("I/O error(%s): %s" % e)
+except ValueError:
+    print("Could not convert data to an integer.")
+except ZeroDivisionError as e:
+    print("ZeroDivisionError:", e)
+except IndexError as e:
+    print("IndexError:", e)
+    a = a + [0, 5]
+except Exception as e:
+    print("Unexpected error:", sys.exc_info()) # [0]
+    print(type(e))
+    raise
+else:
+    print("Else part")
 
 # #
 # print '3'*20

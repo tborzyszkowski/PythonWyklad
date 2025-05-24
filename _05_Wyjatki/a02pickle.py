@@ -1,4 +1,5 @@
 import pickle
+from copy import deepcopy
 
 print(dir(pickle))
 
@@ -97,13 +98,15 @@ m = Maz()
 z = Zona(m)
 m.zona = z
 
-mm = pickle.dumps(m)
+mm = pickle.loads(pickle.dumps(m))
 
 print(m is mm, mm == m)
 print(m)
+
+m2 = deepcopy(m)
+print(m is m2, m2 == m)
+
 x = [1]
 y = [x, 0]
 y[1] = y
 print(y)
-
-m.deepcopy()
