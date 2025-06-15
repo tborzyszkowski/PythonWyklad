@@ -2,12 +2,12 @@ import re
 
 # p = re.compile(r'\W+')
 # print (p.split('This is a test, short and sweet, of split().'))
-# # #
+#
 # print(p.split('This is a test, short and sweet, of split().', 3))
-# # #
+#
 # print(p.split('This... is a test.'))
 # p2 = re.compile(r'(\W+)')
-# print p2.split('This... is a test.')
+# print(p2.split('This... is a test.'))
 #
 # print(re.split('[\W]+', 'Words, words, words.'))
 # print(re.split('([\W]+)', 'Words, words, words.'))
@@ -37,9 +37,9 @@ import re
 #
 # p = re.compile(r'\d+')
 # print(p.sub(hexrepl, 'Call 65490 for printing, 49152 for user code 15 16 14 15.'))
-# p = re.compile(r'^(a+)+$')
-# m = p.match("a"*30+"!")
-# if m:
-#     print(m.span())
-# else:
-#     print("---")
+p = re.compile(r'^(a+)+')
+m = p.match("a"*30+"!")
+if m:
+    print(m.span(), m.groups())
+else:
+    print("---")
