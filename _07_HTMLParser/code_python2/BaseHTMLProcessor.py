@@ -16,15 +16,21 @@ __date__ = "$Date: 2004/05/05 21:57:19 $"
 __copyright__ = "Copyright (c) 2001 Mark Pilgrim"
 __license__ = "Python"
 
-from sgmllib import SGMLParser
-import htmlentitydefs
+#####
+# Adapted to python 3
+#
+#####
+
+# from sgmllib import SGMLParser
+from html.parser import HTMLParser
+from html.entities import entitydefs
 
 
-class BaseHTMLProcessor(SGMLParser):
+class BaseHTMLProcessor(HTMLParser):
 	def reset(self):
 		# extend (called by SGMLParser.__init__)
 		self.pieces = []
-		SGMLParser.reset(self)
+		HTMLParser.reset(self)
 
 	def unknown_starttag(self, tag, attrs):
 		# called for each start tag
@@ -56,7 +62,7 @@ class BaseHTMLProcessor(SGMLParser):
 		# Reconstruct the original entity reference.
 		self.pieces.append("&%(ref)s" % locals())
 		# standard HTML entities are closed with a semicolon; other entities are not
-		if htmlentitydefs.entitydefs.has_key(ref):
+		if ref in entitydefs:
 			self.pieces.append(";")
 
 	def handle_data(self, text):
@@ -89,6 +95,8 @@ class BaseHTMLProcessor(SGMLParser):
 		"""Return processed HTML as a single string"""
 		return "".join(self.pieces)
 
+
 if __name__ == "__main__":
-	for k, v in globals().items():
-		print k, "=", v
+	# for k, v in globals().items():
+	# 	print (k, "=", v)
+	print(globals())

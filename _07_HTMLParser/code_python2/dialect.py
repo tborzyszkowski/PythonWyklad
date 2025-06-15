@@ -12,7 +12,7 @@ __copyright__ = "Copyright (c) 2001 Mark Pilgrim"
 __license__ = "Python"
 
 import re
-from BaseHTMLProcessor import BaseHTMLProcessor
+from _07_HTMLParser.code_python2.BaseHTMLProcessor import BaseHTMLProcessor
 
 class Dialectizer(BaseHTMLProcessor):
 	subs = ()
@@ -137,35 +137,34 @@ class OldeDialectizer(Dialectizer):
 			(r'from', r'fro'),
 			(r'when', r'whan'))
 
-def translate(url, dialectName="chef"):
+def translate(url_link, dialectName="chef"):
 	"""fetch URL and translate using dialect
 
 	dialect in ("chef", "fudd", "olde")"""
 	import urllib
-	sock = urllib.urlopen(url)
-	htmlSource = sock.read()
-	sock.close()
+	htmlSource = ""
+	with urllib.request.urlopen(url_link) as url:
+		htmlSource = url.read()
 	parserName = "%sDialectizer" % dialectName.capitalize()
 	parserClass = globals()[parserName]
 	parser = parserClass()
-	parser.feed(htmlSource)
+	parser.feed(htmlSource.decode('utf-8'))
 	parser.close()
 	return parser.output()
 
-def testMe(url):
-	"""test all dialects against URL"""
-	for dialect in ("chef", "fudd", "olde"):
+def execute(url):
+	for dialect in ("chef",): #, "fudd", "olde"):
 		outfile = "%s.html" % dialect
-		fsock = open(outfile, "wb")
+		fsock = open(outfile, "w", encoding="utf-8")
 		fsock.write(translate(url, dialect))
 		fsock.close()
 		import webbrowser
 		webbrowser.open_new(outfile)
 
 if __name__ == "__main__":
-	# testMe("http://en.ug.edu.pl/")
-	# testMe("http://www.python.org/")
-	# testMe("http://www.wp.pl")
-	testMe("http://bbc.com")
-	# testMe("https://en.wikipedia.org/wiki/Konrad_Zuse")
+	execute("http://en.ug.edu.pl/")
+	# execute("http://www.python.org/")
+	# execute("http://www.wp.pl")
+	# execute("http://bbc.com")
+	# execute("https://en.wikipedia.org/wiki/Konrad_Zuse")
 

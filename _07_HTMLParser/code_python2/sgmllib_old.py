@@ -1,15 +1,7 @@
 """A parser for SGML, using the derived class as a static DTD."""
 
-# XXX This only supports those SGML features used by HTML.
 
-# XXX There should be a way to distinguish between PCDATA (parsed
-# character data -- the normal case), RCDATA (replaceable character
-# data -- only char and entity references and end tags are special)
-# and CDATA (character data -- only end tags are special).  RCDATA is
-# not supported at all.
-
-
-import markupbase
+# from html.parser import HTMLParser
 import re
 
 __all__ = ["SGMLParser", "SGMLParseError"]
@@ -52,7 +44,7 @@ class SGMLParseError(RuntimeError):
 # chunks).  Entity references are passed by calling
 # self.handle_entityref() with the entity reference as argument.
 
-class SGMLParser(markupbase.ParserBase):
+class SGMLParser(HTMLParser):
     # Definition of entities -- derived classes may override
     entity_or_charref = re.compile('&(?:'
       '([a-zA-Z][-.a-zA-Z0-9]*)|#([0-9]+)'
@@ -71,7 +63,7 @@ class SGMLParser(markupbase.ParserBase):
         self.lasttag = '???'
         self.nomoretags = 0
         self.literal = 0
-        markupbase.ParserBase.reset(self)
+        HTMLParser.reset(self)
 
     def setnomoretags(self):
         """Enter literal mode (CDATA) till EOF.
@@ -95,7 +87,7 @@ class SGMLParser(markupbase.ParserBase):
         all the processing is done by goahead().)
         """
 
-        self.rawdata = self.rawdata + data
+        self.rawdata = self.rawdata + str(data)
         self.goahead(0)
 
     def close(self):
@@ -468,47 +460,47 @@ class TestSGMLParser(SGMLParser):
         data = self.testdata
         if data:
             self.testdata = ""
-            print 'data:', repr(data)
+            print('data:', repr(data))
 
     def handle_comment(self, data):
         self.flush()
         r = repr(data)
         if len(r) > 68:
             r = r[:32] + '...' + r[-32:]
-        print 'comment:', r
+        print('comment:', r)
 
     def unknown_starttag(self, tag, attrs):
         self.flush()
         if not attrs:
-            print 'start tag: <' + tag + '>'
+            print('start tag: <' + tag + '>')
         else:
-            print 'start tag: <' + tag,
+            print('start tag: <' + tag,)
             for name, value in attrs:
-                print name + '=' + '"' + value + '"',
-            print '>'
+                print(name + '=' + '"' + value + '"',)
+            print('>')
 
     def unknown_endtag(self, tag):
         self.flush()
-        print 'end tag: </' + tag + '>'
+        print('end tag: </' + tag + '>')
 
     def unknown_entityref(self, ref):
         self.flush()
-        print '*** unknown entity ref: &' + ref + ';'
+        print('*** unknown entity ref: &' + ref + ';')
 
     def unknown_charref(self, ref):
         self.flush()
-        print '*** unknown char ref: &#' + ref + ';'
+        print('*** unknown char ref: &#' + ref + ';')
 
     def unknown_decl(self, data):
         self.flush()
-        print '*** unknown decl: [' + data + ']'
+        print('*** unknown decl: [' + data + ']')
 
     def close(self):
         SGMLParser.close(self)
         self.flush()
 
 
-def test(args = None):
+def run_test(args = None):
     import sys
 
     if args is None:
@@ -523,15 +515,15 @@ def test(args = None):
     if args:
         file = args[0]
     else:
-        file = 'test.html'
+        file = '../test.html'
 
     if file == '-':
         f = sys.stdin
     else:
         try:
             f = open(file, 'r')
-        except IOError, msg:
-            print file, ":", msg
+        except IOError as msg:
+            print (file, ":", msg)
             sys.exit(1)
 
     data = f.read()
@@ -545,4 +537,4 @@ def test(args = None):
 
 
 if __name__ == '__main__':
-    test()
+    run_test()
